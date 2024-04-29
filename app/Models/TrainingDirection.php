@@ -25,8 +25,5 @@ class TrainingDirection extends Model
         return $this->hasMany(Group::class);
     }
 
-    public function head()
-    {
-        return $this->belongsTo(User::class);
-    }
+
 }

@@ -17,11 +17,15 @@ return new class extends Migration
             $table->foreignId('head_OPOP_id')->references('id')->on('users');
             $table->foreignId('institute_id')->references('id')->on('instituts');
 
+
+
             $table->timestamps();
         });
+
         Schema::table('groups', function (Blueprint $tableGroup) {
             $tableGroup->foreignId('training_direction_id')->nullable()->references('id')->on('training_directions');
         });
+
     }
 
     /**
