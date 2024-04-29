@@ -11,6 +11,11 @@ class Group extends Model
 
     public function course()
     {
-        return $this->belongsTo('')
+        return $this->belongsTo(Course::class);
+    }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
     }
 }
