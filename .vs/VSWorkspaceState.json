@@ -4,9 +4,10 @@
     "\\app",
     "\\app\\Models",
     "\\database",
+    "\\database\\factories",
     "\\database\\migrations",
     "\\database\\seeders"
   ],
-  "SelectedNode": "\\database\\seeders\\PracticeTypeSeeder.php",
+  "SelectedNode": "\\database\\seeders\\GroupsSeeder.php",
   "PreviewInSolutionExplorer": false
 }

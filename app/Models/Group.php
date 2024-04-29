@@ -9,8 +9,16 @@ class Group extends Model
 {
     use HasFactory;
 
+    protected $table = 'groups';
+
+    protected $fillable = [
+        'name',
+        'cource_id',
+        'training_direction_id'
+    ];
+
     public function course()
     {
-        return $this->belongsTo('')
+        return $this->belongsTo(Course::class);
     }
 }

@@ -19,6 +19,9 @@ return new class extends Migration
 
             $table->timestamps();
         });
+        Schema::table('groups', function (Blueprint $tableGroup) {
+            $tableGroup->foreignId('training_direction_id')->nullable()->references('id')->on('training_directions');
+        });
     }
 
     /**

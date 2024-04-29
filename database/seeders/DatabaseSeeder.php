@@ -24,7 +24,12 @@ class DatabaseSeeder extends Seeder
             ContractTypeSeeder::class,
             PracticeSortSeeder::class,
             PracticeTypeSeeder::class,
-            ScoreSeeder::class
+            ScoreSeeder::class,
+            InstitutsSeeder::class,
+            TrainingDirectionsSeeder::class,
+            CoursesSeeder::class,
+            GroupsSeeder::class,
+            UsersSeeder::class
         ]);
     }
 }
