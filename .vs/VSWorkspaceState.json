@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Models",
+    "\\database",
+    "\\database\\migrations",
+    "\\database\\seeders"
+  ],
+  "SelectedNode": "\\database\\seeders\\PracticeTypeSeeder.php",
+  "PreviewInSolutionExplorer": false
+}
