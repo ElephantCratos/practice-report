@@ -2,21 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Course;
 use App\Models\Group;
+use App\Models\TrainingDirection;
 use Illuminate\Http\Request;
 
 class GroupController extends Controller
 {
     public function index()
     {
-        $group = Group::OrderBy('name')->get();
+        $group = Group::OrderBy('id')->get();
+        $trainingDirection = TrainingDirection::OrderBy('id')->get();
 
-        return view('Group.index', compact(['group']));
+        return view('group/Group', compact(['group', 'trainingDirection']));
     }
 
     public function create()
     {
-        return view('Group.create');
+        $trainingDirection = TrainingDirection::OrderBy('id')->get();
+        $course = Course::OrderBy('id')->get();
+
+        return view('group/GroupCreate', compact(['trainingDirection', 'course']));
     }
 
     public function store(Request $request)
@@ -33,13 +39,16 @@ class GroupController extends Controller
             'training_direction_id' => $request->training_direction_id,
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Group added');
+        return redirect()->route('Group.index')->with('success', 'Group added');
     }
 
     public function edit($id)
     {
         $group = Group::findOrFail($id);
-        return view('Group.edit', compact('group'));
+        $trainingDirection = TrainingDirection::OrderBy('id')->get();
+        $course = Course::OrderBy('id')->get();
+
+        return view('group/GroupEdit', compact('group', 'trainingDirection', 'course'));
     }
 
     public function update($id, Request $request)
@@ -53,7 +62,7 @@ class GroupController extends Controller
         $group = Group::findOrFail($id);
         $group->update($validatedData);
 
-        return redirect()->route('dashboard')->with('success', 'Group updated');
+        return redirect()->route('Group.index')->with('success', 'Group updated');
     }
 
     public function destroy($id)
@@ -61,6 +70,6 @@ class GroupController extends Controller
         $group = Group::findOrFail($id);
         $group->delete();
 
-        return redirect()->route('dashboard')->with('success', 'Group destroy');
+        return redirect()->route('Group.index')->with('success', 'Group destroy');
     }
 }

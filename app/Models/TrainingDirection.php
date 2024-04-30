@@ -17,9 +17,9 @@ class TrainingDirection extends Model
         'institute_id'
     ];
 
-    public function institut()
+    public function institute()
     {
-        return $this->belongsTo(Institut::class);
+        return $this->belongsTo(Institute::class);
     }
 
     public function groups()
@@ -27,4 +27,8 @@ class TrainingDirection extends Model
         return $this->hasMany(Group::class);
     }
 
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'head_OPOP_id');
+    }
 }

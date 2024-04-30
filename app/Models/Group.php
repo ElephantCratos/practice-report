@@ -23,6 +23,11 @@ class Group extends Model
 
     }
 
+    public function trainingDirections()
+    {
+        return $this->belongsTo(TrainingDirection::class, 'training_direction_id');
+    }
+
     public function users()
     {
         return $this->hasMany(User::class);

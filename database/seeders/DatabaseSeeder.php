@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             PracticeTypeSeeder::class,
             ScoreSeeder::class,
             VolumeSeeder::class,
-            InstitutsSeeder::class,
+            InstitutesSeeder::class,
             TrainingDirectionsSeeder::class,
             CoursesSeeder::class,
             GroupsSeeder::class,
