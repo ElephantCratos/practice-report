@@ -18,7 +18,7 @@
     @foreach ($trouble as $Trouble)
         <tr class="items-center">
             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $Trouble->description }}</td>
-            <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $Trouble->score}}</td>
+            <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $Trouble->score->name}}</td>
             <td class="border-2 border-slate-300 p-5 text-white text-center">
                 <a href="{{ route('Troubles.edit', $Trouble->id) }}"class="text-blue-500 underline">Изменить</a>
                 <form method="POST" action="{{ route('Troubles.delete', $Trouble->id) }}">

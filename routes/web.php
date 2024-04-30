@@ -27,11 +27,11 @@ Route::delete('/training-directions/{id}', 'TrainingDirectionController@destroy'
 
 // TroublesController routes
 Route::get('/troubles', [TroublesController::class, 'index'])->name('Troubles.show');
-Route::get('/troubles/edit/{id}', 'TroublesController@index')->name('Troubles.edit');
-Route::get('/troubles/create', 'TroublesController@create')->name('Troubles.create');
-Route::get('/troubles/{id}', 'TroublesController@show');
-Route::put('/troubles/{id}', 'TroublesController@update');
-Route::delete('/troubles/delete/{id}', 'TroublesController@destroy')->name('Troubles.delete');
+Route::get('/troubles/edit/{id}', [TroublesController::class, 'edit'])->name('Troubles.edit');
+Route::get('/troubles/create', [TroublesController::class, 'create'])->name('Troubles.create');
+Route::post('/troubles/store', [TroublesController::class, 'store'])->name('Troubles.store');
+Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name('Troubles.update');
+Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
 
 // TraitsController routes
 Route::get('/traits', 'TraitsController@index');
