@@ -12,10 +12,6 @@ return new class extends Migration
     public function up(): void
     {
 
-        Schema::create('score', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-        });
 
 
         Schema::create('troubles', function (Blueprint $table) {
@@ -62,7 +58,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            
+
         });
 
         Schema::create('tasks', function (Blueprint $table) {
