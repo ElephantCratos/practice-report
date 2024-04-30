@@ -13,7 +13,7 @@ class Group extends Model
 
     protected $fillable = [
         'name',
-        'cource_id',
+        'course_id',
         'training_direction_id'
     ];
 
@@ -21,6 +21,11 @@ class Group extends Model
     {
         return $this->belongsTo(Course::class);
 
+    }
+
+    public function trainingDirections()
+    {
+        return $this->belongsTo(TrainingDirection::class, 'training_direction_id');
     }
 
     public function users()

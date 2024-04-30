@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\TrainingDirection;
 use App\Models\User;
-use App\Models\Institut;
+use App\Models\Institute;
 
 class TrainingDirectionsSeeder extends Seeder
 {
@@ -15,7 +15,7 @@ class TrainingDirectionsSeeder extends Seeder
         $head_OPOP = User::first();
 
         // Получаем первый институт
-        $institute = Institut::first();
+        $institute = Institute::first();
 
         TrainingDirection::create([
             'name' => 'Информатика и вычислительная техника',

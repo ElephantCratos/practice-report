@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Institute;
 use App\Models\TrainingDirection;
+use App\Models\User;
+
 use Illuminate\Http\Request;
 
 class TrainingDirectionController extends Controller
@@ -10,13 +13,22 @@ class TrainingDirectionController extends Controller
     public function index()
     {
         $trainingDirection = TrainingDirection::OrderBy('name')->get();
+        
+        $institute = Institute::OrderBy('id')->get();
 
-        return view('TrainingDirection.index', compact(['trainingDirection']));
+
+        //Надо рефакторить по мере появления ролевой политики
+        $head_OPOP = User::all();
+    
+        return view('trainingDirection/TrainingDirection', compact(['trainingDirection', 'institute', 'head_OPOP']));
     }
 
     public function create()
     {
-        return view('TrainingDirection.create');
+        $institute = Institute::OrderBy('id')->get();
+        $head_OPOP = User::all();
+
+        return view('trainingDirection/TrainingDirectionCreate', compact(['institute', 'head_OPOP']));
     }
 
     public function store(Request $request)
@@ -33,13 +45,16 @@ class TrainingDirectionController extends Controller
             'institute_id' => $request->institute_id,
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'TrainingDirection added');
+        return redirect()->route('TrainingDirection.index')->with('success', 'TrainingDirection added');
     }
 
     public function edit($id)
     {
         $trainingDirection = TrainingDirection::findOrFail($id);
-        return view('TrainingDirection.edit', compact('trainingDirection'));
+        $institute = Institute::OrderBy('id')->get();
+        $head_OPOP = User::OrderBy('id')->get();
+
+        return view('trainingDirection/TrainingDirectionEdit', compact(['trainingDirection', 'institute', 'head_OPOP']));
     }
 
     public function update($id, Request $request)
@@ -53,7 +68,7 @@ class TrainingDirectionController extends Controller
         $trainingDirection = TrainingDirection::findOrFail($id);
         $trainingDirection->update($validatedData);
 
-        return redirect()->route('dashboard')->with('success', 'TrainingDirection updated');
+        return redirect()->route('TrainingDirection.index')->with('success', 'TrainingDirection updated');
     }
 
     public function destroy($id)
@@ -61,6 +76,6 @@ class TrainingDirectionController extends Controller
         $trainingDirection = TrainingDirection::findOrFail($id);
         $trainingDirection->delete();
 
-        return redirect()->route('dashboard')->with('success', 'TrainingDirection destroy');
+        return redirect()->route('TrainingDirection.index')->with('success', 'TrainingDirection destroy');
     }
 }
