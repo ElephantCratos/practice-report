@@ -16,7 +16,7 @@ class PracticeController extends Controller
     {
         $practice = Practice::all();
 
-        return view('test', compact(['practice']));
+        return view('practice/practice', compact(['practice']));
 
     }
 
