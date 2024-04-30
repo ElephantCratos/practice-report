@@ -9,6 +9,8 @@ class Institut extends Model
 {
     use HasFactory;
 
+    protected $table = 'instituts';
+
     protected $fillable = ['name'];
 
     public function trainingDirections()
