@@ -5,19 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Score extends Model
+class Troubles extends Model
 {
     use HasFactory;
 
-    protected $table = 'score';
+    protected $table = 'troubles';
 
     protected $fillable = [
-        'id',
-        'name',
+        'description',
+        'score_id',
     ];
 
-    public function troubles()
+    public function score()
     {
-        return $this->hasMany(Troubles::class);
+        return $this->belongsTo(Score::class);
+
     }
 }
