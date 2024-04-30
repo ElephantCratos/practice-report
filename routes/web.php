@@ -37,12 +37,12 @@ use App\Http\Controllers\VolumeController;
 //Route::delete('/groups/delete/{id}', [GroupController::class, 'destroy'])->name('Group.delete');
 
 // TrainingDirectionController routes
-//Route::get('/training-directions/index', [TrainingDirectionController::class, 'index'])->name('TrainingDirection.index');
-//Route::get('/training-directions/create', [TrainingDirectionController::class, 'create'])->name('TrainingDirection.create');
-//Route::get('/training-directions/edit/{id}', [TrainingDirectionController::class, 'edit'])->name('TrainingDirection.edit');
-//Route::post('/training-directions/store', [TrainingDirectionController::class, 'store'])->name('TrainingDirection.store');
-//Route::put('/training-directions/update/{id}', [TrainingDirectionController::class, 'update'])->name('TrainingDirection.update');
-//Route::delete('/training-directions/delete/{id}', [TrainingDirectionController::class, 'destroy'])->name('TrainingDirection.delete');
+Route::get('/training-directions/index', [TrainingDirectionController::class, 'index'])->name('TrainingDirection.index');
+Route::get('/training-directions/create', [TrainingDirectionController::class, 'create'])->name('TrainingDirection.create');
+Route::get('/training-directions/edit/{id}', [TrainingDirectionController::class, 'edit'])->name('TrainingDirection.edit');
+Route::post('/training-directions/store', [TrainingDirectionController::class, 'store'])->name('TrainingDirection.store');
+Route::put('/training-directions/update/{id}', [TrainingDirectionController::class, 'update'])->name('TrainingDirection.update');
+Route::delete('/training-directions/delete/{id}', [TrainingDirectionController::class, 'destroy'])->name('TrainingDirection.delete');
 
 // PracticeController routes
 //Route::get('/practices/index', [PracticeController::class, 'index'])->name('Practice.index');
@@ -93,12 +93,12 @@ Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->
 //Route::delete('/reprimands/delete/{id}', [ReprimandController::class, 'destroy'])->name('Reprimand.delete');
 
 // TaskController routes
-//Route::get('/tasks/index', [TaskController::class, 'index'])->name('Task.index');
-//Route::get('/tasks/create', [TaskController::class, 'create'])->name('Task.create');
-//Route::get('/tasks/edit/{id}', [TaskController::class, 'edit'])->name('Task.edit');
-//Route::post('/tasks/store', [TaskController::class, 'store'])->name('Task.store');
-//Route::put('/tasks/update/{id}', [TaskController::class, 'update'])->name('Task.update');
-//Route::delete('/tasks/delete/{id}', [TaskController::class, 'destroy'])->name('Task.delete');
+Route::get('/tasks/index', [TaskController::class, 'index'])->name('Task.index');
+Route::get('/tasks/create', [TaskController::class, 'create'])->name('Task.create');
+Route::get('/tasks/edit/{id}', [TaskController::class, 'edit'])->name('Task.edit');
+Route::post('/tasks/store', [TaskController::class, 'store'])->name('Task.store');
+Route::put('/tasks/update/{id}', [TaskController::class, 'update'])->name('Task.update');
+Route::delete('/tasks/delete/{id}', [TaskController::class, 'destroy'])->name('Task.delete');
 
 Route::get('/', function () {
     return view('welcome');

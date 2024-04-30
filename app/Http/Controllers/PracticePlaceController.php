@@ -84,7 +84,7 @@ class PracticePlaceController extends Controller
 
         $practicePlace->update($validatedData);
 
-        return redirect()->route('dashboard')->with('success', 'Место практики успешно обновлено');
+        return redirect()->route('PracticePlace.index')->with('success', 'Место практики успешно обновлено');
     }
 
     /**
