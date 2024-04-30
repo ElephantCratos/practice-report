@@ -19,7 +19,7 @@ class TroublesController extends Controller
         $score = Score::OrderBy('id')
             ->get();
 
-       return view('Troubles.show',compact([
+       return view('trouble/Troubles',compact([
            'trouble', 'score'
        ]));
     }
