@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('end_date');
             $table->string('order_number');
             $table->date('order_date');
+            $table->foreignId('group_id')->references('id')->on('groups');
             $table->foreignId('practice_head_ugrasu_id')->references('id')->on('users');
             $table->foreignId('practice_head_enterprice_id')->references('id')->on('users');
             $table->foreignId('practice_sort_id')->references('id')->on('practice_sort');
@@ -25,9 +26,6 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('groups', function (Blueprint $tableGroup) {
-            $tableGroup->foreignId('practice_id')->nullable()->references('id')->on('practices');
-        });
     }
 
     /**
