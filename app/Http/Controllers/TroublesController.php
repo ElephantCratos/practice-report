@@ -19,7 +19,7 @@ class TroublesController extends Controller
         $score = Score::OrderBy('id')
             ->get();
 
-       return view('Troubles.show',compact([
+       return view('trouble/Troubles',compact([
            'trouble', 'score'
        ]));
     }
@@ -29,7 +29,12 @@ class TroublesController extends Controller
      */
     public function create()
     {
-       return view('Troubles.create');
+        $score = Score::OrderBy('id')
+            ->get();
+        
+       return view('trouble/TroublesCreate',compact([
+           'score'
+       ]));
     }
 
     /**
@@ -39,7 +44,7 @@ class TroublesController extends Controller
 {
     $validatedData = $request->validate([
         'description' => 'required|string',
-        'score_id' => 'required|exists:score,id',
+        'score_id' => 'required|integer',
     ]);
 
     $trouble = Troubles::create($validatedData);
@@ -61,7 +66,9 @@ class TroublesController extends Controller
     public function edit($id)
     {
         $trouble = Troubles::findOrFail($id);
-        return view('Troubles.edit', compact('trouble'));
+        $score = Score::OrderBy('id')
+            ->get();
+        return view('trouble/TroublesEdit', compact('trouble', 'score'));
     }
 
     /**

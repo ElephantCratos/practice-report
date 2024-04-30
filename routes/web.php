@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TroublesController;
 
 use App\Http\Controllers\Controller;
 
@@ -26,6 +27,14 @@ use App\Http\Controllers\VolumeController;
 //Route::post('/institutes/store', [InstitutController::class, 'store'])->name('Institut.store');
 //Route::put('/institutes/update/{id}', [InstitutController::class, 'update'])->name('Institut.update');
 //Route::delete('/institutes/delete/{id}', [InstitutController::class, 'destroy'])->name('Institut.delete');
+
+// TroublesController routes
+Route::get('/troubles', [TroublesController::class, 'index'])->name('Troubles.show');
+Route::get('/troubles/edit/{id}', [TroublesController::class, 'edit'])->name('Troubles.edit');
+Route::get('/troubles/create', [TroublesController::class, 'create'])->name('Troubles.create');
+Route::post('/troubles/store', [TroublesController::class, 'store'])->name('Troubles.store');
+Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name('Troubles.update');
+Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
 
 // GroupController routes
 //Route::get('/groups/index', [GroupController::class, 'index'])->name('Group.index');
@@ -110,7 +119,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.delete');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 require __DIR__.'/auth.php';
