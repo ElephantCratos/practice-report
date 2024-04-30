@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
+
         Schema::create('score', function (Blueprint $table) {
             $table->id();
-            $table->string('description');
-            $table->string('name', 255);
+            $table->string('name');
         });
+
 
         Schema::create('troubles', function (Blueprint $table) {
             $table->id();
@@ -23,11 +24,13 @@ return new class extends Migration
             $table->foreignId('score_id')->references('id')->on('score');
         });
 
+
         Schema::create('volume', function (Blueprint $table) {
             $table->id();
             $table->string('description');
             $table->foreignId('score_id')->references('id')->on('score');
         });
+
 
         Schema::create('traits', function (Blueprint $table) {
             $table->id();
@@ -36,22 +39,30 @@ return new class extends Migration
         });
 
 
+        //Поменять unsignedBigInt на foreignId как появятся соответствующие модели и миграции
         Schema::create('student_practice', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('practice_id');
-            $table->unsignedBigInteger('student_id');
-            $table->boolean('paid')->default(false);
-            $table->unsignedBigInteger('contract_type_id');
-            $table->unsignedBigInteger('practice_head_organization_id');
-            $table->foreignId('volume_id')->references('id')->on('volume');
-            $table->foreignId('traits_id')->references('id')->on('traits');
-            $table->timestamps();
 
-            //топ тело топ лицо
+            $table->foreignId('student_id')->references('id') ->on('users');
+
+            $table->boolean('paid')->default(false);
+
+            $table->unsignedBigInteger('contract_type_id');
+
+            $table->foreignId('practice_head_organization_id')->references('id') ->on('users');
+
+            $table->foreignId('volume_id')->references('id')->on('volume');
+
+            $table->foreignId('traits_id')->references('id')->on('traits');
+
             $table->foreignId('trouble_id')->references('id')->on('troubles');
+
             $table->foreignId('score_id')->references('id')->on('score');
 
+            $table->timestamps();
 
+            
         });
 
         Schema::create('tasks', function (Blueprint $table) {
@@ -68,8 +79,8 @@ return new class extends Migration
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
         });
 
-        
-        
+
+
     }
 
     /**
