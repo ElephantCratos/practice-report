@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Practice extends Model
 {
     use HasFactory;
+
+    protected $fillable =
+        [
+
+        ];
+
+    public function places()
+    {
+        return $this->belongsToMany(Practice::class);
+    }
 }

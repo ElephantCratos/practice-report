@@ -5,13 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PracticeSort extends Model
+class PracticePlace extends Model
 {
     use HasFactory;
 
-    protected $table = 'practice_sort';
+    protected $table = 'practice_places';
 
     protected $fillable = [
         'name',
+        'address'
     ];
+    public function practices()
+    {
+        return $this->belongsToMany(Practice::class);
+    }
 }
