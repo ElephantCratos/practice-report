@@ -41,7 +41,7 @@ return new class extends Migration
         //Поменять unsignedBigInt на foreignId как появятся соответствующие модели и миграции
         Schema::create('student_practice', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('practice_id');
+
 
             $table->foreignId('student_id')->references('id') ->on('users');
 

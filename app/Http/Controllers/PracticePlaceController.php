@@ -9,7 +9,7 @@ class PracticePlaceController extends Controller
 {
     public function index()
     {
-        
+
         $practice_places = PracticePlace::OrderBy('id')
             ->get();
 
@@ -17,7 +17,7 @@ class PracticePlaceController extends Controller
        return view('practiceplace/Practice_Place',compact([
            'practice_places'
        ]));
-    }    
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -26,7 +26,7 @@ class PracticePlaceController extends Controller
 
         $practice_places = PracticePlace::OrderBy('id')
             ->get();
-        
+
         return view('practicePlace/Practice_placeCreate',compact([
             'practice_places'
         ]));
@@ -67,7 +67,7 @@ class PracticePlaceController extends Controller
     public function edit($id)
     {
         $practice_places = PracticePlace::findOrFail($id);
-        return view('practicePlace/Practice_placeCreate',compact([
+        return view('practicePlace/Practice_placeEdit',compact([
             'practice_places'
         ]));
     }
@@ -97,6 +97,6 @@ class PracticePlaceController extends Controller
         $practicePlace = PracticePlace::findOrFail($id);
         $practicePlace->delete();
 
-        return redirect()->route('') ->with('success', 'Место практики было успешно удалено.');
+        return redirect()->route('PracticePlace.index') ->with('success', 'Место практики было успешно удалено.');
     }
 }
