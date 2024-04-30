@@ -9,6 +9,8 @@ class TrainingDirection extends Model
 {
     use HasFactory;
 
+    protected $table = 'training_directions';
+
     protected $fillable = [
         'name',
         'head_OPOP_id',
@@ -24,6 +26,5 @@ class TrainingDirection extends Model
     {
         return $this->hasMany(Group::class);
     }
-
 
 }
