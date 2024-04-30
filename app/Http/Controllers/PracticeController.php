@@ -30,7 +30,7 @@ class PracticeController extends Controller
         $practicePlaces = PracticePlace::all();
         $groups = Group::all();
 
-        return view('practice.create', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
+        return view('practice/PracticeCreate', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
     }
 
     public function store(Request $request)
@@ -67,7 +67,7 @@ class PracticeController extends Controller
 
         $practiceNew->places()->attach($practice_places);
 
-        return redirect()->route('dashboard')->with('success', 'Практика успешно создана!');
+        return redirect()->route('Practice.index')->with('success', 'Практика успешно создана!');
     }
 
     public function edit($id)
@@ -81,7 +81,7 @@ class PracticeController extends Controller
         $groups = Group::all();
 
         $practice = Practice::findOrFail($id);
-        return view('practice.edit',compact(['practice', 'practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
+        return view('practice/PracticeEdit',compact(['practice', 'practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
     }
 
     public function update($id, Request $request)
@@ -103,7 +103,7 @@ class PracticeController extends Controller
 
         $practice->update($validatedData);
 
-        return redirect()->route('dashboard')->with('success', 'Практика успешно обновлена!');
+        return redirect()->route('Practice.index')->with('success', 'Практика успешно обновлена!');
     }
 
     public function destroy($id)
@@ -111,6 +111,6 @@ class PracticeController extends Controller
         $practice = Practice::findOrFail($id);
         $practice->delete();
 
-        return redirect()->route('') ->with('success', 'Место практики было успешно удалено.');
+        return redirect()->route('Practice.index')->with('success', 'Место практики было успешно удалено.');
     }
 }
