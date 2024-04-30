@@ -9,15 +9,27 @@ class PracticePlaceController extends Controller
 {
     public function index()
     {
-        //
-    }
+        
+        $practice_places = PracticePlace::OrderBy('id')
+            ->get();
+
+        //dd($practice_places);
+       return view('practiceplace/Practice_Place',compact([
+           'practice_places'
+       ]));
+    }    
 
     /**
      * Show the form for creating a new resource.
      */
     public function create(){
 
-        return view('');
+        $practice_places = PracticePlace::OrderBy('id')
+            ->get();
+        
+        return view('practicePlace/Practice_placeCreate',compact([
+            'practice_places'
+        ]));
     }
 
     /**
@@ -25,6 +37,7 @@ class PracticePlaceController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
         $validatedData = $request -> validate([
             'name' => 'required|min:10',
             'address' => 'required|min:10|string'
@@ -35,7 +48,7 @@ class PracticePlaceController extends Controller
             'address' => $validatedData['address']
         ]);
 
-        return redirect()->route('')->with('success', 'Новое место практики успешно добавлено')
+        return redirect()->route('PracticePlace.index')->with('success', 'Новое место практики успешно добавлено');
     }
 
     /**
@@ -51,8 +64,10 @@ class PracticePlaceController extends Controller
      */
     public function edit($id)
     {
-        $practicePlace = PracticePlace::findOrFail($id);
-        return view('', compact('practicePlace'));
+        $practice_places = PracticePlace::findOrFail($id);
+        return view('practicePlace/Practice_placeCreate',compact([
+            'practice_places'
+        ]));
     }
 
     /**
