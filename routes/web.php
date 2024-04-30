@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TroublesController;
+use App\Http\Controllers\TraitsController;
 
 // GroupController routes
 Route::get('/groups', 'GroupController@index');
@@ -34,11 +35,12 @@ Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name
 Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
 
 // TraitsController routes
-Route::get('/traits', 'TraitsController@index');
-Route::get('/traits/{id}', 'TraitsController@show');
-Route::post('/traits', 'TraitsController@store');
-Route::put('/traits/{id}', 'TraitsController@update');
-Route::delete('/traits/{id}', 'TraitsController@destroy');
+Route::get('/traits', [TraitsController::class, 'index'])->name('Traits.show');
+Route::get('/traits/edit/{id}', [TraitsController::class, 'edit'])->name('Traits.edit');
+Route::get('/traits/create', [TraitsController::class, 'create'])->name('Traits.create');
+Route::post('/traits/store', [TraitsController::class, 'store'])->name('Traits.store');
+Route::put('/traits/update/{id}', [TraitsController::class, 'update'])->name('Traits.update');
+Route::delete('/traits/delete/{id}', [TraitsController::class, 'destroy'])->name('Traits.delete');
 
 // TaskController routes
 Route::get('/tasks', 'TaskController@index');
