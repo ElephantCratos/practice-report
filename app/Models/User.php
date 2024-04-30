@@ -20,6 +20,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'full_name',
+        'group_id'
+
     ];
 
     /**
@@ -31,6 +34,12 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
+
 
     /**
      * Get the attributes that should be cast.
