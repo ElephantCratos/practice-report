@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TroublesController;
+
 
 use App\Http\Controllers\Controller;
 
@@ -76,13 +76,6 @@ Route::delete('/practice-places/delete/{id}', [PracticePlaceController::class, '
 //Route::put('/practice-students/update/{id}', 'PracticeStudentController::class, 'update'])->name('PracticeStudent.update');
 //Route::delete('/practice-students/delete/{id}', 'PracticeStudentController::class, 'destroy'])->name('PracticeStudent.delete');
 
-// TroublesController routes
-Route::get('/troubles/index', [TroublesController::class, 'index'])->name('Troubles.index');
-Route::get('/troubles/create', [TroublesController::class, 'create'])->name('Troubles.create');
-Route::get('/troubles/edit/{id}', [TroublesController::class, 'edit'])->name('Troubles.edit');
-Route::post('/troubles/store', [TroublesController::class, 'store'])->name('Troubles.store');
-Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name('Troubles.update');
-Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
 
 // TraitsController routes
 //Route::get('/traits/index', [TraitsController::class, 'index'])->name('Traits.index');
