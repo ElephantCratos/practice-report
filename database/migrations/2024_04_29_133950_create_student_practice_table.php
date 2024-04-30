@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->foreignId('score_id')->references('id')->on('score');
+            $table->timestamps();
         });
 
 
@@ -25,6 +26,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->foreignId('score_id')->references('id')->on('score');
+            $table->timestamps();
         });
 
 
@@ -32,6 +34,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->foreignId('score_id')->references('id')->on('score');
+            $table->timestamps();
         });
 
 
@@ -66,6 +69,7 @@ return new class extends Migration
             $table->string('description');
             $table->date('date');
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
+            $table->timestamps();
 
         });
 
@@ -73,6 +77,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
+            $table->timestamps();
         });
 
 

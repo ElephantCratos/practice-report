@@ -8,6 +8,6 @@
     "\\database\\migrations",
     "\\database\\seeders"
   ],
-  "SelectedNode": "\\database\\seeders\\GroupsSeeder.php",
+  "SelectedNode": "\\app\\Models\\Volume.php",
   "PreviewInSolutionExplorer": false
 }
