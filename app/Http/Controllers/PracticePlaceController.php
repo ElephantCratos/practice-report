@@ -35,7 +35,7 @@ class PracticePlaceController extends Controller
             'address' => $validatedData['address']
         ]);
 
-        return redirect()->route('')->with('success', 'Новое место практики успешно добавлено')
+        return redirect()->route('')->with('success', 'Новое место практики успешно добавлено');
     }
 
     /**

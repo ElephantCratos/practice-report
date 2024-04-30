@@ -54,9 +54,9 @@ Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->
 
 // PracticeController routes
 Route::get('/practices/index', [PracticeController::class, 'index'])->name('Practice.index');
-//Route::get('/practices/create', [PracticeController::class, 'create'])->name('Practice.create');
+Route::get('/practices/create', [PracticeController::class, 'create'])->name('Practice.create');
 //Route::get('/practices/edit/{id}', [PracticeController::class, 'edit'])->name('Practice.edit');
-//Route::post('/practices/store', [PracticeController::class, 'store'])->name('Practice.store');
+Route::post('/practices/store', [PracticeController::class, 'store'])->name('Practice.store');
 //Route::put('/practices/update/{id}', [PracticeController::class, 'update'])->name('Practice.update');
 //Route::delete('/practices/delete/{id}', [PracticeController::class, 'destroy'])->name('Practice.delete');
 

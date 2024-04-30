@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Group;
 use App\Models\Practice;
+use App\Models\PracticePlace;
+use App\Models\PracticeType;
+use App\Models\PracticeSort;
 use Illuminate\Http\Request;
 
 class PracticeController extends Controller
@@ -17,11 +22,20 @@ class PracticeController extends Controller
 
     public function create()
     {
-        return view('practice.create');
+        //Надо рефакторить по мере появления ролевой политики
+        $users = User::all();
+
+        $practiceTypes = PracticeType::all();
+        $practiceSorts = PracticeSort::all();
+        $practicePlaces = PracticePlace::all();
+        $groups = Group::all();
+
+        return view('practice.create', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
     }
 
     public function store(Request $request)
     {
+
         $validatedData =$request->validate([
             'practice_name' => 'required|string|min:10',
             'start_date' => 'date',
@@ -33,9 +47,10 @@ class PracticeController extends Controller
             'practice_head_enterprice_id' => 'required',
             'practice_sort_id' => 'required',
             'practice_type_id' => 'required',
+            '$practicePlaces' => 'required|array'
         ]);
 
-        Practice::create([
+        $practiceNew = Practice::create([
             'practice_name' => $validatedData['practice_name'],
             'start_date' => $validatedData['start_date'],
             'end_date' => $validatedData['end_date'],
@@ -48,13 +63,17 @@ class PracticeController extends Controller
             'practice_type_id' => $validatedData['practice_type_id'],
         ]);
 
-        return redirect()->route('')->with('success', 'Практика успешно создана!');
+        $practice_places = PracticePlace::whereIn('id', $request->input('$practicePlaces', []))->get();
+
+        $practiceNew->places()->attach($practice_places);
+
+        return redirect()->route('dashboard')->with('success', 'Практика успешно создана!');
     }
 
     public function edit($id)
     {
         $practice = Practice::findOrFail($id);
-        return view('practice.edit',compact(['practice']);
+        return view('practice.edit',compact(['practice']));
     }
 
     public function update($id, Request $request)
