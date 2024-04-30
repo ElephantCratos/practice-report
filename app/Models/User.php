@@ -40,6 +40,25 @@ class User extends Authenticatable
         return $this->belongsTo(Group::class);
     }
 
+    public function student_practice()
+    {
+        return $this->belongsTo(StudentPractice::class);
+    }
+
+    public function practiceHeadUgrasu()
+    {
+        return $this->hasOne(Practice::class, 'practice_head_ugrasu_id');
+    }
+
+    public function practiceHeadEnterprice()
+    {
+        return $this->hasOne(Practice::class, 'practice_head_enterprise_id');
+    }
+
+
+
+
+
 
     /**
      * Get the attributes that should be cast.

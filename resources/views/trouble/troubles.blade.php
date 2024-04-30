@@ -26,6 +26,7 @@
                                     @method('DELETE')
                                     <button type="submit" class="text-blue-500 underline">Удалить</button>
                                 </form>
+
                             </td>
                         </tr>
                         @endforeach
@@ -34,6 +35,7 @@
                 <div class="mt-4">
                     <a href="{{ route('Troubles.create') }}"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded">Добавить новый блок</button></a>
                 </div>
+
             </div>
         </div>
     </div>
