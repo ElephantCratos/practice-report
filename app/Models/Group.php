@@ -13,7 +13,7 @@ class Group extends Model
 
     protected $fillable = [
         'name',
-        'cource_id',
+        'course_id',
         'training_direction_id'
     ];
 
