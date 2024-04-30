@@ -8,19 +8,16 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Controller;
 
-use App\Http\Controllers\InstitutController;
+use App\Http\Controllers\InstituteController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\TrainingDirectionController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PracticePlaceController;
-
-
-
 //use App\Http\Controllers\PracticeStudentController;
 use App\Http\Controllers\TroublesController;
 use App\Http\Controllers\TraitsController;
 //use App\Http\Controllers\ReprimandController;
-//use App\Http\Controllers\TaskController;
+use App\Http\Controllers\TaskController;
 //use App\Http\Controllers\VolumeController;
 
 
