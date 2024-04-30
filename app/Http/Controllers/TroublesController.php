@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Troubles;
+use App\Models\Score;
 
 class TroublesController extends Controller
 {
@@ -15,8 +16,11 @@ class TroublesController extends Controller
         $trouble = Troubles::OrderBy('score_id')
             ->get();
 
+        $score = Score::OrderBy('id')
+            ->get();
+
        return view('Troubles.show',compact([
-           'trouble'
+           'trouble', 'score'
        ]));
     }
 
