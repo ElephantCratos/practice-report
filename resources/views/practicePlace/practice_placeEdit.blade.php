@@ -1,7 +1,7 @@
 <x-app-layout>
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8 m-auto">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
-            <form method="POST" action="{{ route('Traits.update', $trait->id) }}" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('PracticePlace.edit', $practice_places->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                <div class="mb-4">
