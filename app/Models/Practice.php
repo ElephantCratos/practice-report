@@ -25,13 +25,9 @@ class Practice extends Model
 
     public function places()
     {
-        return $this->belongsToMany(Practice::class);
+        return $this->belongsToMany(PracticePlace::class, 'practices_practice_places', 'practice_id','practice_places_id' );
     }
 
-    public function head_ugrasu()
-    {
-        return $this->hasOne(User::class);
-    }
 
     public function head_ugrasu()
     {
@@ -40,7 +36,7 @@ class Practice extends Model
 
     public function head_enterprise()
     {
-        return $this->belongsTo(User::class, 'practice_head_enterprise_id');
+        return $this->belongsTo(User::class, 'practice_head_enterprice_id');
     }
 
     public function sort()

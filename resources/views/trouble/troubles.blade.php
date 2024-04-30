@@ -33,6 +33,7 @@
 </table>
 <div class="mt-4">
     <a href="{{ route('Troubles.create') }}" class="text-green-500 underline">Добавить новый блок</a>
+    <a href="{{ route('Practice.index') }}" class="text-green-500 underline">Добавить новый блок</a>
 </div>
             </div>
         </div>

@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
 //use App\Http\Controllers\InstitutController;
 //use App\Http\Controllers\GroupController;
 //use App\Http\Controllers\TrainingDirectionController;
-//use App\Http\Controllers\PracticeController;
+use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PracticePlaceController;
 //use App\Http\Controllers\PracticeStudentController;
 use App\Http\Controllers\TroublesController;
@@ -53,7 +53,7 @@ Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->
 //Route::delete('/training-directions/delete/{id}', [TrainingDirectionController::class, 'destroy'])->name('TrainingDirection.delete');
 
 // PracticeController routes
-//Route::get('/practices/index', [PracticeController::class, 'index'])->name('Practice.index');
+Route::get('/practices/index', [PracticeController::class, 'index'])->name('Practice.index');
 //Route::get('/practices/create', [PracticeController::class, 'create'])->name('Practice.create');
 //Route::get('/practices/edit/{id}', [PracticeController::class, 'edit'])->name('Practice.edit');
 //Route::post('/practices/store', [PracticeController::class, 'store'])->name('Practice.store');
@@ -69,7 +69,7 @@ Route::put('/practice-places/update/{id}', [PracticePlaceController::class, 'upd
 Route::delete('/practice-places/delete/{id}', [PracticePlaceController::class, 'destroy'])->name('PracticePlace.delete');
 
 // PracticeStudentController routes
-//Route::get('/practice-students/index', 'PracticeStudentController::class, 'index'])->name('PracticeStudent.index');
+//Route::get('/practice-students/index', [PracticeStudentController::class, 'index'])->name('PracticeStudent.index');
 //Route::get('/practice-students/create', 'PracticeStudentController::class, 'create'])->name('PracticeStudent.create');
 //Route::get('/practice-students/edit/{id}', 'PracticeStudentController::class, 'edit'])->name('PracticeStudent.edit');
 //Route::post('/practice-students/store', 'PracticeStudentController::class, 'store'])->name('PracticeStudent.store');
