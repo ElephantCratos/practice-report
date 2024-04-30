@@ -72,8 +72,16 @@ class PracticeController extends Controller
 
     public function edit($id)
     {
+        //Надо рефакторить по мере появления ролевой политики
+        $users = User::all();
+
+        $practiceTypes = PracticeType::all();
+        $practiceSorts = PracticeSort::all();
+        $practicePlaces = PracticePlace::all();
+        $groups = Group::all();
+
         $practice = Practice::findOrFail($id);
-        return view('practice.edit',compact(['practice']));
+        return view('practice.edit',compact(['practice', 'practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
     }
 
     public function update($id, Request $request)
