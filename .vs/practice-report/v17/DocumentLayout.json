@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\OSPanel\\domains\\practice-report\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Models\\Volume.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Models\\Volume.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TroublesController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\TroublesController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\seeders\\VolumeSeeder.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -15,20 +15,32 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\seeders\\DatabaseSeeder.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000001_create_cache_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\0001_01_01_000001_create_cache_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000002_create_jobs_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\0001_01_01_000002_create_jobs_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_120027_create_instituts_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\2024_04_29_120027_create_instituts_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_111838_create_permission_tables.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\2024_04_29_111838_create_permission_tables.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_120027_create_instituts_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\2024_04_29_120027_create_instituts_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Models\\Troubles.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Models\\Troubles.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\2024_04_29_133950_create_student_practice_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Models\\Volume.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Models\\Volume.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000001_create_cache_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\0001_01_01_000001_create_cache_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000002_create_jobs_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\0001_01_01_000002_create_jobs_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_120420_create_users_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -57,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_122517_score.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\2024_04_29_122517_score.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\2024_04_29_133950_create_student_practice_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_30_081441_create_practices_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -130,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,33 +146,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "0001_01_01_000001_create_cache_table.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000001_create_cache_table.php",
-              "RelativeDocumentMoniker": "database\\migrations\\0001_01_01_000001_create_cache_table.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000001_create_cache_table.php",
-              "RelativeToolTip": "database\\migrations\\0001_01_01_000001_create_cache_table.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "TroublesController.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TroublesController.php",
+              "RelativeDocumentMoniker": "app\\Http\\Controllers\\TroublesController.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TroublesController.php",
+              "RelativeToolTip": "app\\Http\\Controllers\\TroublesController.php",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAFcAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:41:03.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "0001_01_01_000002_create_jobs_table.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000002_create_jobs_table.php",
-              "RelativeDocumentMoniker": "database\\migrations\\0001_01_01_000002_create_jobs_table.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000002_create_jobs_table.php",
-              "RelativeToolTip": "database\\migrations\\0001_01_01_000002_create_jobs_table.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:41:02.564Z",
+              "WhenOpened": "2024-04-30T10:06:21.87Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Troubles.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\Troubles.php",
+              "RelativeDocumentMoniker": "app\\Models\\Troubles.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\Troubles.php",
+              "RelativeToolTip": "app\\Models\\Troubles.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-04-30T10:05:05.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "2024_04_29_111838_create_permission_tables.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_111838_create_permission_tables.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_111838_create_permission_tables.php",
@@ -177,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "2024_04_29_120027_create_instituts_table.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_120027_create_instituts_table.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_120027_create_instituts_table.php",
@@ -209,27 +217,64 @@
               "RelativeDocumentMoniker": "database\\seeders\\VolumeSeeder.php",
               "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\seeders\\VolumeSeeder.php",
               "RelativeToolTip": "database\\seeders\\VolumeSeeder.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
               "WhenOpened": "2024-04-30T09:21:17.173Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "2024_04_29_133950_create_student_practice_table.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
+              "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
+              "RelativeToolTip": "database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABUAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-04-30T09:03:35.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "0001_01_01_000002_create_jobs_table.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000002_create_jobs_table.php",
+              "RelativeDocumentMoniker": "database\\migrations\\0001_01_01_000002_create_jobs_table.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000002_create_jobs_table.php",
+              "RelativeToolTip": "database\\migrations\\0001_01_01_000002_create_jobs_table.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-04-30T09:41:02.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Volume.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\Volume.php",
               "RelativeDocumentMoniker": "app\\Models\\Volume.php",
               "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\Volume.php",
               "RelativeToolTip": "app\\Models\\Volume.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAASAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
               "WhenOpened": "2024-04-30T09:22:23.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
+              "Title": "0001_01_01_000001_create_cache_table.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000001_create_cache_table.php",
+              "RelativeDocumentMoniker": "database\\migrations\\0001_01_01_000001_create_cache_table.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\0001_01_01_000001_create_cache_table.php",
+              "RelativeToolTip": "database\\migrations\\0001_01_01_000001_create_cache_table.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-04-30T09:41:03.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "2024_04_29_122043_practice_sort.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_122043_practice_sort.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_122043_practice_sort.php",
@@ -237,12 +282,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_29_122043_practice_sort.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:40:35.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:40:35.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "2024_04_29_122420_practice_type.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_122420_practice_type.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_122420_practice_type.php",
@@ -250,12 +294,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_29_122420_practice_type.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:40:34.892Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:40:34.892Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "2024_04_29_122442_contract_type.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_122442_contract_type.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_122442_contract_type.php",
@@ -263,12 +306,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_29_122442_contract_type.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:40:33.884Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:40:33.884Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "2024_04_29_120440_create_training_directions_table.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_120440_create_training_directions_table.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_120440_create_training_directions_table.php",
@@ -276,12 +318,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_29_120440_create_training_directions_table.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-29T14:48:15.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T14:48:15.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "2024_04_29_120430_create_groups_table.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_120430_create_groups_table.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_120430_create_groups_table.php",
@@ -289,12 +330,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_29_120430_create_groups_table.php",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAIAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-29T14:47:53.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T14:47:53.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "2024_04_29_120420_create_users_table.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_120420_create_users_table.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_120420_create_users_table.php",
@@ -302,12 +342,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_29_120420_create_users_table.php",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-29T14:22:22.945Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T14:22:22.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "2024_04_29_122517_score.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_122517_score.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_122517_score.php",
@@ -315,12 +354,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_29_122517_score.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:40:32.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:40:32.212Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "2024_04_30_081441_create_practices_table.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_30_081441_create_practices_table.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_30_081441_create_practices_table.php",
@@ -328,12 +366,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_30_081441_create_practices_table.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:40:27.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:40:27.117Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "2024_04_30_081643_create_practice_places.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_30_081643_create_practice_places.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_30_081643_create_practice_places.php",
@@ -341,12 +378,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_30_081643_create_practice_places.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:40:24.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:40:24.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "2024_04_30_081724_create_practices_practice_places.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_30_081724_create_practices_practice_places.php",
               "RelativeDocumentMoniker": "database\\migrations\\2024_04_30_081724_create_practices_practice_places.php",
@@ -354,12 +390,11 @@
               "RelativeToolTip": "database\\migrations\\2024_04_30_081724_create_practices_practice_places.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:40:19.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:40:19.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "PracticeTypeSeeder.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\seeders\\PracticeTypeSeeder.php",
               "RelativeDocumentMoniker": "database\\seeders\\PracticeTypeSeeder.php",
@@ -367,25 +402,11 @@
               "RelativeToolTip": "database\\seeders\\PracticeTypeSeeder.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:27:38.615Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:27:38.615Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "2024_04_29_133950_create_student_practice_table.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "RelativeToolTip": "database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAE8AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:03:35.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "PracticeType.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\PracticeType.php",
               "RelativeDocumentMoniker": "app\\Models\\PracticeType.php",
@@ -393,12 +414,11 @@
               "RelativeToolTip": "app\\Models\\PracticeType.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-30T09:22:53.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T09:22:53.034Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "PracticeSort.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\PracticeSort.php",
               "RelativeDocumentMoniker": "app\\Models\\PracticeSort.php",
@@ -410,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Group.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\Group.php",
               "RelativeDocumentMoniker": "app\\Models\\Group.php",
@@ -422,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "UserFactory.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\factories\\UserFactory.php",
               "RelativeDocumentMoniker": "database\\factories\\UserFactory.php",
@@ -434,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "GroupsSeeder.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\seeders\\GroupsSeeder.php",
               "RelativeDocumentMoniker": "database\\seeders\\GroupsSeeder.php",
@@ -442,12 +462,11 @@
               "RelativeToolTip": "database\\seeders\\GroupsSeeder.php",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-04-29T14:21:26.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T14:21:26.451Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "UsersSeeder.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\seeders\\UsersSeeder.php",
               "RelativeDocumentMoniker": "database\\seeders\\UsersSeeder.php",
@@ -459,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "TrainingDirectionsSeeder.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\seeders\\TrainingDirectionsSeeder.php",
               "RelativeDocumentMoniker": "database\\seeders\\TrainingDirectionsSeeder.php",
@@ -471,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "User.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\User.php",
               "RelativeDocumentMoniker": "app\\Models\\User.php",
@@ -483,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "TrainingDirection.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Models\\TrainingDirection.php",
               "RelativeDocumentMoniker": "app\\Models\\TrainingDirection.php",
@@ -495,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "InstitutsSeeder.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\seeders\\InstitutsSeeder.php",
               "RelativeDocumentMoniker": "database\\seeders\\InstitutsSeeder.php",
@@ -507,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "CoursesSeeder.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\seeders\\CoursesSeeder.php",
               "RelativeDocumentMoniker": "database\\seeders\\CoursesSeeder.php",
