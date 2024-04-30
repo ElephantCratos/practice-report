@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TroublesController;
+use App\Http\Controllers\TraitsController;
 
 use App\Http\Controllers\Controller;
 
@@ -36,6 +37,14 @@ Route::post('/troubles/store', [TroublesController::class, 'store'])->name('Trou
 Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name('Troubles.update');
 Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
 
+// TraitsController routes
+Route::get('/traits', [TraitsController::class, 'index'])->name('Traits.show');
+Route::get('/traits/edit/{id}', [TraitsController::class, 'edit'])->name('Traits.edit');
+Route::get('/traits/create', [TraitsController::class, 'create'])->name('Traits.create');
+Route::post('/traits/store', [TraitsController::class, 'store'])->name('Traits.store');
+Route::put('/traits/update/{id}', [TraitsController::class, 'update'])->name('Traits.update');
+Route::delete('/traits/delete/{id}', [TraitsController::class, 'destroy'])->name('Traits.delete');
+
 // GroupController routes
 //Route::get('/groups/index', [GroupController::class, 'index'])->name('Group.index');
 //Route::get('/groups/create', [GroupController::class, 'create'])->name('Group.create');
@@ -43,6 +52,7 @@ Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->
 //Route::post('/groups/store', [GroupController::class, 'store'])->name('Group.store');
 //Route::put('/groups/update/{id}', [GroupController::class, 'update'])->name('Group.update');
 //Route::delete('/groups/delete/{id}', [GroupController::class, 'destroy'])->name('Group.delete');
+
 
 // TrainingDirectionController routes
 //Route::get('/training-directions/index', [TrainingDirectionController::class, 'index'])->name('TrainingDirection.index');
@@ -83,14 +93,6 @@ Route::get('/troubles/edit/{id}', [TroublesController::class, 'edit'])->name('Tr
 Route::post('/troubles/store', [TroublesController::class, 'store'])->name('Troubles.store');
 Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name('Troubles.update');
 Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
-
-// TraitsController routes
-//Route::get('/traits/index', [TraitsController::class, 'index'])->name('Traits.index');
-//Route::get('/traits/create', [TraitsController::class, 'create'])->name('Traits.create');
-//Route::get('/traits/edit/{id}', [TraitsController::class, 'edit'])->name('Traits.edit');
-//Route::post('/traits/store', [TraitsController::class, 'store'])->name('Traits.store');
-//Route::put('/traits/update/{id}', [TraitsController::class, 'update'])->name('Traits.update');
-//Route::delete('/traits/delete/{id}', [TraitsController::class, 'destroy'])->name('Traits.delete');
 
 // ReprimandController routes
 //Route::get('/reprimands/index', [ReprimandController::class, 'index'])->name('Reprimand.index');
