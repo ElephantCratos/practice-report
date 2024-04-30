@@ -12,16 +12,13 @@ return new class extends Migration
     public function up(): void
     {
 
-        Schema::create('score', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-        });
 
 
         Schema::create('troubles', function (Blueprint $table) {
             $table->id();
             $table->string('description');
             $table->foreignId('score_id')->references('id')->on('score');
+            $table->timestamps();
         });
 
 
@@ -29,6 +26,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->foreignId('score_id')->references('id')->on('score');
+            $table->timestamps();
         });
 
 
@@ -36,6 +34,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->foreignId('score_id')->references('id')->on('score');
+            $table->timestamps();
         });
 
 
@@ -62,7 +61,7 @@ return new class extends Migration
 
             $table->timestamps();
 
-            
+
         });
 
         Schema::create('tasks', function (Blueprint $table) {
@@ -70,6 +69,7 @@ return new class extends Migration
             $table->string('description');
             $table->date('date');
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
+            $table->timestamps();
 
         });
 
@@ -77,6 +77,7 @@ return new class extends Migration
             $table->id();
             $table->string('description');
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
+            $table->timestamps();
         });
 
 

@@ -23,7 +23,6 @@ return new class extends Migration
             $table->text('name');
             $table->foreignId('course_id')->nullable()->references('id')->on('courses');
 
-
             $table->timestamps();
         });
 
