@@ -15,4 +15,10 @@ class Troubles extends Model
         'description',
         'score_id',
     ];
+
+    public function score()
+    {
+        return $this->belongsTo(Score::class);
+
+    }
 }

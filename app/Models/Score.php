@@ -15,4 +15,9 @@ class Score extends Model
         'id',
         'name',
     ];
+
+    public function troubles()
+    {
+        return $this->hasMany(Troubles::class);
+    }
 }
