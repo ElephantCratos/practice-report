@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TroublesController;
 
 // GroupController routes
 Route::get('/groups', 'GroupController@index');
@@ -25,11 +26,12 @@ Route::put('/training-directions/{id}', 'TrainingDirectionController@update');
 Route::delete('/training-directions/{id}', 'TrainingDirectionController@destroy');
 
 // TroublesController routes
-Route::get('/troubles', 'TroublesController@index');
-Route::get('/troubles/{id}', 'TroublesController@show');
-Route::post('/troubles', 'TroublesController@store');
-Route::put('/troubles/{id}', 'TroublesController@update');
-Route::delete('/troubles/{id}', 'TroublesController@destroy');
+Route::get('/troubles', [TroublesController::class, 'index'])->name('Troubles.show');
+Route::get('/troubles/edit/{id}', [TroublesController::class, 'edit'])->name('Troubles.edit');
+Route::get('/troubles/create', [TroublesController::class, 'create'])->name('Troubles.create');
+Route::post('/troubles/store', [TroublesController::class, 'store'])->name('Troubles.store');
+Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name('Troubles.update');
+Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
 
 // TraitsController routes
 Route::get('/traits', 'TraitsController@index');
