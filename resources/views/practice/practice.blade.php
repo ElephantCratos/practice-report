@@ -1,5 +1,29 @@
 
 <x-app-layout>
+<x-slot name="header">
+    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Practice list') }}
+        </h2>
+    <h3 class="font-semibold text-xl text-gray-800 leading-tight">
+            @if (session('success'))
+        <div class="alert-container">
+            {{ session('success') }}
+        </div>
+    @endif
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+        </h3>
+    </x-slot>
+    <div class="mt-4">
+                    <a href="{{ route('Practice.create') }}"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded">Добавить новый блок</button></a>
+     </div>
 
     @foreach($practice as $practice)
 

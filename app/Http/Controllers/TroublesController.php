@@ -49,7 +49,7 @@ class TroublesController extends Controller
 
     $trouble = Troubles::create($validatedData);
 
-    return redirect()->route('dashboard')->with('success', 'Trouble create successfully.');
+    return redirect()->route('Troubles.index')->with('success', 'Шаблон успешно создан!');
 }
 
     /**
@@ -85,7 +85,7 @@ class TroublesController extends Controller
 
     $trouble->update($validatedData);
 
-    return redirect()->route('dashboard')->with('success', 'Trouble edit successfully.');
+    return redirect()->route('Troubles.index')->with('success', 'Шаблон успешно изменён!');
 }
 
     /**
@@ -96,6 +96,6 @@ class TroublesController extends Controller
     $trouble = Troubles::findOrFail($id);
     $trouble->delete();
 
-    return redirect()->route('dashboard')->with('success', 'Trouble delete successfully.');
+    return redirect()->route('Troubles.index')->with('success', 'Шаблон успешно удалён!');
 }
 }

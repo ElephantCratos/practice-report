@@ -39,8 +39,8 @@ class PracticePlaceController extends Controller
     {
         //dd($request);
         $validatedData = $request -> validate([
-            'name' => 'required|min:10',
-            'address' => 'required|min:10|string'
+            'name' => 'required|min:3',
+            'address' => 'required|min:3|string'
         ]);
 
         PracticePlace::create([
@@ -78,8 +78,8 @@ class PracticePlaceController extends Controller
     public function update($id, Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|min:10',
-            'address' => 'required|string|min:10',
+            'name' => 'required|string|min:3',
+            'address' => 'required|string|min:3',
         ]);
 
         $practicePlace = PracticePlace::findOrFail($id);

@@ -49,7 +49,7 @@ class TraitsController extends Controller
 
     $trait = Traits::create($validatedData);
 
-    return redirect()->route('dashboard')->with('success', 'Trait create successfully.');
+    return redirect()->route('Traits.index')->with('success', 'Шаблон успешно создан!');
     }
 
     /**
@@ -85,7 +85,7 @@ class TraitsController extends Controller
 
     $trait->update($validatedData);
 
-    return redirect()->route('dashboard')->with('success', 'Trait edit successfully.');
+    return redirect()->route('Traits.index')->with('success', 'Шаблон успешно изменён!');
     }
 
     /**
@@ -96,6 +96,6 @@ class TraitsController extends Controller
         $trait = Traits::findOrFail($id);
         $trait->delete();
 
-    return redirect()->route('dashboard')->with('success', 'Trait delete successfully.');
+    return redirect()->route('Traits.index')->with('success', 'Шаблон успешно удалён!');
     }
 }

@@ -1,18 +1,4 @@
 <x-app-layout>
-    @if (session('success'))
-        <div class="alert-container">
-            {{ session('status') }}
-        </div>
-    @endif
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8 m-auto">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
             <form method="POST" action="{{ route('Practice.store') }}" enctype="multipart/form-data">
