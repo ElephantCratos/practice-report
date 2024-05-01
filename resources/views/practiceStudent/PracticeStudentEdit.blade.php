@@ -2,13 +2,13 @@
     <x-slot name="header">
         <h3 class="font-semibold text-xl text-gray-800 leading-tight">
             @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
         </h3>
     </x-slot>
@@ -24,7 +24,7 @@
                     <label for="volume_id"> Объем выполненной работы </label>
                     <select name="volume_id" class="form-control">
                         @foreach($volumes as $volume)
-                            <option value="{{ $volume->id }}" @if($volume->id == $practiceStudent->volume_id) selected="selected" @endif >{{ $volume->description }}</option>
+                        <option value="{{ $volume->id }}" @if($volume->id == $practiceStudent->volume_id) selected="selected" @endif >{{ $volume->description }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -33,7 +33,7 @@
                     <label for="traits_id"> Какие качества были продемонстрированы в ходе работы </label>
                     <select name="traits_id" class="form-control">
                         @foreach($traits as $trait)
-                            <option value="{{ $trait->id }}" @if($trait->id == $practiceStudent->trait_id) selected="selected" @endif >{{ $trait->description }}</option>
+                        <option value="{{ $trait->id }}" @if($trait->id == $practiceStudent->trait_id) selected="selected" @endif >{{ $trait->description }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -42,7 +42,7 @@
                     <label for="trouble_id"> Качества, продемострированные при решение проблем</label>
                     <select name="trouble_id" class="form-control">
                         @foreach($troubles as $trouble)
-                            <option value="{{ $trouble->id }}" @if($trouble->id == $practiceStudent->trouble_id) selected="selected" @endif >{{ $trouble->description }}</option>
+                        <option value="{{ $trouble->id }}" @if($trouble->id == $practiceStudent->trouble_id) selected="selected" @endif >{{ $trouble->description }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -51,7 +51,7 @@
                     <label for="contract_type_id"> Тип контракта</label>
                     <select name="contract_type_id" class="form-control">
                         @foreach($contractTypes as $type)
-                            <option value="{{ $type->id }}" @if($type->id == $practiceStudent->practice_type_id) selected="selected" @endif >{{ $type->name }}</option>
+                        <option value="{{ $type->id }}" @if($type->id == $practiceStudent->practice_type_id) selected="selected" @endif >{{ $type->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -61,19 +61,19 @@
                     <label for="score_id"> Оценка</label>
                     <select name="score_id" class="form-control">
                         @foreach($scores as $score)
-                            <option value="{{ $score->id }}" @if($score->id == $practiceStudent->score_id) selected="selected" @endif >{{ $score->name }}</option>
+                        <option value="{{ $score->id }}" @if($score->id == $practiceStudent->score_id) selected="selected" @endif >{{ $score->name }}</option>
                         @endforeach
                     </select>
                 </div>
 
                 <div class="mb-4">
                     <label for="practice_place"> Место прохождения практики студентом</label>
-                <select name="practice_place" class="form_control">
-                @foreach ($practiceStudent->practice->places as $place)
+                    <select name="practice_place" class="form_control">
+                        @foreach ($practiceStudent->practice->places as $place)
                         <option value="{{$place->id}}" @if($place->id == $practiceStudent->practice_place) selected="selected" @endif > {{ $place->name }} - {{$place->address}} </option>
-                @endforeach
-                </select>
-        </div>
+                        @endforeach
+                    </select>
+                </div>
 
                 <div class="mb-4">
                     <label for="reprimand">Замечания </label>
@@ -81,14 +81,13 @@
                 </div>
 
                 <div class="mb-4">
-                <label><input type="checkbox" name="paid" @if($practiceStudent->paid) checked @endif">Оплачиваемая  практика</label>
+                    <label><input type="checkbox" name="paid" @if($practiceStudent->paid) checked @endif">Оплачиваемая практика</label>
                 </div>
 
                 <div class="mb-4">
                     <label><input type="checkbox" name="isReady" @if($practiceStudent->isReady) checked @endif">Данные актуальны и документ готов к печати</label>
                 </div>
-                    <button class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" type="submit" name="submitForm" class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">Submit</button>
-
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded" type="submit" name="submitForm">Submit</button>
             </form>
         </div>
     </div>

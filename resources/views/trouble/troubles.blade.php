@@ -5,12 +5,12 @@
                 {{ __('Troubles') }}
             </h2>
             <h3 class="font-semibold text-xl text-gray-800 leading-tight">
-            @if (session('success'))
-        <div class="alert-container">
-            {{ session('success') }}
-        </div>
-    @endif
-        </h3>
+                @if (session('success'))
+                <div class="alert-container">
+                    {{ session('success') }}
+                </div>
+                @endif
+            </h3>
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 justify-center items-center " style="display:flex;">
@@ -31,7 +31,7 @@
                                 <form method="POST" action="{{ route('Troubles.delete', $Trouble->id) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="text-blue-500 underline">Удалить</button>
+                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 border border-red-700 rounded">Удалить</button>
                                 </form>
 
                             </td>

@@ -11,7 +11,6 @@ use App\Models\Troubles;
 use App\Models\Score;
 use Illuminate\Http\Request;
 
-
 class StudentPracticeController extends Controller
 {
     public function index()

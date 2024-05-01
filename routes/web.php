@@ -14,7 +14,6 @@ use App\Http\Controllers\PracticePlaceController;
 use App\Http\Controllers\StudentPracticeController;
 use App\Http\Controllers\TroublesController;
 use App\Http\Controllers\TraitsController;
-//use App\Http\Controllers\ReprimandController;
 use App\Http\Controllers\TaskController;
 //use App\Http\Controllers\VolumeController;
 
@@ -82,14 +81,6 @@ Route::get('/troubles/edit/{id}', [TroublesController::class, 'edit'])->name('Tr
 Route::post('/troubles/store', [TroublesController::class, 'store'])->name('Troubles.store');
 Route::put('/troubles/update/{id}', [TroublesController::class, 'update'])->name('Troubles.update');
 Route::delete('/troubles/delete/{id}', [TroublesController::class, 'destroy'])->name('Troubles.delete');
-
-// ReprimandController routes
-//Route::get('/reprimands/index', [ReprimandController::class, 'index'])->name('Reprimand.index');
-//Route::get('/reprimands/create', [ReprimandController::class, 'create'])->name('Reprimand.create');
-//Route::get('/reprimands/edit/{id}', [ReprimandController::class, 'edit'])->name('Reprimand.edit');
-//Route::post('/reprimands/store', [ReprimandController::class, 'store'])->name('Reprimand.store');
-//Route::put('/reprimands/update/{id}', [ReprimandController::class, 'update'])->name('Reprimand.update');
-//Route::delete('/reprimands/delete/{id}', [ReprimandController::class, 'destroy'])->name('Reprimand.delete');
 
 // TaskController routes
 Route::get('/tasks/index', [TaskController::class, 'index'])->name('Task.index');

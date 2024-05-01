@@ -5,12 +5,12 @@
                 {{ __('Traits') }}
             </h2>
             <h3 class="font-semibold text-xl text-gray-800 leading-tight">
-            @if (session('success'))
-        <div class="alert-container">
-            {{ session('success') }}
-        </div>
-    @endif
-        </h3>
+                @if (session('success'))
+                <div class="alert-container">
+                    {{ session('success') }}
+                </div>
+                @endif
+            </h3>
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 justify-center items-center " style="display:flex;">
@@ -27,11 +27,13 @@
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $Trouble->description }}</td>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $Trouble->score->name}}</td>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">
-                                <a href="{{ route('Traits.edit', $Trouble->id) }}" class="text-blue-500 underline">Изменить</a>
+                                <a href="{{ route('Traits.edit', $Trouble->id) }}">
+                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Изменить</button>
+                                </a>
                                 <form method="POST" action="{{ route('Traits.delete', $Trouble->id) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="text-blue-500 underline">Удалить</button>
+                                    <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 border border-red-700 rounded">Удалить</button>
                                 </form>
                             </td>
                         </tr>
