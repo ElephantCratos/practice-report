@@ -37,7 +37,7 @@ class PracticePlaceController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
+
         $validatedData = $request -> validate([
             'name' => 'required|min:3',
             'address' => 'required|min:3|string'
