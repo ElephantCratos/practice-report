@@ -16,6 +16,7 @@ use App\Http\Controllers\TroublesController;
 use App\Http\Controllers\TraitsController;
 use App\Http\Controllers\TaskController;
 //use App\Http\Controllers\VolumeController;
+use App\Http\Controllers\ReportStudentWordController;
 
 
 // InstitutController routes
@@ -103,5 +104,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/PhpWord/{pr_stud_id}',[ReportStudentWordController::class, 'downloadDocx']) -> name('downloadDocx');
 
 require __DIR__.'/auth.php';

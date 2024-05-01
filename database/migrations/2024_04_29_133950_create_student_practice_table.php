@@ -61,7 +61,7 @@ return new class extends Migration
 
             $table->string('reprimand')->nullable();
 
-            $table->foreignId('practice_place')->nullable()->references('id')->on('practice_places');
+
 
             $table->boolean('isReady') -> default(false);
 
@@ -73,7 +73,7 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->date('date');
+            $table->date('date')->format('d-m-y');
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
             $table->timestamps();
 

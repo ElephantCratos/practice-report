@@ -17,6 +17,11 @@ return new class extends Migration
             $table->string('address');
             $table->timestamps();
         });
+
+        Schema::table('student_practice', function (Blueprint $studentTable){
+        $studentTable->foreignId('practice_place')->nullable()->references('id')->on('practice_places');
+    });
+
     }
 
     /**
