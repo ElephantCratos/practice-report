@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Practice;
+use App\Models\StudentPractice;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class ReportStudentWordController extends Controller
 {
 
-    public function downloadDocx(Request $request, $id)
+    public function downloadDocx(Request $request, $pr_stud_id)
     {
-        $practice = Practice::findOrFail($id);
+        $student_practice = StudentPractice::findOrFail($pr_stud_id);
+        $tasks=$student_practice->tasks;
 
         $document = new \PhpOffice\PhpWord\TemplateProcessor('CompletedTemplate.docx');
 
-        $h_pr_ent = explode(" ",$practice->head_enterprise->full_name);
+        $h_pr_ent = explode(" ",$student_practice->practice->head_enterprise->full_name);
 
         $surname = $h_pr_ent[0];
 
@@ -23,7 +24,7 @@ class ReportStudentWordController extends Controller
 
         $h_pr_ent = $surname . " " . $initials;
 
-        $pos_ent = $practice->head_enterprise->position;
+        $pos_ent = $student_practice->practice->head_enterprise->position;
 
 
 
@@ -31,6 +32,29 @@ class ReportStudentWordController extends Controller
             'pos_ent' => $pos_ent)
         );
 
+       
+       $xyi = 'хуй';
+
+       $i =0;
+
+       $size = count($tasks);
+
+       
+       for ($i = 0; $i<$size;$i++)
+       {
+            if($xyi){
+            $document->setValue('row' . $i, $tasks[$i]->description);
+            $newDateFormat = date('d.m.Y', strtotime($tasks[$i]->date));
+            $document->setValue('date' . $i, $newDateFormat);
+            }
+       }
+
+       while($i <= 21)
+       {
+            $document->setValue('row' . $i, ' ');
+            $document->setValue('date' . $i, ' ');
+            $i++;
+       }
 
 
         $document -> saveAs('fish - '.'faggot'.'.docx');

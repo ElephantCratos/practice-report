@@ -73,7 +73,7 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->date('date');
+            $table->date('date')->format('d-m-y');
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
             $table->timestamps();
 

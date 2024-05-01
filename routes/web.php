@@ -114,6 +114,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/PhpWord/{id}',[ReportStudentWordController::class, 'downloadDocx']) -> name('downloadDocx');
+Route::get('/PhpWord/{pr_stud_id}',[ReportStudentWordController::class, 'downloadDocx']) -> name('downloadDocx');
 
 require __DIR__.'/auth.php';
