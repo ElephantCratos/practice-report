@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\StudentPractice;
+use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -32,30 +33,18 @@ class ReportStudentWordController extends Controller
             'pos_ent' => $pos_ent)
         );
 
-       
-       $xyi = 'хуй';
+        $tasks = Task::OrderBy('id')->get();
 
-       $i =0;
+        $document->cloneRow('taskN', count($tasks));
 
-       $size = count($tasks);
+        $i = 1;
 
-       
-       for ($i = 0; $i<$size;$i++)
-       {
-            if($xyi){
-            $document->setValue('row' . $i, $tasks[$i]->description);
-            $newDateFormat = date('d.m.Y', strtotime($tasks[$i]->date));
-            $document->setValue('date' . $i, $newDateFormat);
-            }
-       }
-
-       while($i <= 21)
-       {
-            $document->setValue('row' . $i, ' ');
-            $document->setValue('date' . $i, ' ');
+        foreach($tasks as $task)
+        {
+            $document->setValue('taskN#'.$i, $i);
+            $document->setValue('task#'.$i, $task->description);
             $i++;
-       }
-
+        }
 
         $document -> saveAs('fish - '.'faggot'.'.docx');
 
