@@ -6,19 +6,27 @@
                 @method('PUT')
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Направление</label>
-                    <textarea name="name" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" required>{{ $trainingDirection->name }} </textarea>
+                    <input type="text" name="name" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-2/3" value="{{ $trainingDirection->name }}" required></input>
                 </div>
-                <select name="institute_id" class="form-control">
-                    @foreach($institute as $Institute)
-                    <option value="{{ $Institute->id }}" @if($Institute->name == $trainingDirection->institute->name) selected @endif>{{ $Institute->name }}</option>
-                    @endforeach
-                </select>
-                <select name="head_OPOP_id" class="form-control">
-                    @foreach($head_OPOP as $User)
-                    <option value="{{ $User->id }}" @if($User->full_name == $trainingDirection->users->full_name) selected @endif>{{ $User->name }}</option>
-                    @endforeach
-                </select>
-                <button class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" type="submit" name="submitForm" class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">Submit</button>
+                <div class="mb-4 flex">
+                    <div class="flex flex-col mt-3 mr-5 mb-3">
+                        <label for="institute_id">Институт</label>
+                        <select name="institute_id" class="form-control">
+                            @foreach($institute as $Institute)
+                            <option value="{{ $Institute->id }}" @if($Institute->name == $trainingDirection->institute->name) selected @endif>{{ $Institute->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="flex flex-col mt-3 mr-5 mb-3">
+                        <label for="head_OPOP_id">Руководитель ОПОП</label>
+                        <select name="head_OPOP_id" class="form-control">
+                            @foreach($head_OPOP as $User)
+                            <option value="{{ $User->id }}" @if($User->full_name == $trainingDirection->users->full_name) selected @endif>{{ $User->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded" type="submit" name="submitForm" class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">Submit</button>
 
             </form>
         </div>
