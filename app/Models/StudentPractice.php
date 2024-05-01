@@ -74,7 +74,10 @@ class StudentPractice extends Model
         return $this->belongsTo(Practice::class);
     }
 
-
+    public function place()
+    {
+        return $this->belongsTo(PracticePlace::class, 'practice_place');
+    }
 
 
 }

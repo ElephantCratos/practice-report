@@ -19,4 +19,9 @@ class PracticePlace extends Model
     {
         return $this->belongsToMany(Practice::class, 'practices_practice_places', 'practice_id','practice_places_id' );
     }
+
+    public function stud_pr()
+    {
+        return $this->hasMany(StudentPractice::class);
+    }
 }

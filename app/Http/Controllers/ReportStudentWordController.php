@@ -25,12 +25,29 @@ class ReportStudentWordController extends Controller
 
         $h_pr_ent = $surname . " " . $initials;
 
+        $h_pr_usu = explode(" ",$student_practice->practice->head_ugrasu->full_name);
+
+        $surname = $h_pr_usu[0];
+
+        $initials = Str::substr($h_pr_usu[1], 0, 1) . '.' . Str::substr($h_pr_usu[2], 0, 1)  ;
+
+        $h_pr_usu = $surname . " " . $initials;
+
         $pos_ent = $student_practice->practice->head_enterprise->position;
 
+        $pos_usu = $student_practice->practice->head_ugrasu->position;
+
+        $s_c = $student_practice->practice->group->course->name;
+
+        $stud_g = $student_practice->practice->group->name;
+
+        $student_full_name = $student_practice->student->full_name;
+
+        $pr_pl = $student_practice->place->name;
 
 
-        $document->setValues(array('h_pr_ent' => $h_pr_ent,
-            'pos_ent' => $pos_ent)
+        $document->setValues(array('h_pr_ent' => $h_pr_ent, 'h_pr_usu' => $h_pr_usu,
+            'pos_ent' => $pos_ent, 'pos_usu' => $pos_usu, 's_c' => $s_c, 'stud_g' => $stud_g, 'student_full_name' => $student_full_name, 'pr_pl' => $pr_pl)
         );
 
         $tasks = Task::OrderBy('id')->get();
