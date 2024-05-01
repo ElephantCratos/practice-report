@@ -21,12 +21,13 @@
                         <label for="head_OPOP_id">Руководитель ОПОП</label>
                         <select name="head_OPOP_id" class="form-control">
                             @foreach($head_OPOP as $User)
-                            <option value="{{ $User->id }}" @if($User->full_name == $trainingDirection->users->full_name) selected @endif>{{ $User->name }}</option>
+                            <option value="{{ $User->id }}" @if($User->full_name == $trainingDirection->users->full_name) selected @endif>{{ $User->full_name }}</option>
                             @endforeach
                         </select>
                     </div>
                 </div>
                 <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded" type="submit" name="submitForm" class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">Submit</button>
+
 
             </form>
         </div>

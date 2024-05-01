@@ -47,19 +47,23 @@ return new class extends Migration
 
             $table->boolean('paid')->default(false);
 
-            $table->unsignedBigInteger('contract_type_id');
+            $table->foreignId('contract_type_id')->nullable()->references('id')->on('contract_type');
 
             $table->foreignId('practice_head_organization_id')->references('id') ->on('users');
 
-            $table->foreignId('volume_id')->references('id')->on('volume');
+            $table->foreignId('volume_id')->nullable()->references('id')->on('volume');
 
-            $table->foreignId('traits_id')->references('id')->on('traits');
+            $table->foreignId('traits_id')->nullable()->references('id')->on('traits');
 
-            $table->foreignId('trouble_id')->references('id')->on('troubles');
+            $table->foreignId('trouble_id')->nullable()->references('id')->on('troubles');
 
-            $table->foreignId('score_id')->references('id')->on('score');
+            $table->foreignId('score_id')->nullable()->references('id')->on('score');
 
             $table->string('reprimand')->nullable();
+
+            $table->foreignId('practice_place')->nullable();
+
+            $table->boolean('isReady') -> default(false);
 
             $table->timestamps();
 
