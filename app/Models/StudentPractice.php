@@ -22,7 +22,10 @@ class StudentPractice extends Model
         'traits_id',
         'trouble_id',
         'score_id',
-        'reprimand'
+        'reprimand',
+        'practice_place',
+        'isReady'
+
 
     ];
     public function score()
@@ -64,6 +67,11 @@ class StudentPractice extends Model
     public function tasks()
     {
         return $this->hasMany(Task::class);
+    }
+
+    public function practice()
+    {
+        return $this->belongsTo(Practice::class);
     }
 
 
