@@ -28,7 +28,7 @@ return new class extends Migration
 
 
         Schema::table('student_practice', function (Blueprint $tableUser) {
-            $tableUser->foreignId('practice_id')->nullable()->references('id')->on('practices');
+            $tableUser->foreignId('practice_id')->references('id')->on('practices');
         });
 
     }

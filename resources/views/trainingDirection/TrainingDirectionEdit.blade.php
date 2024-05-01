@@ -10,7 +10,7 @@
                 </div>
                 <select name="institute_id" class="form-control">
                     @foreach($institute as $Institute)
-                    <option value="{{ $Institute->id }}" @if($Institute->name == $trainingDirection->institute->name) selected @endif>{{ $Institute->name }}</option>
+                    <option value="{{ $Institute->id }}" @if($Institute->name == $trainingDirection->institute->name) selected @endif>{{ $Institute->full_name }}</option>
                     @endforeach
                 </select>
                 <select name="head_OPOP_id" class="form-control">

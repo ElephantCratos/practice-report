@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\StudentPractice;
 use App\Models\Group;
 use App\Models\Practice;
 use App\Models\PracticePlace;
@@ -63,7 +64,32 @@ class PracticeController extends Controller
             'practice_type_id' => $validatedData['practice_type_id'],
         ]);
 
+
+        $students = User::where('group_id', $validatedData['group_id'])->get();
+
         $practice_places = PracticePlace::whereIn('id', $request->input('$practicePlaces', []))->get();
+
+        foreach ($students as $student)
+        {
+            $StudentPractice = StudentPractice::create([
+
+                'practice_id' => $practiceNew->id,
+                'student_id'  => $student->id,
+                'paid' => false,
+                'contract_type_id' => 2,
+                'practice_head_organization_id' => $practiceNew->practice_head_enterprice_id,
+                'volume_id' => null,
+                'traits_id' => null,
+                'trouble_id' => null,
+                'score_id' => null,
+                'reprimand' => null,
+                'practice_place' => null,
+                'isReady' => false,
+
+
+                ]);
+
+        }
 
         $practiceNew->places()->attach($practice_places);
 

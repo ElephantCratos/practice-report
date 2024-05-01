@@ -11,7 +11,7 @@
                     <label for="category"></label>
                     <select name="head_OPOP_id" class="form-control">
                         @foreach($head_OPOP as $User)
-                        <option value="{{ $User->id }}">{{ $User->name }}</option>
+                        <option value="{{ $User->id }}">{{ $User->full_name }}</option>
                         @endforeach
                     </select>
                     <select name="institute_id" class="form-control">

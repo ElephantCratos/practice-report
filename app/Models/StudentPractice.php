@@ -22,6 +22,51 @@ class StudentPractice extends Model
         'traits_id',
         'trouble_id',
         'score_id',
+        'reprimand'
 
     ];
+    public function score()
+    {
+        return $this->belongsTo(Score::class);
+    }
+
+    public function volume()
+    {
+        return $this->belongsTo(Volume::class);
+    }
+
+    public function trait()
+    {
+        return $this->belongsTo(Traits::class);
+    }
+
+    public function troubles()
+    {
+        return $this->belongsTo(Troubles::class);
+    }
+
+    public function student()
+    {
+        return $this->belongsTo(User::class, 'student_id');
+    }
+
+
+    public function practice_head()
+    {
+        return $this->belongsTo(User::class , 'practice_head_organization_id');
+    }
+
+    public function contract_type()
+    {
+        return $this->belongsTo(ContractType::class);
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
+
+
+
+
 }
