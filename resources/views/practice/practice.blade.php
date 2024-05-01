@@ -1,3 +1,4 @@
+
 <x-app-layout>
 
     @foreach($practice as $practice)
@@ -60,3 +61,4 @@
         </div>
     @endforeach
 </x-app-layout>
+

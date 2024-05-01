@@ -52,12 +52,12 @@ Route::put('/practices/update/{id}', [PracticeController::class, 'update'])->nam
 Route::delete('/practices/delete/{id}', [PracticeController::class, 'destroy'])->name('Practice.delete');
 
 //  PracticePlaceController routes
-//Route::get('/practice-places/index', [PracticePlaceController::class, 'index'])->name('PracticePlace.index');
-//Route::get('/practice-places/create', [PracticePlaceController::class, 'create'])->name('PracticePlace.create');
-//Route::get('/practice-places/edit/{id}', [PracticePlaceController::class, 'edit'])->name('PracticePlace.edit');
-//Route::post('/practice-places/store', [PracticePlaceController::class, 'store'])->name('PracticePlace.store');
-//Route::put('/practice-places/update/{id}', [PracticePlaceController::class, 'update'])->name('PracticePlace.update');
-//Route::delete('/practice-places/delete/{id}', [PracticePlaceController::class, 'destroy'])->name('PracticePlace.delete');
+Route::get('/practice-places/index', [PracticePlaceController::class, 'index'])->name('PracticePlace.index');
+Route::get('/practice-places/create', [PracticePlaceController::class, 'create'])->name('PracticePlace.create');
+Route::get('/practice-places/edit/{id}', [PracticePlaceController::class, 'edit'])->name('PracticePlace.edit');
+Route::post('/practice-places/store', [PracticePlaceController::class, 'store'])->name('PracticePlace.store');
+Route::put('/practice-places/update/{id}', [PracticePlaceController::class, 'update'])->name('PracticePlace.update');
+Route::delete('/practice-places/delete/{id}', [PracticePlaceController::class, 'destroy'])->name('PracticePlace.delete');
 
 //  PracticeStudentController routes
 //Route::get('/practice-students/index', [PracticeStudentController::class, 'index'])->name('PracticeStudent.index');

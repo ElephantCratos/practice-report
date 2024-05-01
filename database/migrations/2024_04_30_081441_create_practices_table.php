@@ -26,6 +26,11 @@ return new class extends Migration
             $table->timestamps();
         });
 
+
+        Schema::table('student_practice', function (Blueprint $tableUser) {
+            $tableUser->foreignId('practice_id')->nullable()->references('id')->on('practices');
+        });
+
     }
 
     /**
