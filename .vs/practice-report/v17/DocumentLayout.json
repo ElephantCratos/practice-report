@@ -7,56 +7,96 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\group\\group.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\group\\GroupCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\group\\GroupCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\group\\GroupEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\group\\GroupEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\Institute.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\institute\\Institute.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\task.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\task\\task.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\InstituteCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\institute\\InstituteCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TaskController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\TaskController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\InstituteEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\institute\\InstituteEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:database\\migrations\\2024_04_29_133950_create_student_practice_table.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\practice.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\practice\\practice.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\routes\\web.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:routes\\web.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\PracticeCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\practice\\PracticeCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\PracticeEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\practice\\PracticeEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_place.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\practicePlace\\practice_place.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_placeCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\practicePlace\\practice_placeCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_placeEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\practicePlace\\practice_placeEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\task.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\task\\task.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\taskCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\task\\taskCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\taskEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\task\\taskEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirection.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\trainingDirection\\TrainingDirection.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TroublesController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\TroublesController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirectionCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\trainingDirection\\TrainingDirectionCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirectionEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\trainingDirection\\TrainingDirectionEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\troubles.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\trouble\\troubles.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\traits.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\traits\\traits.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TraitsController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\TraitsController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\TraitsCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\traits\\TraitsCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TrainingDirectionController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\TrainingDirectionController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\TraitsEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\traits\\TraitsEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\PracticeController.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:app\\Http\\Controllers\\PracticeController.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\TroublesEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\trouble\\TroublesEdit.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\practice.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\practice\\practice.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\TroublesCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:resources\\views\\trouble\\TroublesCreate.blade.php||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -80,178 +120,308 @@
               "RelativeDocumentMoniker": "resources\\views\\group\\group.blade.php",
               "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\group\\group.blade.php",
               "RelativeToolTip": "resources\\views\\group\\group.blade.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T12:09:31.941Z",
+              "WhenOpened": "2024-05-01T12:43:59.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Institute.blade.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\Institute.blade.php",
-              "RelativeDocumentMoniker": "resources\\views\\institute\\Institute.blade.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\Institute.blade.php",
-              "RelativeToolTip": "resources\\views\\institute\\Institute.blade.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "Title": "GroupCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\group\\GroupCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\group\\GroupCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\group\\GroupCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\group\\GroupCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T12:08:48.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "practice_place.blade.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_place.blade.php",
-              "RelativeDocumentMoniker": "resources\\views\\practicePlace\\practice_place.blade.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_place.blade.php",
-              "RelativeToolTip": "resources\\views\\practicePlace\\practice_place.blade.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T12:06:47.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "2024_04_29_133950_create_student_practice_table.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "RelativeDocumentMoniker": "database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "RelativeToolTip": "database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEgAAABfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T12:04:22.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TaskController.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TaskController.php",
-              "RelativeDocumentMoniker": "app\\Http\\Controllers\\TaskController.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TaskController.php",
-              "RelativeToolTip": "app\\Http\\Controllers\\TaskController.php",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAGAAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:57:38.015Z",
+              "WhenOpened": "2024-05-01T12:43:54.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "task.blade.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\task.blade.php",
-              "RelativeDocumentMoniker": "resources\\views\\task\\task.blade.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\task.blade.php",
-              "RelativeToolTip": "resources\\views\\task\\task.blade.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "Title": "GroupEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\group\\GroupEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\group\\GroupEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\group\\GroupEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\group\\GroupEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:57:05.88Z",
+              "WhenOpened": "2024-05-01T12:43:47.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TrainingDirection.blade.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirection.blade.php",
-              "RelativeDocumentMoniker": "resources\\views\\trainingDirection\\TrainingDirection.blade.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirection.blade.php",
-              "RelativeToolTip": "resources\\views\\trainingDirection\\TrainingDirection.blade.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "DocumentIndex": 3,
+              "Title": "Institute.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\Institute.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\institute\\Institute.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\Institute.blade.php",
+              "RelativeToolTip": "resources\\views\\institute\\Institute.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:55:00.108Z",
+              "WhenOpened": "2024-05-01T12:43:31.237Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TroublesController.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TroublesController.php",
-              "RelativeDocumentMoniker": "app\\Http\\Controllers\\TroublesController.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TroublesController.php",
-              "RelativeToolTip": "app\\Http\\Controllers\\TroublesController.php",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAGIAAABaAAAA",
+              "DocumentIndex": 4,
+              "Title": "InstituteCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\InstituteCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\institute\\InstituteCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\InstituteCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\institute\\InstituteCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:49:44.751Z",
+              "WhenOpened": "2024-05-01T12:43:27.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "web.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\routes\\web.php",
-              "RelativeDocumentMoniker": "routes\\web.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\routes\\web.php",
-              "RelativeToolTip": "routes\\web.php",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABYAAAAdAAAA",
+              "Title": "InstituteEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\InstituteEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\institute\\InstituteEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\institute\\InstituteEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\institute\\InstituteEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:23:49.271Z",
+              "WhenOpened": "2024-05-01T12:43:23.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TrainingDirectionController.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TrainingDirectionController.php",
-              "RelativeDocumentMoniker": "app\\Http\\Controllers\\TrainingDirectionController.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TrainingDirectionController.php",
-              "RelativeToolTip": "app\\Http\\Controllers\\TrainingDirectionController.php",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:55:04.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TraitsController.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TraitsController.php",
-              "RelativeDocumentMoniker": "app\\Http\\Controllers\\TraitsController.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\TraitsController.php",
-              "RelativeToolTip": "app\\Http\\Controllers\\TraitsController.php",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAGMAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:49:33.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "traits.blade.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\traits.blade.php",
-              "RelativeDocumentMoniker": "resources\\views\\traits\\traits.blade.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\traits.blade.php",
-              "RelativeToolTip": "resources\\views\\traits\\traits.blade.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:49:24.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 6,
               "Title": "practice.blade.php",
               "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\practice.blade.php",
               "RelativeDocumentMoniker": "resources\\views\\practice\\practice.blade.php",
               "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\practice.blade.php",
               "RelativeToolTip": "resources\\views\\practice\\practice.blade.php",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:24:05.421Z",
+              "WhenOpened": "2024-05-01T12:42:16.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PracticeCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\PracticeCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\practice\\PracticeCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\PracticeCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\practice\\PracticeCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:42:03.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PracticeEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\PracticeEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\practice\\PracticeEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practice\\PracticeEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\practice\\PracticeEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:41:43.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "practice_place.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_place.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\practicePlace\\practice_place.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_place.blade.php",
+              "RelativeToolTip": "resources\\views\\practicePlace\\practice_place.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:41:36.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "practice_placeCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_placeCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\practicePlace\\practice_placeCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_placeCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\practicePlace\\practice_placeCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:41:31.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "practice_placeEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_placeEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\practicePlace\\practice_placeEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\practicePlace\\practice_placeEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\practicePlace\\practice_placeEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:41:27.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "PracticeController.php",
-              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\PracticeController.php",
-              "RelativeDocumentMoniker": "app\\Http\\Controllers\\PracticeController.php",
-              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\app\\Http\\Controllers\\PracticeController.php",
-              "RelativeToolTip": "app\\Http\\Controllers\\PracticeController.php",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAAEUAAABhAAAA",
+              "Title": "task.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\task.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\task\\task.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\task.blade.php",
+              "RelativeToolTip": "resources\\views\\task\\task.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
-              "WhenOpened": "2024-05-01T11:23:18.801Z",
+              "WhenOpened": "2024-05-01T12:41:17.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "taskCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\taskCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\task\\taskCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\taskCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\task\\taskCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:41:12.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "taskEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\taskEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\task\\taskEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\task\\taskEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\task\\taskEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:41:08.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TrainingDirection.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirection.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\trainingDirection\\TrainingDirection.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirection.blade.php",
+              "RelativeToolTip": "resources\\views\\trainingDirection\\TrainingDirection.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:40:53.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TrainingDirectionCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirectionCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\trainingDirection\\TrainingDirectionCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirectionCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\trainingDirection\\TrainingDirectionCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:40:49.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TrainingDirectionEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirectionEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\trainingDirection\\TrainingDirectionEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trainingDirection\\TrainingDirectionEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\trainingDirection\\TrainingDirectionEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:40:45.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "traits.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\traits.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\traits\\traits.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\traits.blade.php",
+              "RelativeToolTip": "resources\\views\\traits\\traits.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:40:08.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TraitsCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\TraitsCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\traits\\TraitsCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\TraitsCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\traits\\TraitsCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:40:04.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TraitsEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\TraitsEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\traits\\TraitsEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\traits\\TraitsEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\traits\\TraitsEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:39:57.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "TroublesEdit.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\TroublesEdit.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\trouble\\TroublesEdit.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\TroublesEdit.blade.php",
+              "RelativeToolTip": "resources\\views\\trouble\\TroublesEdit.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:39:46.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TroublesCreate.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\TroublesCreate.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\trouble\\TroublesCreate.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\TroublesCreate.blade.php",
+              "RelativeToolTip": "resources\\views\\trouble\\TroublesCreate.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:36:29.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "troubles.blade.php",
+              "DocumentMoniker": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\troubles.blade.php",
+              "RelativeDocumentMoniker": "resources\\views\\trouble\\troubles.blade.php",
+              "ToolTip": "E:\\OSPanel\\domains\\practice-report\\resources\\views\\trouble\\troubles.blade.php",
+              "RelativeToolTip": "resources\\views\\trouble\\troubles.blade.php",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002338|",
+              "WhenOpened": "2024-05-01T12:36:27.74Z",
               "EditorCaption": ""
             }
           ]
