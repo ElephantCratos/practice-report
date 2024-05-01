@@ -61,7 +61,7 @@ return new class extends Migration
 
             $table->string('reprimand')->nullable();
 
-            $table->foreignId('practice_place')->nullable()->references('id')->on('practice_places');
+
 
             $table->boolean('isReady') -> default(false);
 
