@@ -4,6 +4,13 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Troubles') }}
             </h2>
+            <h3 class="font-semibold text-xl text-gray-800 leading-tight">
+            @if (session('success'))
+        <div class="alert-container">
+            {{ session('success') }}
+        </div>
+    @endif
+        </h3>
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 justify-center items-center " style="display:flex;">

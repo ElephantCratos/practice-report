@@ -1,9 +1,6 @@
 <x-app-layout>
-    @if (session('success'))
-        <div class="alert-container">
-            {{ session('status') }}
-        </div>
-    @endif
+<x-slot name="header">
+    <h3 class="font-semibold text-xl text-gray-800 leading-tight">
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -13,6 +10,8 @@
             </ul>
         </div>
     @endif
+        </h3>
+    </x-slot>
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8 m-auto">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
             <form method="POST" action="{{ route('Practice.store') }}" enctype="multipart/form-data">

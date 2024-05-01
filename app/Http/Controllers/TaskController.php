@@ -29,7 +29,6 @@ class TaskController extends Controller
         return view('task/taskCreate',compact([
             'tasks'
         ]));
-        return redirect()->route('Task.index')->with('success', 'Новое место практики успешно добавлено');
     }
     
     /**
@@ -48,7 +47,7 @@ class TaskController extends Controller
             'date' => $validatedData['date']
         ]);
 
-        return redirect()->route('Task.index')->with('success', 'Новое место практики успешно добавлено');
+        return redirect()->route('Task.index')->with('success', 'Новое задание успешно добавлено');
     }
 
     /**
@@ -84,7 +83,7 @@ class TaskController extends Controller
 
         $tasks->update($validatedData);
 
-        return redirect()->route('Task.index')->with('success', 'Место практики успешно обновлено');
+        return redirect()->route('Task.index')->with('success', 'Задание успешно обновлено');
     }
 
     /**
@@ -95,6 +94,6 @@ class TaskController extends Controller
         $tasks = Task::findOrFail($id);
         $tasks->delete();
 
-        return redirect()->route('Task.index') ->with('success', 'Место практики было успешно удалено.');
+        return redirect()->route('Task.index') ->with('success', 'Задание было успешно удалено.');
     }
 }
