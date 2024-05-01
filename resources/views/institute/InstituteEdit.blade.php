@@ -6,9 +6,9 @@
                 @method('PUT')
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Название</label>
-                    <textarea name="name" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"  required>{{ $institute->name }} </textarea>
+                    <input type="text" name="name" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-2/3" value="{{ $institute->name }}" required></input>
                 </div>
-                <button class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300" type="submit" name="submitForm" class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">Submit</button>
+                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded" type="submit" name="submitForm">Submit</button>
 
             </form>
         </div>
