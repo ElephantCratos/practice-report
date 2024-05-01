@@ -63,6 +63,30 @@ class ReportStudentWordController extends Controller
             $i++;
         }
 
+        $xyi = 'хуй';
+
+       $i =0;
+
+       $size = count($tasks);
+
+       
+       for ($i = 0; $i<$size;$i++)
+       {
+            if($xyi){
+            $document->setValue('row' . $i, $tasks[$i]->description);
+            $newDateFormat = date('d.m.Y', strtotime($tasks[$i]->date));
+            $document->setValue('date' . $i, $newDateFormat);
+            }
+       }
+
+       while($i <= 21)
+       {
+            $document->setValue('row' . $i, ' ');
+            $document->setValue('date' . $i, ' ');
+            $i++;
+       }
+
+
         $document -> saveAs('fish - '.'faggot'.'.docx');
 
         return response()->download(public_path('fish - '.'faggot'.'.docx'));
