@@ -2,12 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\app",
-    "\\app\\Models",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
     "\\database",
-    "\\database\\factories",
     "\\database\\migrations",
-    "\\database\\seeders"
+    "\\database\\seeders",
+    "\\public",
+    "\\resources",
+    "\\resources\\views"
   ],
-  "SelectedNode": "\\app\\Models\\Volume.php",
+  "SelectedNode": "\\database\\migrations\\2024_04_29_133950_create_student_practice_table.php",
   "PreviewInSolutionExplorer": false
 }

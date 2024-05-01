@@ -59,6 +59,8 @@ return new class extends Migration
 
             $table->foreignId('score_id')->references('id')->on('score');
 
+            $table->string('reprimand')->nullable();
+
             $table->timestamps();
 
 
@@ -71,13 +73,6 @@ return new class extends Migration
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
             $table->timestamps();
 
-        });
-
-        Schema::create('reprimand', function (Blueprint $table) {
-            $table->id();
-            $table->string('description');
-            $table->foreignId('student_practice_id')->references('id')->on('student_practice');
-            $table->timestamps();
         });
 
 
