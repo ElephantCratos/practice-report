@@ -12,20 +12,7 @@ class UsersSeeder extends Seeder
 {
     public function run()
     {
-        $superAdmin = User::create([
-            'name' => 'SuperAdmin',
-            'email' => 'SuperAdmin@example.com',
-            'password' => Hash::make('password'),
-            'full_name' => 'Super Admin Adminovich',
-        ]);
-
-        $superAdminRole = Role::create([
-            'name' => 'superAdmin',
-        ]);
-
-        $permissions = Permission::pluck('name')->all();
-        $superAdminRole->syncPermissions($permissions);
-        $superAdmin->assignRole('superAdmin');
+        
 /////////////////////////////////////////////////////////////////////////
         $admin = User::create([
             'name' => 'John Do',
@@ -109,5 +96,19 @@ class UsersSeeder extends Seeder
         $studentRole->givePermissionTo('access to student panel');
         $student->assignRole('student');
 /////////////////////////////////////////////////////////////////////////
+        $superAdmin = User::create([
+            'name' => 'SuperAdmin',
+            'email' => 'SuperAdmin@example.com',
+            'password' => Hash::make('password'),
+            'full_name' => 'Super Admin Adminovich',
+        ]);
+
+        $superAdminRole = Role::create([
+                'name' => 'superAdmin',
+            ]);
+
+        $permissions = Permission::pluck('name')->all();
+        $superAdminRole->syncPermissions($permissions);
+        $superAdmin->assignRole('superAdmin', 'student', 'admin', 'head_OPOP', 'head_enterprice', 'head_ugrasu');
     }
 }
