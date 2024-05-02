@@ -26,6 +26,7 @@ use App\Http\Controllers\ReportHeadPractice;
 
 
 
+
 Route::middleware(['auth', 'verified'])->group(function () {
 
 
@@ -115,6 +116,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/tasks/store', [TaskController::class, 'store'])->name('Task.store');
         Route::put('/tasks/update/{id}', [TaskController::class, 'update'])->name('Task.update');
         Route::delete('/tasks/delete/{id}', [TaskController::class, 'destroy'])->name('Task.delete');
+        Route::post('/tasks/import', [TaskController::class, 'import'])->name('tasks.import');
     });
 
 
