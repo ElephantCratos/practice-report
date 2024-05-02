@@ -20,6 +20,7 @@ use App\Http\Controllers\TraitsController;
 use App\Http\Controllers\TaskController;
 //use App\Http\Controllers\VolumeController;
 use App\Http\Controllers\ReportStudentWordController;
+use App\Http\Controllers\ReportHeadPractice;
 
 
 // InstitutController routes
@@ -123,5 +124,6 @@ Route::middleware('auth')->group(function () {
 Route::get('/signUpWithToken/{token}', [RegistrationController::class, 'signUpWithToken'])->name('signUpWithToken');
 
 Route::get('/PhpWord/{pr_stud_id}',[ReportStudentWordController::class, 'downloadDocx']) -> name('downloadDocx');
+Route::get('/PhpWord1/{pr_id}', [ReportHeadPractice::class, 'downloadDocxHead'])->name('downloadDocxHead');
 
 require __DIR__.'/auth.php';
