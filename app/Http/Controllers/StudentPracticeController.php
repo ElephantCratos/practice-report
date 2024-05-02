@@ -15,7 +15,21 @@ class StudentPracticeController extends Controller
 {
     public function index()
     {
-        //
+        $practiceHeadOrganization = User::all();
+
+        $practiceStudent = StudentPractice::all();
+
+        $contractTypes = ContractType::all();
+
+        $volumes = Volume::all();
+
+        $traits = Traits::all();
+
+        $troubles = Troubles::all();
+
+        $scores = Score::all();
+
+      return view('practiceStudent/PracticeStudent', compact(['practiceHeadOrganization', 'practiceStudent', 'volumes', 'traits', 'troubles', 'contractTypes', 'scores']));
     }
 
     public function create()
@@ -78,16 +92,17 @@ class StudentPracticeController extends Controller
 
         $studentPractice->update($validatedData);
 
-        return redirect()->route('practiceStudent/PracticeStudentIndex');
+        return redirect()->route('PracticeStudent.index')->with('success', 'Практика студента успешно обновлена!');
 
     }
 
-    public function delete($id)
+    public function destroy($id)
     {
         $practiceStudent = StudentPractice::findOrFail($id);
 
         $practiceStudent->delete();
 
+        return redirect()->route('PracticeStudent.index');
     }
 
 }

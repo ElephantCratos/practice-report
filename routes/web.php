@@ -60,12 +60,12 @@ Route::put('/practice-places/update/{id}', [PracticePlaceController::class, 'upd
 Route::delete('/practice-places/delete/{id}', [PracticePlaceController::class, 'destroy'])->name('PracticePlace.delete');
 
 //  PracticeStudentController routes
-//Route::get('/practice-students/index', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
+Route::get('/practice-students/index', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
 //Route::get('/practice-students/create', [StudentPracticeController::class, 'create'])->name('PracticeStudent.create');
 Route::get('/practice-students/edit/{id}', [StudentPracticeController::class, 'edit'])->name('PracticeStudent.edit');
 //Route::post('/practice-students/store', [StudentPracticeController::class, 'store'])->name('PracticeStudent.store');
 Route::put('/practice-students/update/{id}', [StudentPracticeController::class, 'update'])->name('PracticeStudent.update');
-//Route::delete('/practice-students/delete/{id}', [StudentPracticeController::class, 'destroy'])->name('PracticeStudent.delete');
+Route::delete('/practice-students/delete/{id}', [StudentPracticeController::class, 'destroy'])->name('PracticeStudent.delete');
 
 // TraitsController routes
 Route::get('/traits/index', [TraitsController::class, 'index'])->name('Traits.index');
