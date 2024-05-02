@@ -18,9 +18,27 @@
         @method('patch')
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
+            <x-input-label for="name" :value="__('Nickname')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
+        </div>
+
+        <div>
+            <x-input-label for="full_name" :value="__('Full Name')" />
+            <x-text-input id="full_name" name="full_name" type="text" class="mt-1 block w-full" :value="old('full_name', $user->full_name)" required autofocus autocomplete="name" />
+            <x-input-error class="mt-2" :messages="$errors->get('full_name')" />
+        </div>
+
+        <div>
+            <x-input-label for="full_name_r" :value="__('Full name in genitive case')" />
+            <x-text-input id="full_name_r" name="full_name_r" type="text" class="mt-1 block w-full" :value="old('full_name_r', $user->full_name_r)" required autofocus autocomplete="name" />
+            <x-input-error class="mt-2" :messages="$errors->get('full_name_r')" />
+        </div>
+
+        <div>
+            <x-input-label for="full_name_d" :value="__('Full name in dative case')" />
+            <x-text-input id="full_name_d" name="full_name_d" type="text" class="mt-1 block w-full" :value="old('full_name_d', $user->full_name_d)" required autofocus autocomplete="name" />
+            <x-input-error class="mt-2" :messages="$errors->get('full_name_d')" />
         </div>
 
         <div>
