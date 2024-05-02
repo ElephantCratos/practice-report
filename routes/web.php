@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\InstituteController;
@@ -19,6 +20,7 @@ use App\Http\Controllers\TraitsController;
 use App\Http\Controllers\TaskController;
 //use App\Http\Controllers\VolumeController;
 use App\Http\Controllers\ReportStudentWordController;
+use App\Http\Controllers\ReportHeadPractice;
 
 
 // InstitutController routes
@@ -101,6 +103,7 @@ Route::resource('users', UserController::class );
 Route::get('users/{user}/edit-roles', [UserController::class, 'edit'])->name('users.edit-roles');
 Route::post('users/{user}/assign-role', [UserController::class, 'assignRole'])->name('users.assignRole');
 Route::post('users/{user}/remove-role', [UserController::class, 'removeRole'])->name('users.removeRole');
+Route::post('users/{user}/update-position', [UserController::class, 'updatePosition'])->name('users.updatePosition');
 
 Route::get('/', function () {
     return view('welcome');
@@ -114,8 +117,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/generate-registration-link', [RegistrationController::class, 'generateRegistrationLink']) ->name('generateLink');
+
 });
 
+Route::get('/signUpWithToken/{token}', [RegistrationController::class, 'signUpWithToken'])->name('signUpWithToken');
+
 Route::get('/PhpWord/{pr_stud_id}',[ReportStudentWordController::class, 'downloadDocx']) -> name('downloadDocx');
+Route::get('/PhpWord1/{pr_id}', [ReportHeadPractice::class, 'downloadDocxHead'])->name('downloadDocxHead');
 
 require __DIR__.'/auth.php';

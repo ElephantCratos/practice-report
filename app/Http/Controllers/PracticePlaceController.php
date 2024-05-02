@@ -40,12 +40,14 @@ class PracticePlaceController extends Controller
 
         $validatedData = $request -> validate([
             'name' => 'required|min:3',
-            'address' => 'required|min:3|string'
+            'address' => 'required|min:3|string',
+            'name_p' => 'required|min:3|string',
         ]);
 
         PracticePlace::create([
             'name' => $validatedData['name'],
-            'address' => $validatedData['address']
+            'address' => $validatedData['address'],
+            'name_p' => $validatedData['name_p']
         ]);
 
 
@@ -80,6 +82,7 @@ class PracticePlaceController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|min:3',
             'address' => 'required|string|min:3',
+            'name_p' => 'required|min:3|string',
         ]);
 
         $practicePlace = PracticePlace::findOrFail($id);

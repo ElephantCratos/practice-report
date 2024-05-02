@@ -16,6 +16,8 @@ class PracticeSortSeeder extends Seeder
         $practiceSort = PracticeSort::create([
             'id' => '1',
             'name' => 'Учебная',
+            'p_d' => 'УЧЕБНОЙ',
+            'p_w' => 'учебную'
         ]);
     }
 }

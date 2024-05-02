@@ -14,6 +14,8 @@
                             <tr class="bg-gray-700 text-white">
                                 <th class="border-2 border-gray-300 p-3 text-center">Id</th>
                                 <th class="border-2 border-gray-300 p-3 text-center">Имя</th>
+                                <th class="border-2 border-gray-300 p-3 text-center">ФИО</th>
+                                <th class="border-2 border-gray-300 p-3 text-center">Должность</th>
                                 <th class="border-2 border-gray-300 p-3 text-center">Email</th>
                                 <th class="border-2 border-gray-300 p-3 text-center">Роли</th>
                                 <th class="border-2 border-gray-300 p-3 text-center">Действия</th>
@@ -24,6 +26,8 @@
                             <tr class="bg-white">
                                 <td class="border-2 border-gray-300 p-3 text-center">{{ $user->id }}</td>
                                 <td class="border-2 border-gray-300 p-3 text-center">{{ $user->name }}</td>
+                                <td class="border-2 border-gray-300 p-3 text-center">{{ $user->full_name}}</td>
+                                <td class="border-2 border-gray-300 p-3 text-center">{{ $user->position}}</td>
                                 <td class="border-2 border-gray-300 p-3 text-center">{{ $user->email }}</td>
                                 <td class="border-2 border-gray-300 p-3 text-center">
                                     @if($user->roles)
@@ -33,7 +37,9 @@
                                     @endif
                                 </td>
                                 <td class="border-2 border-gray-300 p-3 text-center">
+
                                     <a href="{{ route('users.edit', $user->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-auto py-5 px-1 rounded mb-2">Изменить роли</a>
+
 
                                 </td>
                             </tr>

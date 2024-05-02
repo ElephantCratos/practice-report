@@ -28,7 +28,6 @@ class Practice extends Model
         return $this->belongsToMany(PracticePlace::class, 'practices_practice_places', 'practice_id','practice_places_id' );
     }
 
-
     public function head_ugrasu()
     {
         return $this->belongsTo(User::class, 'practice_head_ugrasu_id');
@@ -54,6 +53,10 @@ class Practice extends Model
         return $this->belongsTo(Group::class, 'group_id');
     }
 
+    public function practice_st()
+    {
+        return $this->hasMany(StudentPractice::class);
+    }
 
 
 

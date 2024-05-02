@@ -13,7 +13,8 @@ class PracticePlace extends Model
 
     protected $fillable = [
         'name',
-        'address'
+        'address',
+        'name_p'
     ];
     public function practices()
     {
