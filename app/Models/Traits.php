@@ -21,4 +21,9 @@ class Traits extends Model
         return $this->belongsTo(Score::class);
 
     }
+
+    public function student_practice()
+    {
+        return $this->hasMany(StudentPractice::class);
+    }
 }

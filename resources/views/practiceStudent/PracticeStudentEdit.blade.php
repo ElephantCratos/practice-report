@@ -2,13 +2,13 @@
     <x-slot name="header">
         <h3 class="font-semibold text-xl text-gray-800 leading-tight">
             @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
             @endif
         </h3>
     </x-slot>
@@ -22,7 +22,7 @@
                     <label for="volume_id"> Объем выполненной работы </label>
                     <select name="volume_id" class="form-control">
                         @foreach($volumes as $volume)
-                            <option value="{{ $volume->id }}" @if($volume->id == $practiceStudent->volume_id) selected="selected" @endif >{{ $volume->description }} - {{ $volume->score->name }}</option>
+                        <option value="{{ $volume->id }}" @if($volume->id == $practiceStudent->volume_id) selected="selected" @endif >{{ $volume->description }} - {{ $volume->score->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -31,7 +31,7 @@
                     <label for="traits_id"> Какие качества были продемонстрированы в ходе работы </label>
                     <select name="traits_id" class="form-control">
                         @foreach($traits as $trait)
-                            <option value="{{ $trait->id }}" @if($trait->id == $practiceStudent->trait_id) selected="selected" @endif >{{ $trait->description }} - {{$trait->score->name}}</option>
+                        <option value="{{ $trait->id }}" @if($trait->id == $practiceStudent->trait_id) selected="selected" @endif >{{ $trait->description }} - {{$trait->score->name}}</option>
                         @endforeach
                     </select>
                 </div>
@@ -40,7 +40,7 @@
                     <label for="trouble_id"> Качества, продемострированные при решение проблем</label>
                     <select name="trouble_id" class="form-control">
                         @foreach($troubles as $trouble)
-                            <option value="{{ $trouble->id }}" @if($trouble->id == $practiceStudent->trouble_id) selected="selected" @endif >{{ $trouble->description }} - {{ $trouble->score->name }}</option>
+                        <option value="{{ $trouble->id }}" @if($trouble->id == $practiceStudent->trouble_id) selected="selected" @endif >{{ $trouble->description }} - {{ $trouble->score->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -49,16 +49,16 @@
                     <label for="contract_type_id"> Тип контракта</label>
                     <select name="contract_type_id" class="form-control">
                         @foreach($contractTypes as $type)
-                            <option value="{{ $type->id }}" @if($type->id == $practiceStudent->practice_type_id) selected="selected" @endif >{{ $type->name }}</option>
+                        <option value="{{ $type->id }}" @if($type->id == $practiceStudent->practice_type_id) selected="selected" @endif >{{ $type->name }}</option>
                         @endforeach
                     </select>
                 </div>
 
                 <div class="mb-4">
                     <label for="score_id"> Оценка</label>
-                    <select name="score_id" class="form-control">
+                    <select name="score_id" id="score_id" class="form-control">
                         @foreach($scores as $score)
-                            <option value="{{ $score->id }}" @if($score->id == $practiceStudent->score_id) selected="selected" @endif >{{ $score->name }}</option>
+                        <option value="{{ $score->id }}" onchange="checkScore()" @if($score->id == $practiceStudent->score_id) selected="selected" @endif >{{ $score->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -67,7 +67,7 @@
                     <label for="practice_place"> Место прохождения практики студентом</label>
                     <select name="practice_place" class="form_control">
                         @foreach ($practiceStudent->practice->places as $place)
-                            <option value="{{$place->id}}" @if($place->id == $practiceStudent->practice_place) selected="selected" @endif > {{ $place->name }} - {{$place->address}} </option>
+                        <option value="{{$place->id}}" @if($place->id == $practiceStudent->practice_place) selected="selected" @endif > {{ $place->name }} - {{$place->address}} </option>
                         @endforeach
                     </select>
                 </div>
@@ -83,7 +83,7 @@
 
                 <div class="mb-4">
                     <label for="reprimand">Замечания </label>
-                    <textarea name="reprimand">{{$practiceStudent->reprimand}}</textarea>
+                    <textarea name="reprimand" id="reprimand">{{$practiceStudent->reprimand}}</textarea>
                 </div>
 
                 <div class="mb-4">
@@ -136,10 +136,17 @@
         var randomIndex = Math.floor(Math.random() * validOptions.length);
         return validOptions[randomIndex];
     }
+
+    function checkScore() {
+        var selectedScore = document.getElementById("score_id");
+        var rep = document.getElementById("reprimand");
+
+        selectedScore.addEventListener("change", function() {
+            if (selectedScore.value == 1) {
+                rep.setAttribute('required', 1);
+            } else {
+                rep.removeAttribute('required');
+            }
+        })
+    }
 </script>
-
-
-
-
-
-

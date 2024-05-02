@@ -22,7 +22,7 @@
                                     <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200">{{ $role->name }}</h3>
                                     <div class="flex">
                                         <a href="{{ route('roles.edit', $role->id) }}" class="text-blue-500 underline mr-4">Изменить</a>
-                                        
+
                                         <form action="{{ route('roles.destroy', $role->id) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
@@ -38,5 +38,8 @@
                 </div>
             </div>
         </div>
-    </div>
+        
+    
 </x-app-layout>
+
+
