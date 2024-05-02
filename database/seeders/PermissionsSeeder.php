@@ -8,14 +8,11 @@ use Spatie\Permission\Models\Permission;
 
 class PermissionsSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        Permission::create(['name' => 'Что то может']);
-        Permission::create(['name' => 'Голова не варит']);
-        Permission::create(['name' => 'Все неймы пермишнов ']);
-        Permission::create(['name' => 'строго для теста']);
+        Permission::create(['name' => 'access to admin panel']);
+        Permission::create(['name' => 'access to head_OPOP panel']);
+        Permission::create(['name' => 'access to head_ugrasu panel']);
+        Permission::create(['name' => 'access to student panel']);
     }
 }

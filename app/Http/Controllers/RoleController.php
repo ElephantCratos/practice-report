@@ -13,7 +13,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        $roles = Role::orderBy('name')->where('name', '!=' ,'admin') -> get();
+        $roles = Role::orderBy('name')->where('name', '!=' ,'superAdmin') -> get();
         return view('roles.index', compact([
             'roles'
         ]));
@@ -64,7 +64,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        $role = Role::where('name', '!=' , 'admin') -> findOrFail($role -> id);
+        $role = Role::where('name', '!=' , 'superAdmin') -> findOrFail($role -> id);
         $permissions = Permission::orderby('name') -> get() ;
         return view('roles.edit', compact([
             'permissions',
@@ -81,7 +81,7 @@ class RoleController extends Controller
             'name' => 'required',
         ]);
 
-        $role = Role::where('name', '!=' , 'admin')->findOrFail($role->id);
+        $role = Role::where('name', '!=' , 'superAdmin')->findOrFail($role->id);
         $role->update([
             'name' => $request->name,
         ]);
