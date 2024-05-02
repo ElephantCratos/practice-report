@@ -77,8 +77,8 @@
                 <div class="mb-4">
                     <label for="practice_head_ugrasu_id">Глава практики ЮГУ </label>
                     <select name="practice_head_ugrasu_id" class="form-control">
-                        @foreach($users as $user)
-                        <option value="{{ $user->id }}">{{ $user->full_name }}</option>
+                        @foreach($heads_ugrasu as $head_ugrasu)
+                        <option value="{{ $head_ugrasu }}">{{ $head_ugrasu->full_name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -86,8 +86,8 @@
                 <div class="mb-4">
                     <label for="practice_head_enterprice_id">Глава интерпрайз хуй важный</label>
                     <select name="practice_head_enterprice_id" class="form-control">
-                        @foreach($users as $user)
-                        <option value="{{ $user->id }}">{{ $user->full_name }}</option>
+                        @foreach($heads_enterprice as $head_enterprice)
+                        <option value="{{ $head_enterprice->id }}">{{ $head_enterprice->full_name }}</option>
                         @endforeach
                     </select>
                 </div>

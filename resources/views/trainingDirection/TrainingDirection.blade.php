@@ -5,12 +5,12 @@
                 {{ __('Training Direction') }}
             </h2>
             <h3 class="font-semibold text-xl text-gray-800 leading-tight">
-            @if (session('success'))
-        <div class="alert-container">
-            {{ session('success') }}
-        </div>
-    @endif
-        </h3>
+                @if (session('success'))
+                <div class="alert-container">
+                    {{ session('success') }}
+                </div>
+                @endif
+            </h3>
     </x-slot>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 justify-center items-center " style="display:flex;">
@@ -26,7 +26,7 @@
                         @foreach ($trainingDirection as $TrainingDirection)
                         <tr class="items-center">
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $TrainingDirection->name}}</td>
-                            <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $TrainingDirection->users->full_name}}</td>
+                            <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $TrainingDirection->head_OPOP->full_name}}</td>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $TrainingDirection->institute->name}}</td>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">
                                 <a href="{{ route('TrainingDirection.edit', $TrainingDirection->id) }}">

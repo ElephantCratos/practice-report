@@ -17,7 +17,6 @@ class UsersSeeder extends Seeder
             'email' => 'SuperAdmin@example.com',
             'password' => Hash::make('password'),
             'full_name' => 'Super Admin Adminovich',
-            'group_id' => 1
         ]);
 
         $superAdminRole = Role::create([
@@ -33,7 +32,6 @@ class UsersSeeder extends Seeder
             'email' => 'jane@example.com',
             'password' => Hash::make('password'),
             'full_name' => 'Петрушов Александр Сергеевич',
-            'group_id' => 1
         ]);
 
         $adminRole = Role::create([
@@ -48,7 +46,6 @@ class UsersSeeder extends Seeder
             'email' => 'john@example.com',
             'password' => Hash::make('password'),
             'full_name' => 'Малых Кирилл Алексеевич',
-            'group_id' => 1,
         ]);
 
         $head_ugrasuRole = Role::create([
@@ -63,7 +60,6 @@ class UsersSeeder extends Seeder
             'email' => 'jaaaaa@example.com',
             'password' => Hash::make('password'),
             'full_name' => 'Плосков Артур Игоревич',
-            'group_id' => 2,
         ]);
 
         $head_OPOPRole = Role::create([
@@ -72,6 +68,21 @@ class UsersSeeder extends Seeder
 
         $head_OPOPRole->givePermissionTo('access to head_OPOP panel');
         $head_OPOP->assignRole('head_OPOP');
+        /////////////////////////////////////////////////////////////////////////
+        $head_enterprice = User::create([
+            'name' => 'Zmeev',
+            'email' => 'head_enterprice@example.com',
+            'password' => Hash::make('password'),
+            'full_name' => 'Змеев Денис Олегович',
+
+        ]);
+
+        $head_enterpriceRole = Role::create([
+            'name' => 'head_enterprice',
+        ]);
+
+        $head_enterpriceRole->givePermissionTo('access to head_enterprice panel');
+        $head_enterprice->assignRole('head_enterprice');
 /////////////////////////////////////////////////////////////////////////
         $student = User::create([
             'name' => 'John',

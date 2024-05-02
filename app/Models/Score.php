@@ -25,4 +25,9 @@ class Score extends Model
     {
         return $this->hasMany(Traits::class);
     }
+
+    public function student_practice()
+    {
+        return $this->hasMany(StudentPractice::class);
+    }
 }

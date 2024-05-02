@@ -73,6 +73,15 @@
                 </div>
 
                 <div class="mb-4">
+                    <label for="practiceHeadsOrganization"> Руководитель практики</label>
+                    <select name="practiceHeadsOrganization" class="form_control">
+                        @foreach ($practiceHeadsOrganization as $practiceHeadOrganization)
+                        <option value="{{$practiceHeadOrganization->id}}" @if($practiceHeadOrganization->id == $practiceStudent->practice_head->id) selected="selected" @endif > {{ $practiceHeadOrganization->full_name }} </option>
+                        @endforeach
+                    </select>
+                </div>
+
+                <div class="mb-4">
                     <label for="reprimand">Замечания </label>
                     <textarea name="reprimand">{{$practiceStudent->reprimand}}</textarea>
                 </div>
@@ -128,3 +137,9 @@
         return validOptions[randomIndex];
     }
 </script>
+
+
+
+
+
+

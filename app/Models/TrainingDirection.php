@@ -27,7 +27,7 @@ class TrainingDirection extends Model
         return $this->hasMany(Group::class);
     }
 
-    public function users()
+    public function head_OPOP()
     {
         return $this->belongsTo(User::class, 'head_OPOP_id');
     }
