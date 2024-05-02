@@ -75,7 +75,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 
 
-    Route::middleware(['can:access to head_OPOP panel', 'can:access to student panel'])->group(function () {
+    Route::middleware(['can:access to head_OPOP panel'])->group(function () {
         Route::get('/practice-students/index', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
         //Route::get('/practice-students/create', [StudentPracticeController::class, 'create'])->name('PracticeStudent.create');
         Route::get('/practice-students/edit/{id}', [StudentPracticeController::class, 'edit'])->name('PracticeStudent.edit');
@@ -118,7 +118,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('roles', RoleController::class) ->middleware('can:access to admin panel');
 
 
-    Route::middleware(['can:access to head_enterprice panel', 'can:access to admin panel'])->group(function () {
+    Route::group(['middleware' => ['role:head_OPOP|admin']], function () {
         Route::resource('users', UserController::class);
         Route::get('users/{user}/edit-roles', [UserController::class, 'edit'])->name('users.edit-roles');
         Route::post('users/{user}/assign-role', [UserController::class, 'assignRole'])->name('users.assignRole');

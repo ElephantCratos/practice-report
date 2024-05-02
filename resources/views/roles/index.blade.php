@@ -38,28 +38,8 @@
                 </div>
             </div>
         </div>
-        <form id="generateLinkForm" action="{{route('generateLink')}}" method="POST">
-            <div>
-                @csrf
-                @method('POST')
-                <label for="roleSelect">Выберите роль:</label>
-                <select id="roleSelect" name="role">
-                        @foreach ($roles as $role)
-                            <option value="{{ $role->name }}">{{ $role->name }}</option>
-                        @endforeach
-                </select>
-            </div>
-            <button type="submit">Создать ссылку регистрации</button>
-        </form>
-    </div>
-    <div> Тут пока пусто
-    @if(session('registrationLink'))
-        <div>
-            <label for="registrationLink">Ссылка регистрации:</label>
-            <input type="text" id="registrationLink" value="{{session('registrationLink')}}" readonly>
-        </div>
-    @endif
-    </div>
+        
+    
 </x-app-layout>
 
 
