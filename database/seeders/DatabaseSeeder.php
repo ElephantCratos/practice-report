@@ -30,7 +30,8 @@ class DatabaseSeeder extends Seeder
             TrainingDirectionsSeeder::class,
             CoursesSeeder::class,
             GroupsSeeder::class,
-            UsersSeeder::class
+            UsersSeeder::class,
+            PermissionsSeeder::class
         ]);
     }
 }

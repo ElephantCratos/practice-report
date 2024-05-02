@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\InstituteController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\TrainingDirectionController;
@@ -90,6 +92,15 @@ Route::get('/tasks/edit/{id}', [TaskController::class, 'edit'])->name('Task.edit
 Route::post('/tasks/store', [TaskController::class, 'store'])->name('Task.store');
 Route::put('/tasks/update/{id}', [TaskController::class, 'update'])->name('Task.update');
 Route::delete('/tasks/delete/{id}', [TaskController::class, 'destroy'])->name('Task.delete');
+
+Route::resource('roles',RoleController::class); //RoleResController
+
+
+// UserController routes
+Route::resource('users', UserController::class );
+Route::get('users/{user}/edit-roles', [UserController::class, 'edit'])->name('users.edit-roles');
+Route::post('users/{user}/assign-role', [UserController::class, 'assignRole'])->name('users.assignRole');
+Route::post('users/{user}/remove-role', [UserController::class, 'removeRole'])->name('users.removeRole');
 
 Route::get('/', function () {
     return view('welcome');
