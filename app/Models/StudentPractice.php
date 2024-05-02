@@ -40,12 +40,12 @@ class StudentPractice extends Model
 
     public function trait()
     {
-        return $this->belongsTo(Traits::class);
+        return $this->belongsTo(Traits::class, 'traits_id');
     }
 
     public function troubles()
     {
-        return $this->belongsTo(Troubles::class);
+        return $this->belongsTo(Troubles::class, 'trouble_id');
     }
 
     public function student()

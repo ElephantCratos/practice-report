@@ -17,7 +17,7 @@ class PracticePlace extends Model
     ];
     public function practices()
     {
-        return $this->belongsToMany(Practice::class, 'practices_practice_places', 'practice_id','practice_places_id' );
+        return $this->belongsToMany(Practice::class, 'practices_practice_places', 'practice_id','practice_places_id', 'practice_places_name', 'practice_places_address' );
     }
 
     public function stud_pr()

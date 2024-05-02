@@ -31,11 +31,12 @@
                         </div>
                         <div class="mb-4">
                             <div class="font-bold">Качества, продемострированные при решении проблем:</div>
-                            @if($student->trouble)
-                            <div>{{ $student->trouble->description }}</div>
+                            @if($student->troubles)
+                            <div>{{ $student->troubles->description }}</div>
                             @else
                             <div>Нет данных</div>
                             @endif
+
                         </div>
                         <div class="mb-4">
                             <div class="font-bold">Тип контракта:</div>
@@ -54,10 +55,9 @@
                             @endif
                         </div>
                         <div class="mb-4">
-                            <!--  -->
                             <div class="font-bold">Место прохождения практики студентом:</div>
-                            @if($student->practice_place)
-                            <div>{{ $student->practice_place }} - {{ $student->practice_place }}</div>
+                            @if($student->place)
+                            <div>{{ $student->place->name }} - {{ $student->place->address }}</div>
                             @else
                             <div>Нет данных</div>
                             @endif
