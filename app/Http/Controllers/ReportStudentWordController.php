@@ -45,9 +45,41 @@ class ReportStudentWordController extends Controller
 
         $pr_pl = $student_practice->place->name;
 
+        $inst = $student_practice->practice->group->trainingDirections->institute->name;
 
-        $document->setValues(array('h_pr_ent' => $h_pr_ent, 'h_pr_usu' => $h_pr_usu,
-            'pos_ent' => $pos_ent, 'pos_usu' => $pos_usu, 's_c' => $s_c, 'stud_g' => $stud_g, 'student_full_name' => $student_full_name, 'pr_pl' => $pr_pl)
+        $pr_s = $student_practice->practice->sort->name;
+
+        $tr_d = $student_practice->practice->group->trainingDirections->name;
+
+        $st_ent = explode(" ",$student_practice->student->full_name);
+
+        $surname = $st_ent[0];
+
+        $initials = Str::substr($st_ent[1], 0, 1) . '.' . Str::substr($st_ent[2], 0, 1)  ;
+
+        $st_ent = $surname . " " . $initials;
+
+        $practice_name = $student_practice->practice->practice_name;
+
+        $sc = $student_practice->score->name;
+
+        $pr_p_ad = $student_practice->place->address;
+
+        $startDateFormat = date('d.m.Y', strtotime($student_practice->practice->start_date));
+
+        $st_d = date('d', strtotime($startDateFormat));
+
+        $st_m = date('m', strtotime($startDateFormat));
+
+        $endDateFormat = date('d.m.Y', strtotime($student_practice->practice->end_date));
+
+        $en_d = date('d', strtotime($endDateFormat));
+
+        $en_m = date('m', strtotime($endDateFormat));
+
+        $document->setValues(array('h_pr_ent' => $h_pr_ent, 'h_pr_usu' => $h_pr_usu, 'inst' => $inst, 'pr_s' => $pr_s, 'tr_d' => $tr_d, 'st_ent' => $st_ent, 'practice_name' => $practice_name, 'sc' => $sc, 'pr_p_ad' => $pr_p_ad, 'start_date' => $startDateFormat, 'end_date' => $endDateFormat,
+            'pos_ent' => $pos_ent, 'pos_usu' => $pos_usu, 's_c' => $s_c, 'stud_g' => $stud_g, 'student_full_name' => $student_full_name, 'pr_pl' => $pr_pl,
+            'st_d' => $st_d, 'st_m' => $st_m, 'en_d' => $en_d, 'en_m' => $en_m)
         );
 
         $document->cloneRow('taskN', count($tasks));
