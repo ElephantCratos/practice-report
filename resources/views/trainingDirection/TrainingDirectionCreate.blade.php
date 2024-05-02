@@ -1,15 +1,15 @@
 <x-app-layout>
-<x-slot name="header">
-    <h3 class="font-semibold text-xl text-gray-800 leading-tight">
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
+    <x-slot name="header">
+        <h3 class="font-semibold text-xl text-gray-800 leading-tight">
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+                    @endforeach
+                </ul>
+            </div>
+            @endif
         </h3>
     </x-slot>
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8 m-auto">
@@ -33,8 +33,8 @@
                     <div class="flex flex-col mt-3 mr-5 mb-3">
                         <label for="head_OPOP_id">Руководитель ОПОП</label>
                         <select name="head_OPOP_id" class="form-control">
-                            @foreach($head_OPOP as $User)
-                            <option value="{{ $User->id }}">{{ $User->full_name }}</option>
+                            @foreach($heads_OPOP as $head_OPOP)
+                            <option value="{{ $head_OPOP->id }}">{{ $head_OPOP->full_name }}</option>
                             @endforeach
                         </select>
                     </div>

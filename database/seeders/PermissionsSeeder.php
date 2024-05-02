@@ -14,5 +14,6 @@ class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'access to head_OPOP panel']);
         Permission::create(['name' => 'access to head_ugrasu panel']);
         Permission::create(['name' => 'access to student panel']);
+        Permission::create(['name' => 'access to head_enterprice panel']);
     }
 }

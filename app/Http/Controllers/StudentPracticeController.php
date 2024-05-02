@@ -34,7 +34,7 @@ class StudentPracticeController extends Controller
         //Нужно рефакторить по мере появления ролевой политики
 
 
-        $practiceHeadOrganization = User::all();
+        $practiceHeadsOrganization = User::role('head_enterprice')->get();;
 
         $practiceStudent = StudentPractice::findOrFail($id);
 
@@ -48,7 +48,7 @@ class StudentPracticeController extends Controller
 
         $scores = Score::all();
 
-      return view('practiceStudent/PracticeStudentEdit', compact(['practiceHeadOrganization', 'practiceStudent', 'volumes', 'traits', 'troubles', 'contractTypes', 'scores']));
+      return view('practiceStudent/PracticeStudentEdit', compact(['practiceHeadsOrganization', 'practiceStudent', 'volumes', 'traits', 'troubles', 'contractTypes', 'scores']));
     }
 
     public function update($id, Request $request)

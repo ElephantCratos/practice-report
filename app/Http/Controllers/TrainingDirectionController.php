@@ -18,22 +18,23 @@ class TrainingDirectionController extends Controller
 
 
         //Надо рефакторить по мере появления ролевой политики
-        $head_OPOP = User::all();
+        $heads_OPOP = User::role('head_OPOP')->get();
     
-        return view('trainingDirection/TrainingDirection', compact(['trainingDirection', 'institute', 'head_OPOP']));
+        return view('trainingDirection/TrainingDirection', compact(['trainingDirection', 'institute', 'heads_OPOP']));
     }
 
     public function create()
     {
         $institute = Institute::OrderBy('id')->get();
-        $head_OPOP = User::all();
+        $heads_OPOP = User::role('head_OPOP')->get();
 
-        return view('trainingDirection/TrainingDirectionCreate', compact(['institute', 'head_OPOP']));
+        return view('trainingDirection/TrainingDirectionCreate', compact(['institute', 'heads_OPOP']));
     }
 
     public function store(Request $request)
     {
         $request->validate([
+            
             'name' => 'required | string | max:255',
             'head_OPOP_id' => 'required',
             'institute_id' => 'required',
@@ -52,9 +53,9 @@ class TrainingDirectionController extends Controller
     {
         $trainingDirection = TrainingDirection::findOrFail($id);
         $institute = Institute::OrderBy('id')->get();
-        $head_OPOP = User::OrderBy('id')->get();
+        $heads_OPOP = User::role('head_OPOP')->get();
 
-        return view('trainingDirection/TrainingDirectionEdit', compact(['trainingDirection', 'institute', 'head_OPOP']));
+        return view('trainingDirection/TrainingDirectionEdit', compact(['trainingDirection', 'institute', 'heads_OPOP']));
     }
 
     public function update($id, Request $request)

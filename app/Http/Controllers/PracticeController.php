@@ -23,15 +23,15 @@ class PracticeController extends Controller
 
     public function create()
     {
-        //Надо рефакторить по мере появления ролевой политики
-        $users = User::all();
+        $heads_enterprice = User::role('head_enterprice')->get();
+        $heads_ugrasu = User::role('head_ugrasu')->get();
 
         $practiceTypes = PracticeType::all();
         $practiceSorts = PracticeSort::all();
         $practicePlaces = PracticePlace::all();
         $groups = Group::all();
 
-        return view('practice/PracticeCreate', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
+        return view('practice/PracticeCreate', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_enterprice', 'heads_ugrasu']));
     }
 
     public function store(Request $request)
@@ -98,8 +98,8 @@ class PracticeController extends Controller
 
     public function edit($id)
     {
-        //Надо рефакторить по мере появления ролевой политики
-        $users = User::all();
+        $heads_OPOP = User::role('head_OPOP')->get();
+        $heads_ugrasu = User::role('head_ugrasu')->get();
 
         $practiceTypes = PracticeType::all();
         $practiceSorts = PracticeSort::all();
@@ -107,7 +107,7 @@ class PracticeController extends Controller
         $groups = Group::all();
 
         $practice = Practice::findOrFail($id);
-        return view('practice/PracticeEdit',compact(['practice', 'practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'users']));
+        return view('practice/PracticeEdit',compact(['practice', 'practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_OPOP', 'heads_ugrasu']));
     }
 
     public function update($id, Request $request)
