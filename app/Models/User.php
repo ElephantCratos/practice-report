@@ -26,6 +26,7 @@ class User extends Authenticatable
         'full_name_r',
         'position',
         'group_id',
+        'registration_token',
 
 
     ];
