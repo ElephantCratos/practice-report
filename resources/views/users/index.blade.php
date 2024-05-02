@@ -33,8 +33,10 @@
                                     @endif
                                 </td>
                                 <td class="border-2 border-gray-300 p-3 text-center">
-                                    <a href="{{ route('users.edit', $user->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-auto py-5 px-1 rounded mb-2">Изменить роли</a>
-
+                                    <a href="{{ route('users.edit', $user->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-5 px-1 rounded mb-2">Изменить роли</a>
+                                    <form action="{{ route('users.destroy', $user->id) }}" method="post" class="inline-block">
+                                        
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

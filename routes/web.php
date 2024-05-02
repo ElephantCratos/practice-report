@@ -92,6 +92,8 @@ Route::get('/tasks/edit/{id}', [TaskController::class, 'edit'])->name('Task.edit
 Route::post('/tasks/store', [TaskController::class, 'store'])->name('Task.store');
 Route::put('/tasks/update/{id}', [TaskController::class, 'update'])->name('Task.update');
 Route::delete('/tasks/delete/{id}', [TaskController::class, 'destroy'])->name('Task.delete');
+// Таски из CVS
+Route::post('/tasks/import', [TaskController::class, 'import'])->name('tasks.import');
 
 Route::resource('roles',RoleController::class); //RoleResController
 

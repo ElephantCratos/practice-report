@@ -1,22 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\StudentPractice;
 use App\Models\PracticePlace;
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models;
 class TaskController extends Controller
 {
     public function index()
     {
-        
-        $tasks = Task::OrderBy('id')
-            ->get();
+        $tasks = Task::OrderBy('id')->get();
+        $practiceStudents = StudentPractice::all();
+        return view('task.task', compact('tasks', 'practiceStudents'));
+    }
 
-       return view('task/task',compact([
-           'tasks'
-       ]));
-    }    
+    
 
     /**
      * Show the form for creating a new resource.
@@ -86,6 +85,9 @@ class TaskController extends Controller
         return redirect()->route('Task.index')->with('success', 'Задание успешно обновлено');
     }
 
+
+
+
     /**
      * Remove the specified resource from storage.
      */
@@ -96,4 +98,36 @@ class TaskController extends Controller
 
         return redirect()->route('Task.index') ->with('success', 'Задание было успешно удалено.');
     }
+    /**
+     * Импорт тасков из CVS файла
+     */
+    public function import(Request $request)
+    {
+        $request->validate([
+            'csv_file' => 'required|mimes:csv,txt'
+        ]);
+
+        $file = $request->file('csv_file');
+        $filePath = $file->getRealPath();
+
+        $csvData = array_map('str_getcsv', file($filePath));
+        $csvHeaders = array_shift($csvData);
+
+        foreach ($csvData as $csvTask) {
+            $description = $csvTask[4];
+            $csvDate = $csvTask[6];
+            $date = date('Y-m-d H:i:s', strtotime($csvDate));
+
+            $studentId = $request->input('student_practice_id');
+
+            $task = new Task();
+            $task->description = $description;
+            $task->date = $date;
+            $task->student_practice_id = $studentId; 
+            $task->save();
+        }
+
+        return redirect()->route('Task.index')->with('success', 'Задачи успешно импортированы.');
+    }
+
 }
