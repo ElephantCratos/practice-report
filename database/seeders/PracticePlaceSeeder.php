@@ -9,9 +9,10 @@ class PracticePlaceSeeder extends Seeder
 {
     public function run()
     {
-        $practicePlace = PracticePlace::create([
+        PracticePlace::create([
             'name' => 'Югорский Государственный Университет',
-            'address' => 'ХМАО, г. Ханты-Мансийск, ул. Чехова, 16'
+            'address' => 'ХМАО, г. Ханты-Мансийск, ул. Чехова, 16',
+            'name_p' => 'Югорском Государсвенном Университете',
         ]);
         
     }
