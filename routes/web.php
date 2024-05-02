@@ -101,6 +101,7 @@ Route::resource('users', UserController::class );
 Route::get('users/{user}/edit-roles', [UserController::class, 'edit'])->name('users.edit-roles');
 Route::post('users/{user}/assign-role', [UserController::class, 'assignRole'])->name('users.assignRole');
 Route::post('users/{user}/remove-role', [UserController::class, 'removeRole'])->name('users.removeRole');
+Route::post('users/{user}/update-position', [UserController::class, 'updatePosition'])->name('users.updatePosition');
 
 Route::get('/', function () {
     return view('welcome');
