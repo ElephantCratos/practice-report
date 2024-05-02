@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Practice;
+use App\Models\Traits;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -24,6 +26,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             PermissionsSeeder::class,
             ContractTypeSeeder::class,
+            PracticePlaceSeeder::class,
             PracticeSortSeeder::class,
             PracticeTypeSeeder::class,
             ScoreSeeder::class,
@@ -32,6 +35,8 @@ class DatabaseSeeder extends Seeder
             TrainingDirectionsSeeder::class,
             CoursesSeeder::class,
             GroupsSeeder::class,
+            TroubleSeeder::class,
+            TraitSeeder::class,
             UsersSeeder::class,
         ]);
     }
