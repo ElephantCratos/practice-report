@@ -37,6 +37,17 @@ class UserController extends Controller
         return redirect()->back()->with('status', 'Роль была успешно удалена у пользователя.');
     }
 
+    public function updatePosition(Request $request, User $user)
+    {
+        $validatedData = $request->validate([
+            'position' => 'required',
+        ]);
+
+        $user->update($validatedData);
+
+        return redirect()->back()->with('status', 'Должность была изменена.');
+    }
+
     public function destroy(User $user)
     {
         $user->delete();
