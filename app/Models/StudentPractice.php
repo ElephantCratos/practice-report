@@ -53,7 +53,6 @@ class StudentPractice extends Model
         return $this->belongsTo(User::class, 'student_id');
     }
 
-
     public function practice_head()
     {
         return $this->belongsTo(User::class , 'practice_head_organization_id');

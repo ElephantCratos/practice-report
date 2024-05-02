@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Group;
 use App\Models\User;
 use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
@@ -18,8 +19,8 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $roles = Role::all();
-
-        return view('users.edit-user-roles', compact('user', 'roles'));
+        $groups = Group::all();
+        return view('users.edit-user-roles', compact('user', 'roles', 'groups'));
     }
 
     public function assignRole(Request $request, User $user)
@@ -47,6 +48,17 @@ class UserController extends Controller
         $user->update($validatedData);
 
         return redirect()->back()->with('status', 'Должность была изменена.');
+    }
+
+    public function updateGroup(Request $request, User $user)
+    {
+        $validatedData = $request->validate([
+            'group_id' => 'required',
+        ]);
+
+        $user->update($validatedData);
+
+        return redirect()->back()->with('status', 'Группа была изменена.');
     }
 
     public function destroy(User $user)

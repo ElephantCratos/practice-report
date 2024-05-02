@@ -15,11 +15,14 @@ use App\Http\Controllers\TrainingDirectionController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PracticePlaceController;
 use App\Http\Controllers\StudentPracticeController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TroublesController;
 use App\Http\Controllers\TraitsController;
 use App\Http\Controllers\TaskController;
 //use App\Http\Controllers\VolumeController;
 use App\Http\Controllers\ReportStudentWordController;
+use App\Http\Controllers\ReportHeadPractice;
+
 
 
 
@@ -139,13 +142,17 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::post('/generate-registration-link', [RegistrationController::class, 'generateRegistrationLink'])->name('generateLink');
     Route::get('/PhpWord/{pr_stud_id}', [ReportStudentWordController::class, 'downloadDocx'])->name('downloadDocx');
-
+    Route::get('/practice-students/ind/index/{pr_stud_id}', [ReportStudentWordController::class, 'downloadDocx'])->name('downloadDocx.ind');
+    Route::get('/PhpWord1/{pr_id}', [ReportHeadPractice::class, 'downloadDocxHead'])->name('downloadDocxHead');
 
 });
 
 Route::get('/signUpWithToken/{token}', [RegistrationController::class, 'signUpWithToken'])->name('signUpWithToken');
 
+
 Route::get('/', function () {
         return view('welcome');
     });
+
+
 require __DIR__.'/auth.php';
