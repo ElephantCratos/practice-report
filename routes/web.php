@@ -15,6 +15,7 @@ use App\Http\Controllers\TrainingDirectionController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PracticePlaceController;
 use App\Http\Controllers\StudentPracticeController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TroublesController;
 use App\Http\Controllers\TraitsController;
 use App\Http\Controllers\TaskController;
@@ -65,6 +66,7 @@ Route::delete('/practice-places/delete/{id}', [PracticePlaceController::class, '
 
 //  PracticeStudentController routes
 Route::get('/practice-students/index', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
+Route::get('/practice-students/ind/index', [StudentController::class, 'index'])->name('PracticeStudent.ind.index');
 //Route::get('/practice-students/create', [StudentPracticeController::class, 'create'])->name('PracticeStudent.create');
 Route::get('/practice-students/edit/{id}', [StudentPracticeController::class, 'edit'])->name('PracticeStudent.edit');
 //Route::post('/practice-students/store', [StudentPracticeController::class, 'store'])->name('PracticeStudent.store');
@@ -124,7 +126,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/signUpWithToken/{token}', [RegistrationController::class, 'signUpWithToken'])->name('signUpWithToken');
 
-Route::get('/PhpWord/{pr_stud_id}',[ReportStudentWordController::class, 'downloadDocx']) -> name('downloadDocx');
+Route::get('/PhpWord/{pr_stud_id}', [ReportStudentWordController::class, 'downloadDocx'])->name('downloadDocx');
+Route::get('/practice-students/ind/index/{pr_stud_id}', [ReportStudentWordController::class, 'downloadDocx'])->name('downloadDocx.ind');
 Route::get('/PhpWord1/{pr_id}', [ReportHeadPractice::class, 'downloadDocxHead'])->name('downloadDocxHead');
 
 require __DIR__.'/auth.php';
