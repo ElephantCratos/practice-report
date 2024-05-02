@@ -98,6 +98,7 @@ class PracticeController extends Controller
 
     public function edit($id)
     {
+
         $heads_OPOP = User::role('head_OPOP')->get();
         $heads_ugrasu = User::role('head_ugrasu')->get();
 
