@@ -81,6 +81,22 @@
                     <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Назначить</button>
                 </form>
 
+                @if($user->hasRole('student'))
+                <form method="POST" action="{{ route('users.updateGroup', $user->id) }}" class="form-group mb-10">
+                    @csrf
+                    <div class="form-group">
+                        <label for="group" class="block text-gray-700 text-sm font-bold mb-2">Изменить группу</label>
+                        <select name="group_id" id="group" class="form-control">
+                            @foreach ($groups as $group)
+                            <option value="{{ $group->id }}" @if($group->id == $user->group_id) selected="selected" @endif>{{ $group->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Изменить</button>
+                </form>
+                @endif
+
+
                 <div>
                     <a href="{{ route('roles.index') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Просмотреть все роли</a>
                 </div>

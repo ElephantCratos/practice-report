@@ -104,6 +104,7 @@ Route::get('users/{user}/edit-roles', [UserController::class, 'edit'])->name('us
 Route::post('users/{user}/assign-role', [UserController::class, 'assignRole'])->name('users.assignRole');
 Route::post('users/{user}/remove-role', [UserController::class, 'removeRole'])->name('users.removeRole');
 Route::post('users/{user}/update-position', [UserController::class, 'updatePosition'])->name('users.updatePosition');
+Route::post('users/{user}/update-group', [UserController::class, 'updateGroup'])->name('users.updateGroup');
 
 Route::get('/', function () {
     return view('welcome');
