@@ -139,7 +139,7 @@ class ReportStudentWordController extends Controller
        }
 
 
-        $document -> saveAs('fish - '.'faggot'.'.docx');
+       $document -> saveAs('fish - '.'faggot'.'.docx');
 
         return response()->download(public_path('fish - '.'faggot'.'.docx'));
     }
