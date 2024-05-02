@@ -98,7 +98,7 @@ class PracticeController extends Controller
 
     public function edit($id)
     {
-        //Надо рефакторить по мере появления ролевой политики
+
         $users = User::all();
 
         $practiceTypes = PracticeType::all();
