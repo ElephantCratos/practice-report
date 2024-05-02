@@ -25,7 +25,7 @@ class RegistrationController extends Controller
 
         $link = route('signUpWithToken', ['token' => $token]);
 
-        return redirect()->route('roles.index')->with('registrationLink', $link);
+        return redirect()->route('users.index')->with('registrationLink', $link);
     }
 
     public function signUpWithToken($token)

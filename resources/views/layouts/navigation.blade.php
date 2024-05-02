@@ -11,61 +11,94 @@
                 </div>
 
                 <!-- Navigation Links -->
+                @role('admin')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Institute.index')" :active="request()->routeIs('Institute.index')">
                         {{ __('Institute') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('head_OPOP')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Group.index')" :active="request()->routeIs('Group.index')">
                         {{ __('Group') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('admin')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('TrainingDirection.index')" :active="request()->routeIs('TrainingDirection.index')">
                         {{ __('Training Direction') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('head_OPOP')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Practice.index')" :active="request()->routeIs('Practice.index')">
                         {{ __('Practice') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @hasanyrole('student|head_OPOP')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('PracticeStudent.index')" :active="request()->routeIs('PracticeStudent.index')">
                         {{ __('Student Practice') }}
                     </x-nav-link>
                 </div>
+                @endhasanyrole
+
+                @role('head_OPOP')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('PracticePlace.index')" :active="request()->routeIs('PracticePlace.index')">
                         {{ __('Practice Place') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('head_enterprice')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Traits.index')" :active="request()->routeIs('Traits.index')">
                         {{ __('Traits') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('head_enterprice')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Troubles.index')" :active="request()->routeIs('Troubles.index')">
                         {{ __('Troubles') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('head_enterprice')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Task.index')" :active="request()->routeIs('Task.index')">
                         {{ __('Task') }}
                     </x-nav-link>
                 </div>
+                @endrole
+
+                @role('admin')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                 <x-nav-link :href="route('roles.index')" :active="request()->routeIs('roles.index')">
                     {{__('Roles')  }}
                 </x-nav-link>
                 </div>
+                @endrole
+
+
+                @hasanyrole('admin|head_OPOP')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                 <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">
                     {{__('Users')  }}
                 </x-nav-link>
                 </div>
+                    @endhasanyrole
             </div>
 
             <!-- Settings Dropdown -->
