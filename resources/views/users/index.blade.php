@@ -40,8 +40,6 @@
 
 
                                     <a href="{{ route('users.edit', $user->id) }}" class="bg-blue-500 hover:bg-blue-700 text-white font-auto py-5 px-1 rounded mb-2">Изменить роли</a>
-
-
                                 </td>
                             </tr>
                             @endforeach
@@ -68,10 +66,7 @@
                         <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded" type="submit">Создать ссылку регистрации</button>
                     </form>
                 </div>
-
                 </div>
-
-
                 </div>
             </div>
         </div>
