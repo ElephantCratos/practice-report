@@ -88,7 +88,7 @@
                     <label for="practice_head_enterprice_id">Глава интерпрайз хуй важный</label>
                     <select name="practice_head_enterprice_id" class="form-control">
                         @foreach($heads_enterprice as $head_enterprice)
-                        <option value="{{ $head_enterprice }}" @if($head_enterprice->id == $practice->practice_head_enterprice_id) selected="selected" @endif>{{ $head_enterprice->full_name }}</option>
+                        <option value="{{ $head_enterprice->id }}" @if($head_enterprice->id == $practice->practice_head_enterprice_id) selected="selected" @endif>{{ $head_enterprice->full_name }}</option>
                         @endforeach
                     </select>
                 </div>

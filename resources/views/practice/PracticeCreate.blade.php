@@ -78,7 +78,7 @@
                     <label for="practice_head_ugrasu_id">Глава практики ЮГУ </label>
                     <select name="practice_head_ugrasu_id" class="form-control">
                         @foreach($heads_ugrasu as $head_ugrasu)
-                        <option value="{{ $head_ugrasu }}">{{ $head_ugrasu->full_name }}</option>
+                        <option value="{{ $head_ugrasu->id }}">{{ $head_ugrasu->full_name }}</option>
                         @endforeach
                     </select>
                 </div>

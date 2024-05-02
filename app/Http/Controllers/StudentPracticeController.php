@@ -15,21 +15,13 @@ class StudentPracticeController extends Controller
 {
     public function index()
     {
-        $practiceHeadOrganization = User::all();
+
 
         $practiceStudent = StudentPractice::all();
 
-        $contractTypes = ContractType::all();
 
-        $volumes = Volume::all();
 
-        $traits = Traits::all();
-
-        $troubles = Troubles::all();
-
-        $scores = Score::all();
-
-      return view('practiceStudent/PracticeStudent', compact(['practiceHeadOrganization', 'practiceStudent', 'volumes', 'traits', 'troubles', 'contractTypes', 'scores']));
+      return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
     }
 
     public function create()

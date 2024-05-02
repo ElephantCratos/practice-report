@@ -32,6 +32,7 @@ class UsersSeeder extends Seeder
             'email' => 'jane@example.com',
             'password' => Hash::make('password'),
             'full_name' => 'Петрушов Александр Сергеевич',
+            'group_id' => 1
         ]);
 
         $adminRole = Role::create([
@@ -46,6 +47,7 @@ class UsersSeeder extends Seeder
             'email' => 'john@example.com',
             'password' => Hash::make('password'),
             'full_name' => 'Малых Кирилл Алексеевич',
+            'group_id' => 1
         ]);
 
         $head_ugrasuRole = Role::create([
@@ -60,6 +62,7 @@ class UsersSeeder extends Seeder
             'email' => 'jaaaaa@example.com',
             'password' => Hash::make('password'),
             'full_name' => 'Плосков Артур Игоревич',
+            'group_id' => 2
         ]);
 
         $head_OPOPRole = Role::create([
