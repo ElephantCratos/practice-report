@@ -1,17 +1,18 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Данные о практике студента') }}
+            {{ __('Данные о практике студентов') }}
         </h2>
     </x-slot>
-    <section>
-        <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                    <div class="p-6 bg-white border-b border-gray-200">
-                        <form>
-                        <h2 class="text-lg font-semibold mb-4">Данные о практике студента</h2>
-                    @foreach ($practiceStudent as $student)
+    <section >
+        <div class="mt-4">
+            @foreach ($practiceStudent as $student)
+            <div class="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8 m-auto">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
+                    <div class="bg-white border-b border-gray-200">
+                        <div class="flex flex-col">
+                            <div class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                    
                         <div class="mb-4">
                             <div class="font-bold">Объем выполненной работы:</div>
                             @if($student->volume)
@@ -89,13 +90,14 @@
 
                                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Изменить</button>
                                 </form>
-                                </form>
-                            </div>
-                        @endforeach
+                                </div>
+                                </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
     </section>
 </x-app-layout>
 
