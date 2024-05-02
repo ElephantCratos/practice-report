@@ -50,8 +50,6 @@ class ReportStudentWordController extends Controller
             'pos_ent' => $pos_ent, 'pos_usu' => $pos_usu, 's_c' => $s_c, 'stud_g' => $stud_g, 'student_full_name' => $student_full_name, 'pr_pl' => $pr_pl)
         );
 
-        $tasks = Task::OrderBy('id')->get();
-
         $document->cloneRow('taskN', count($tasks));
 
         $i = 1;
