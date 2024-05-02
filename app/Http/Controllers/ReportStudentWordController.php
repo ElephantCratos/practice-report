@@ -43,11 +43,19 @@ class ReportStudentWordController extends Controller
 
         $student_full_name = $student_practice->student->full_name;
 
+        $full_name_r = $student_practice->student->full_name_r;
+
+        $full_name_d = $student_practice->student->full_name_d;
+
         $pr_pl = $student_practice->place->name;
+
+        $pr_pl_p = $student_practice->place->name_p;
 
         $inst = $student_practice->practice->group->trainingDirections->institute->name;
 
-        $pr_s = $student_practice->practice->sort->name;
+        $pr_s_d = $student_practice->practice->sort->p_d;
+
+        $pr_s_w = $student_practice->practice->sort->p_w;
 
         $tr_d = $student_practice->practice->group->trainingDirections->name;
 
@@ -77,9 +85,23 @@ class ReportStudentWordController extends Controller
 
         $en_m = date('m', strtotime($endDateFormat));
 
-        $document->setValues(array('h_pr_ent' => $h_pr_ent, 'h_pr_usu' => $h_pr_usu, 'inst' => $inst, 'pr_s' => $pr_s, 'tr_d' => $tr_d, 'st_ent' => $st_ent, 'practice_name' => $practice_name, 'sc' => $sc, 'pr_p_ad' => $pr_p_ad, 'start_date' => $startDateFormat, 'end_date' => $endDateFormat,
-            'pos_ent' => $pos_ent, 'pos_usu' => $pos_usu, 's_c' => $s_c, 'stud_g' => $stud_g, 'student_full_name' => $student_full_name, 'pr_pl' => $pr_pl,
-            'st_d' => $st_d, 'st_m' => $st_m, 'en_d' => $en_d, 'en_m' => $en_m)
+        if ($student_practice->reprimand == null)
+        {
+        $rep = 'Замечания отсутствуют.';
+        }
+        else{
+            $rep = $student_practice->reprimand;
+        }
+
+       $trait = $student_practice->trait->description;
+
+       $trouble = $student_practice->troubles->description;  
+
+        $volum = $student_practice->volume->description;
+
+        $document->setValues(array('h_pr_ent' => $h_pr_ent, 'h_pr_usu' => $h_pr_usu, 'inst' => $inst, 'pr_s_d' => $pr_s_d, 'pr_s_w' => $pr_s_w, 'tr_d' => $tr_d, 'st_ent' => $st_ent, 'practice_name' => $practice_name, 'sc' => $sc, 'pr_p_ad' => $pr_p_ad, 'start_date' => $startDateFormat, 'end_date' => $endDateFormat,
+            'pos_ent' => $pos_ent, 'pos_usu' => $pos_usu, 's_c' => $s_c, 'stud_g' => $stud_g, 'student_full_name' => $student_full_name, 'full_name_r' => $full_name_r,'full_name_d' => $full_name_d, 'pr_pl' => $pr_pl,
+            'st_d' => $st_d, 'st_m' => $st_m, 'en_d' => $en_d, 'en_m' => $en_m, 'rep' => $rep, 'trait' => $trait, 'trouble' => $trouble, 'volum' => $volum)
         );
 
         $document->cloneRow('taskN', count($tasks));

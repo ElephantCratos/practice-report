@@ -13,5 +13,7 @@ class PracticeSort extends Model
 
     protected $fillable = [
         'name',
+        'p_d',
+        'p_w'
     ];
 }

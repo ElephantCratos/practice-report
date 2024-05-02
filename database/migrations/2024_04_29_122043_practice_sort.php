@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('practice_sort', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('p_d');
+            $table->string('p_w');
             $table->timestamps();
         });
     }
