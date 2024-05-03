@@ -15,24 +15,19 @@ class ReportStudentWordController extends Controller
     
 
         $student_practice = StudentPractice::findOrFail($pr_stud_id);
-
-
         
-        if (!$student_practice->student->full_name || !$student_practice->student->full_name_r || !$student_practice->student->full_name_p)
+        //if($student_practice->student->full_name_p == null ) {
+          //  dd(1);
+        //}
+
+        //dd(2);
+             
+        if ($student_practice->student->full_name == null || $student_practice->student->full_name_r == null || $student_practice->student->full_name_d == null)
         {
-            return redirect()->route('downloadDocx.ind')-> with('success', 'Вы не заполнили все необходимые данные во вкладке профиль, заполните все склонения вашего ФИО');
+            return redirect()->route('PracticeStudent.index')-> with('success', 'Вы не заполнили все необходимые данные во вкладке профиль, заполните все склонения вашего ФИО');
         }
 
-        if (!$student_practice->practice->head_enterprise->full_name || !$student_practice->practice->head_enterprise->full_name_r || !$student_practice->practice->head_enterprise->full_name_p)
-        {
-            return redirect()->route('downloadDocx.ind')-> with('success', 'Руководитель практики от организации не заполнил все необходимые поля в профиле, сообщите ему об этом');
-        }
-
-        if (!$student_practice->practice->head_ugrasu->full_name || !$student_practice->practice->head_ugrasu->full_name_r || !$student_practice->practice->head_ugrasu->full_name_p)
-        {
-            return redirect()->route('downloadDocx.ind')-> with('success', 'Руководитель практики ЮГУ не заполнил все необходимые поля в профиле, сообщите ему об этом');
-        }
-
+      
 
 
 
