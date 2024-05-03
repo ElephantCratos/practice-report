@@ -66,7 +66,7 @@ class StudentPracticeController extends Controller
             'contract_type_id' => 'required',
             'score_id' => 'required',
             'practice_place' => 'required',
-            'reprimand' => 'string|max:255',
+            'reprimand' => 'nullable|string|max:255',
         ]);
 
         if ($request->input('paid'))

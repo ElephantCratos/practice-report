@@ -99,7 +99,7 @@ class PracticeController extends Controller
     public function edit($id)
     {
 
-        $heads_OPOP = User::role('head_OPOP')->get();
+        $heads_enterprice = User::role('head_enterprice')->get();
         $heads_ugrasu = User::role('head_ugrasu')->get();
 
         $practiceTypes = PracticeType::all();
@@ -108,7 +108,7 @@ class PracticeController extends Controller
         $groups = Group::all();
 
         $practice = Practice::findOrFail($id);
-        return view('practice/PracticeEdit',compact(['practice', 'practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_OPOP', 'heads_ugrasu']));
+        return view('practice/PracticeEdit',compact(['practice', 'practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_enterprice', 'heads_ugrasu']));
     }
 
     public function update($id, Request $request)
