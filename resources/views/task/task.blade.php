@@ -18,6 +18,8 @@
                     <tr class="">
                         <th class="border-2 border-slate-300 p-5 text-white text-center">Описание задачи</th>
                         <th class="border-2 border-slate-300 p-5 text-white text-center">Дата создания задачи</th>
+                        <th class="border-2 border-slate-300 p-5 text-white text-center">кому назначена</th>
+                        <th class="border-2 border-slate-300 p-5 text-white text-center">статус</th>
                         <th class="border-2 border-slate-300 p-5 text-white text-center">Изменение</th>
                     </tr>
                     <tbody>
@@ -25,12 +27,18 @@
                         <tr class="items-center">
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $task->description }}</td>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $task->date}}</td>
+                            <th class="border-2 border-slate-300 p-5 text-white text-center">{{ $task->practice->student->full_name}}-{{ $task->practice->practice->practice_name}}</th>
+                            <th class="border-2 border-slate-300 p-5 text-white text-center">{{ $task->status}}</th>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">
                                 
                                 <form method="POST" action="{{ route('Task.delete', $task->id) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 border border-red-700 rounded">Удалить</button>
+                                </form>
+                                 <form action="{{ route('Task.edit', $task->id) }}">
+                                    @csrf
+                                    <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-5 border border-green-700 rounded">Изменить</button>
                                 </form>
                             </td>
                         </tr>

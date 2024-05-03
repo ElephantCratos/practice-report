@@ -68,8 +68,12 @@ class TaskController extends Controller
     public function edit($id)
     {
         $tasks = Task::findOrFail($id);
-        return view('task/taskCreate',compact([
-            'tasks'
+
+        $id = $tasks->student_practice_id;
+        $practiceStudents = StudentPractice::findOrFail($id);
+      
+        return view('task/taskEdit',compact([
+            'tasks', 'practiceStudents'
         ]));
     }
 

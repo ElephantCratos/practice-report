@@ -16,10 +16,6 @@ class ReportStudentWordController extends Controller
 
         $student_practice = StudentPractice::findOrFail($pr_stud_id);
 
-       
-        
-
-
 
         
         if (!$student_practice->student->full_name || !$student_practice->student->full_name_r || !$student_practice->student->full_name_p)
@@ -40,8 +36,7 @@ class ReportStudentWordController extends Controller
 
 
 
-        $tasks=$student_practice->tasks->sortBy('date');
-
+        $tasks=$student_practice->tasks;
 
         $document = new \PhpOffice\PhpWord\TemplateProcessor('CompletedTemplate.docx');
 
@@ -158,25 +153,11 @@ class ReportStudentWordController extends Controller
             )
         );
 
-        
+        $document->cloneRow('taskN', count($tasks));
 
-        $j=0;
-
-        $size = count($tasks);
-
-        for ($i=0; $i<$size;$i++)
-        {
-            if($tasks[$i]->status == 'задача'){
-                $tasks_z[$j] = $tasks[$i];
-                $j++;
-            }
-
-        }
         $i = 1;
 
-        $document->cloneRow('taskN', count($tasks_z));
-
-        foreach($tasks_z as $task)
+        foreach($tasks as $task)
         {
             $document->setValue('taskN#'.$i, $i);
             $document->setValue('task#'.$i, $task->description);
@@ -187,25 +168,23 @@ class ReportStudentWordController extends Controller
 
        $i =0;
 
-       
+       $size = count($tasks);
 
-       $j = 0;
        
-       foreach($tasks as $task)
-        {
-                if($task->status == 'работа'){
-                    $document->setValue('row' . $j, $task->description);
-                    $newDateFormat = date('d.m.Y', strtotime($task->date));
-                    $document->setValue('date' . $j, $newDateFormat);
-                    $j++;
-                }
-       }
-       $g = 0;
-       for ($g = 0; $g<=21;$i++)
+       for ($i = 0; $i<$size;$i++)
        {
-            $document->setValue('row' . $g, ' ');
-            $document->setValue('date' . $g, ' ');
-            $g++;
+            if($xyi){
+            $document->setValue('row' . $i, $tasks[$i]->description);
+            $newDateFormat = date('d.m.Y', strtotime($tasks[$i]->date));
+            $document->setValue('date' . $i, $newDateFormat);
+            }
+       }
+
+       while($i <= 21)
+       {
+            $document->setValue('row' . $i, ' ');
+            $document->setValue('date' . $i, ' ');
+            $i++;
        }
 
 

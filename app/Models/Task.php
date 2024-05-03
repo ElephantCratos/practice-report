@@ -19,6 +19,6 @@ class Task extends Model
     ];
     public function practice()
     {
-	return $this->belongsToMany(PracticePlace::class);
+	return $this->belongsTo(StudentPractice::class, 'student_practice_id');
     }
 }
