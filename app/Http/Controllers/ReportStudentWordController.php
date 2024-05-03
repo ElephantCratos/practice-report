@@ -12,7 +12,30 @@ class ReportStudentWordController extends Controller
 
     public function downloadDocx(Request $request, $pr_stud_id)
     {
+    
+
         $student_practice = StudentPractice::findOrFail($pr_stud_id);
+
+
+        
+        if (!$student_practice->student->full_name || !$student_practice->student->full_name_r || !$student_practice->student->full_name_p)
+        {
+            return redirect()->route('downloadDocx.ind')-> with('success', 'Вы не заполнили все необходимые данные во вкладке профиль, заполните все склонения вашего ФИО');
+        }
+
+        if (!$student_practice->practice->head_enterprise->full_name || !$student_practice->practice->head_enterprise->full_name_r || !$student_practice->practice->head_enterprise->full_name_p)
+        {
+            return redirect()->route('downloadDocx.ind')-> with('success', 'Руководитель практики от организации не заполнил все необходимые поля в профиле, сообщите ему об этом');
+        }
+
+        if (!$student_practice->practice->head_ugrasu->full_name || !$student_practice->practice->head_ugrasu->full_name_r || !$student_practice->practice->head_ugrasu->full_name_p)
+        {
+            return redirect()->route('downloadDocx.ind')-> with('success', 'Руководитель практики ЮГУ не заполнил все необходимые поля в профиле, сообщите ему об этом');
+        }
+
+
+
+
         $tasks=$student_practice->tasks;
 
         $document = new \PhpOffice\PhpWord\TemplateProcessor('CompletedTemplate.docx');
