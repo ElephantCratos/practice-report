@@ -13,7 +13,7 @@
         </h3>
     </x-slot>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 justify-center items-center " style="display:flex;">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 justify-center items-center flex">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg items-center p-5 w-full">
                 <table class="bg-gray-700 w-full">
                     <tr class="">

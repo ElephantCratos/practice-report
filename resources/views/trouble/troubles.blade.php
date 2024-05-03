@@ -27,7 +27,9 @@
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $Trouble->description }}</td>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">{{ $Trouble->score->name}}</td>
                             <td class="border-2 border-slate-300 p-5 text-white text-center">
-                                <a href="{{ route('Troubles.edit', $Trouble->id) }}" class="text-blue-500 underline">Изменить</a>
+                                <a href="{{ route('Troubles.edit', $Trouble->id) }}" class="text-blue-500 underline">
+                                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Изменить</button>
+                                </a>
                                 <form method="POST" action="{{ route('Troubles.delete', $Trouble->id) }}">
                                     @csrf
                                     @method('DELETE')
