@@ -6,14 +6,22 @@ use App\Models\PracticePlace;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
     public function index()
     {
+         $user = Auth::user();
         $tasks = Task::OrderBy('id')->get();
-        $practiceStudents = StudentPractice::all();
-        return view('task.task', compact('tasks', 'practiceStudents'));
+         if ($user->hasRole('head_enterprice'))
+        {
+            $practiceStudents = StudentPractice::where('practice_head_organization_id', $user->id)->orderBy('id','desc')->get();
+             return view('task.task', compact('tasks', 'practiceStudents'));
+        }
+       
     }
 
     
@@ -23,8 +31,13 @@ class TaskController extends Controller
      */
     public function create(Request $request)
     {
-        $practiceStudents = StudentPractice::all();
-        return view('task.taskcreate', compact('practiceStudents'));
+         $user = Auth::user();
+        if ($user->hasRole('head_enterprice'))
+        {
+            $practiceStudents = StudentPractice::where('practice_head_organization_id', $user->id)->orderBy('id','desc')->get();
+            return view('task.taskCreate', compact('practiceStudents'));
+        }
+       
     }
 
     
