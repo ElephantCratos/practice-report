@@ -64,7 +64,7 @@
                     </div>
                 </div>
                  
-                @if(auth()->user()->role == 'head_OPOP')
+                @if(auth()->user()->hasRole('head_OPOP'))
                 <div class="mt-4">
                     <a href="{{ route('Practice.edit', $practice->id) }}">
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Изменить</button>

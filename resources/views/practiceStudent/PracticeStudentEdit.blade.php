@@ -29,7 +29,7 @@
 
                 <div class="mb-4">
                     <label for="traits_id"> Какие качества были продемонстрированы в ходе работы </label>
-                    <select name="traits_id" class="form-control">
+                    <select name="traits_id" class="form-control w-full">
                         @foreach($traits as $trait)
                         <option value="{{ $trait->id }}" @if($trait->id == $practiceStudent->trait_id) selected="selected" @endif >{{ $trait->description }} - {{$trait->score->name}}</option>
                         @endforeach
