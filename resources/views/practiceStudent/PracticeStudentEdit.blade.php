@@ -56,9 +56,9 @@
 
                 <div class="mb-4">
                     <label for="score_id"> Оценка</label>
-                    <select name="score_id" id="score_id" class="form-control">
+                    <select name="score_id" id="score_id" onchange="checkScore(this)" class="form-control">
                         @foreach($scores as $score)
-                        <option value="{{ $score->id }}" onchange="checkScore()" @if($score->id == $practiceStudent->score_id) selected="selected" @endif >{{ $score->name }}</option>
+                        <option value="{{ $score->id }}" @if($score->id == $practiceStudent->score_id) selected="selected" @endif >{{ $score->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -137,16 +137,14 @@
         return validOptions[randomIndex];
     }
 
-    function checkScore() {
-        var selectedScore = document.getElementById("score_id");
+    function checkScore(selectScore) {
+
         var rep = document.getElementById("reprimand");
 
-        selectedScore.addEventListener("change", function() {
-            if (selectedScore.value == 1) {
-                rep.setAttribute('required', 1);
-            } else {
-                rep.removeAttribute('required');
-            }
-        })
+        if (selectScore.value == 1) {
+            rep.setAttribute('required', true);
+        } else {
+            rep.removeAttribute('required');
+        }
     }
 </script>
