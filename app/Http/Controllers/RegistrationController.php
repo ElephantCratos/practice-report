@@ -10,10 +10,15 @@ class RegistrationController extends Controller
 {
     public function generateRegistrationLink(Request $request)
     {
-        $role = $request->input('role');
+        $requestingUserRole = auth()->user()->roles->first()->name;
+        if ($requestingUserRole === 'head_OPOP') {
+            $forbiddenRoles = ['admin', 'head_OPOP', 'superAdmin'];
+            if (in_array($request->input('role'), $forbiddenRoles)) {
+                abort(403, 'Вы не можете создать ссылку регистрации для этой роли.');
+            }
+        }
 
         $token = Str::random(100);
-
         $user = User::create([
             'name' => 'temp_username' . $token,
             'email' => 'temp_username' . $token . '@example.com',
@@ -21,7 +26,7 @@ class RegistrationController extends Controller
             'registration_token' => $token,
         ]);
 
-        $user->assignRole($role);
+        $user->assignRole($request->input('role'));
 
         $link = route('signUpWithToken', ['token' => $token]);
 
@@ -36,7 +41,6 @@ class RegistrationController extends Controller
             abort(404);
         }
 
-
         if (strpos($user->name, 'temp_username') !== false) {
             $newUser = User::create([
                 'name' => 'new_user' . $token,
@@ -48,11 +52,10 @@ class RegistrationController extends Controller
             foreach($user->roles as $role) {
                 $newUser->assignRole($role);
             }
+
             $user->delete();
             $flag = false;
         }
-
-
 
         $flag == true ? auth()->login($user) : auth()->login($newUser);
 

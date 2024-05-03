@@ -25,19 +25,47 @@ class UserController extends Controller
 
     public function assignRole(Request $request, User $user)
     {
-        $role = Role::findOrFail($request->role_id);
-        $user->assignRole($role);
+        if ($request->user()->hasRole('admin')) {
+            $role = Role::findOrFail($request->role_id);
+            $user->assignRole($role);
+            return redirect()->back()->with('status', 'Роль была успешно назначена');
+        }
+        
+        if ($request->user()->hasRole('head_OPOP')) {
+            $role = Role::findOrFail($request->role_id);
 
-        return redirect()->back()->with('status', 'Роль была успешно назначена пользователю.');
+            $forbiddenRoles = ['admin', 'head_OPOP', 'superAdmin'];
+            if (in_array($role->name, $forbiddenRoles)) {
+                abort(403, 'Вы не можете назначить эту роль');
+            }
+        }
+        $user->assignRole($role);
+        return redirect()->back()->with('status', 'Роль была успешно назначена');
     }
+
 
     public function removeRole(Request $request, User $user)
     {
-        $role = Role::findOrFail($request->role_id);
+        if ($request->user()->hasRole('admin')) {
+            $role = Role::findOrFail($request->role_id);
+            $user->removeRole($role);
+            return redirect()->back()->with('status', 'Роль была успешно удалена у юзера');
+        }
+
+        if ($request->user()->hasRole('head_OPOP')) {
+            $role = Role::findOrFail($request->role_id);
+
+            $forbiddenRoles = ['admin', 'head_OPOP', 'superAdmin'];
+            if (in_array($role->name, $forbiddenRoles)) {
+                abort(403, 'Вы не можете удалить эту роль у юзера');
+            }
+        }
+
         $user->removeRole($role);
 
-        return redirect()->back()->with('status', 'Роль была успешно удалена у пользователя.');
+        return redirect()->back()->with('status', 'Роль была успешно удалена у юзера');
     }
+
 
     public function updatePosition(Request $request, User $user)
     {
