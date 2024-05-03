@@ -79,7 +79,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 
 
-    Route::middleware(['can:access to head_OPOP panel'])->group(function () {
+    Route::middleware(['can:access to head_enterprice panel'])->group(function () {
         Route::get('/practice-students/index', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
         //Route::get('/practice-students/create', [StudentPracticeController::class, 'create'])->name('PracticeStudent.create');
         Route::get('/practice-students/edit/{id}', [StudentPracticeController::class, 'edit'])->name('PracticeStudent.edit');

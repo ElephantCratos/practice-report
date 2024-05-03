@@ -14,5 +14,20 @@ class TroubleSeeder extends Seeder
             'description' => 'оперативно, качественно',
             'score_id' => '4',
         ]);
+
+        Troubles::create([
+            'description' => 'стабильно, без особых проблем',
+            'score_id' => '3',
+        ]);
+
+        Troubles::create([
+            'description'=> 'достаточно стабильно, с частичной потерей мотивации ',
+            'score_id'=> '2',
+        ]);  
+
+        Troubles::create([
+            'description' => 'плохо, теряет последовательность действий',
+            'score_id' => '1',
+        ]);
     }
 }
