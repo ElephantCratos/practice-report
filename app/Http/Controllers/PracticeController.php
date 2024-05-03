@@ -149,7 +149,6 @@ class PracticeController extends Controller
             'practice_head_enterprice_id' => 'required',
             'practice_sort_id' => 'required',
             'practice_type_id' => 'required',
-            'contract_type_id' => 'required',
         ]);
 
         $practice = Practice::findOrFail($id);

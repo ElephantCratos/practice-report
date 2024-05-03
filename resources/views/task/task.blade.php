@@ -26,7 +26,7 @@
         }    
     }
     
-    $practices = $arr;
+    $tasks = $arr;
 
     @endphp
     @endrole
