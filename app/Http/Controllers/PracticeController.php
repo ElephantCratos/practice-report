@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 use App\Models\User;
 use App\Models\StudentPractice;
 use App\Models\Group;
@@ -9,15 +12,33 @@ use App\Models\Practice;
 use App\Models\PracticePlace;
 use App\Models\PracticeType;
 use App\Models\PracticeSort;
+use App\Models\ContractType;
 use Illuminate\Http\Request;
 
 class PracticeController extends Controller
 {
     public function index()
     {
-        $practice = Practice::all();
 
-        return view('practice/practice', compact(['practice']));
+        $user = Auth::user();
+        
+        if ($user->hasRole('head_OPOP'))
+        {
+            $practice = Practice::all();
+            return view('practice/practice', compact(['practice']));
+        }
+
+        if ($user->hasRole('head_enterprice'))
+        {
+            $practice = Practice::where('practice_head_enterprice_id', $user->id)->orderBy('id','desc')->get();
+            return view('practice/practice', compact(['practice']));
+        }
+        
+       
+
+        
+
+        
 
     }
 
@@ -30,8 +51,9 @@ class PracticeController extends Controller
         $practiceSorts = PracticeSort::all();
         $practicePlaces = PracticePlace::all();
         $groups = Group::all();
+        $contractTypes = ContractType::all();
 
-        return view('practice/PracticeCreate', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_enterprice', 'heads_ugrasu']));
+        return view('practice/PracticeCreate', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_enterprice', 'heads_ugrasu', 'contractTypes']));
     }
 
     public function store(Request $request)
@@ -48,7 +70,8 @@ class PracticeController extends Controller
             'practice_head_enterprice_id' => 'required',
             'practice_sort_id' => 'required',
             'practice_type_id' => 'required',
-            '$practicePlaces' => 'required|array'
+            '$practicePlaces' => 'required|array',
+            'contract_type_id' => 'required',
         ]);
 
         $practiceNew = Practice::create([

@@ -39,9 +39,9 @@
                 <div class="flex place-content-center">
                     <form action="{{ route('users.assignRole', $user->id) }}" method="post" class="mt-3 flex flex-colm mr-3 mb-3 form-group">
                         @csrf
-                        <div class="flex flex-col mt-3 mr-3 mb-3 form-group">
+                        <div class="w-56 flex flex-col mt-3 mr-3 mb-3 form-group">
                             <label for="role_id" class="block text-gray-700 text-sm font-bold mb-2">Выберите роль для назначения:</label>
-                            <select name="role_id" id="role_id" class="form-control mb-3">
+                            <select name="role_id" id="role_id" class="form-control px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-100 mb-3">
                                 @foreach ($roles as $role)
                                 <option value="{{ $role->id }}">{{ $role->name }}</option>
                                 @endforeach
@@ -53,9 +53,9 @@
 
                     <form action="{{ route('users.removeRole', $user->id) }}" method="post" class="mt-3 flex flex-colm mr-3 mb-3 form-group">
                         @csrf
-                        <div class="flex flex-col mt-3 mr-3 mb-3 form-group">
+                        <div class="w-56 flex flex-col mt-3 mr-3 mb-3 form-group">
                             <label for="role_id" class="block text-gray-700 text-sm font-bold mb-2">Выберите роль для удаления:</label>
-                            <select name="role_id" id="role_id" class="form-control mb-3">
+                            <select name="role_id" id="role_id" class="form-control px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-100 mb-3">
                                 @if($user->roles)
                                 @foreach ($user->roles as $role)
                                 <option value="{{ $role->id }}">{{ $role->name }}</option>
@@ -70,7 +70,7 @@
                 <div class="flex place-content-center">
                     <form action="{{ route('users.updatePosition', $user->id) }}" method="post" class="mt-3 flex flex-colm mr-3 mb-3 form-group">
                         @csrf
-                        <div class="flex flex-col mt-3 mr-3 mb-3 form-group">
+                        <div class="w-56 flex flex-col mt-3 mr-3 mb-3 form-group">
                             <label for="position" class="block text-gray-700 text-sm font-bold mb-2">Изменить должность</label>
                             <input type="text" name="position" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-100 mb-3" value="{{$user->position}}" required></input>
                             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Назначить</button>
@@ -81,15 +81,15 @@
                     @if($user->hasRole('student'))
                     <form method="POST" action="{{ route('users.updateGroup', $user->id) }}" class="mt-3 flex flex-colm mr-3 mb-3 form-group">
                         @csrf
-                        <div class="form-group">
+                        <div class="w-56 flex flex-col mt-3 mr-3 mb-3 form-group">
                             <label for="group" class="block text-gray-700 text-sm font-bold mb-2">Изменить группу</label>
-                            <select name="group_id" id="group" class="form-control mb-3">
+                            <select name="group_id" id="group" class="form-control px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-100 mb-3">
                                 @foreach ($groups as $group)
                                 <option value="{{ $group->id }}" @if($group->id == $user->group_id) selected="selected" @endif>{{ $group->name }}</option>
                                 @endforeach
                             </select>
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Изменить</button>
                         </div>
-                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Изменить</button>
                     </form>
                     @endif
                 </div>

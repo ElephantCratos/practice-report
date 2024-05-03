@@ -92,6 +92,15 @@
                     </select>
                 </div>
 
+                <div class="mb-4">
+                    <label for="contract_type_id"> Тип контракта</label>
+                    <select name="contract_type_id" class="form-control">
+                        @foreach($contractTypes as $type)
+                        <option value="{{ $type->id }}">{{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
 
 
 

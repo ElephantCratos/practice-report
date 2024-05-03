@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
 use App\Models\User;
 use App\Models\ContractType;
 use App\Models\StudentPractice;
@@ -10,18 +12,27 @@ use App\Models\Traits;
 use App\Models\Troubles;
 use App\Models\Score;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StudentPracticeController extends Controller
 {
     public function index()
     {
 
+        $user = Auth::user();
+        
+        if ($user->hasRole('head_enterprice'))
+        {
+            $practiceStudent = StudentPractice::where('practice_head_organization_id', $user->id)->orderBy('id','desc')->get();
+            return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
+        }
 
-        $practiceStudent = StudentPractice::all();
+        if ($user->hasRole('head_OPOP'))
+        {
+            $practiceStudent = StudentPractice::all();
+            return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
+        }
 
-
-
-      return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
     }
 
     public function create()
@@ -63,7 +74,6 @@ class StudentPracticeController extends Controller
             'volume_id' => 'required',
             'traits_id' => 'required',
             'trouble_id' => 'required',
-            'contract_type_id' => 'required',
             'score_id' => 'required',
             'practice_place' => 'required',
             'reprimand' => 'nullable|string|max:255',

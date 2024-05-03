@@ -80,7 +80,7 @@
                                     <div>{{ $student->isReady ? 'Да' : 'Нет' }}</div>
                                 </div>
 
-                                @if(auth()->user()->hasanyRole('student', 'head_OPOP', 'head_enterprice'))
+                                @if(auth()->user()->hasanyRole('head_OPOP', 'head_enterprice'))
                                 <form action="{{ route('PracticeStudent.edit', $student->id) }}">
                                     @csrf
                                     <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Изменить</button>

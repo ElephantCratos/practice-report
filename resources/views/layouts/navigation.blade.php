@@ -35,15 +35,15 @@
                 </div>
                 @endrole
 
-                @role('head_OPOP')
+                @hasanyrole('head_OPOP|head_enterprice')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('Practice.index')" :active="request()->routeIs('Practice.index')">
                         {{ __('Practice') }}
                     </x-nav-link>
                 </div>
-                @endrole
+                @endhasanyrole
 
-                @hasanyrole('student|head_OPOP')
+                @hasanyrole('student|head_OPOP|head_enterprice')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('PracticeStudent.index')" :active="request()->routeIs('PracticeStudent.index')">
                         {{ __('Student Practice') }}

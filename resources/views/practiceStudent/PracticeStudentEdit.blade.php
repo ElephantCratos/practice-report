@@ -45,14 +45,7 @@
                     </select>
                 </div>
 
-                <div class="mb-4">
-                    <label for="contract_type_id"> Тип контракта</label>
-                    <select name="contract_type_id" class="form-control">
-                        @foreach($contractTypes as $type)
-                        <option value="{{ $type->id }}" @if($type->id == $practiceStudent->practice_type_id) selected="selected" @endif >{{ $type->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
+                
 
                 <div class="mb-4">
                     <label for="score_id"> Оценка</label>
