@@ -20,34 +20,37 @@ class TaskController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(){
-
-        $tasks = Task::OrderBy('id')
-            ->get();
-        
-        return view('task/taskCreate',compact([
-            'tasks'
-        ]));
+    public function create(Request $request)
+    {
+        $practiceStudents = StudentPractice::all();
+        return view('task.taskcreate', compact('practiceStudents'));
     }
+
     
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //dd($request);
-        $validatedData = $request -> validate([
+        $validatedData = $request->validate([
             'description' => 'required|min:10',
             'date' => 'required|date_format:Y-m-d',
+            'student_practice_id' => 'required', // Добавляем проверку на наличие идентификатора студента
         ]);
 
-        Task::create([
-            'description' => $validatedData['description'],
-            'date' => $validatedData['date']
-        ]);
+        // Создаем новую задачу с полученными данными
+        $task = new Task();
+        $task->description = $validatedData['description'];
+        $task->date = $validatedData['date'];
+        $task->student_practice_id = $validatedData['student_practice_id']; // Используем идентификатор студента из запроса
 
+        // Сохраняем задачу в базе данных
+        $task->save();
+
+        // После сохранения задачи, перенаправляем пользователя на страницу с задачами с сообщением об успехе
         return redirect()->route('Task.index')->with('success', 'Новое задание успешно добавлено');
     }
+
 
     /**
      * Display the specified resource.

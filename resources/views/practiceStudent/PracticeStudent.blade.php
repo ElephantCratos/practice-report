@@ -1,11 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Данные о практике студента') }}
+            {{ __('Данные о практике студентов') }}
         </h2>
     </x-slot>
-    <section>
-        <section >
+    <section >
         <div class="mt-4">
             @foreach ($practiceStudent as $student)
             <div class="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8 m-auto">
@@ -13,6 +12,7 @@
                     <div class="bg-white border-b border-gray-200">
                         <div class="flex flex-col">
                             <div class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                    
                         <div class="mb-4">
                             <div class="font-bold">Объем выполненной работы:</div>
                             @if($student->volume)
@@ -79,8 +79,7 @@
                             <div class="font-bold">Данные актуальны и документ готов к печати:</div>
                             <div>{{ $student->isReady ? 'Да' : 'Нет' }}</div>
                         </div>
-                    @if(auth()->user()->can('edit articles') && $some_other_condition)
-
+                        
                     <form action="{{ route('PracticeStudent.delete', $student->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
@@ -91,27 +90,13 @@
 
                                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Изменить</button>
                                 </form>
-                                </form>
-                                
-                                @endif
-                                @if($student->isReady)
-                           
-                                <div class="mt-4">
-                                    <a href="{{ route('downloadDocx.ind', $student->id) }}">
-                                        скачать
-                                    </a>
                                 </div>
-                                @endif
-                                
-                            </div>
-                           
-                            </div>
+                                </div>
+                        
+                    </div>
                 </div>
             </div>
-            </div>
-             @endforeach
         </div>
-        
+        @endforeach
     </section>
 </x-app-layout>
-
