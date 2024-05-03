@@ -12,12 +12,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        
-    $practiceStudent = StudentPractice::where('student_id', Auth::user()->id)->OrderBy('id')->get();
-
-
-
-      return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
+      //
     }
 
     /**

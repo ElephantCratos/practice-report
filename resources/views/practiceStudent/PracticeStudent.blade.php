@@ -4,6 +4,11 @@
             {{ __('Данные о практике студентов') }}
         </h2>
     </x-slot>
+    @if (session('success'))
+            <div class="alert-container">
+                {{ session('success') }}
+            </div>
+            @endif
     <section>
         <div class="mt-4">
             @foreach ($practiceStudent as $student)

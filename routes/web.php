@@ -79,13 +79,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     });
 
 
-    Route::middleware(['role:head_OPOP|head_enterprice'])->group(function () {
+    Route::middleware(['role:head_OPOP|head_enterprice|student'])->group(function () {
         Route::get('/practice-students/index', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
         //Route::get('/practice-students/create', [StudentPracticeController::class, 'create'])->name('PracticeStudent.create');
-        Route::get('/practice-students/edit/{id}', [StudentPracticeController::class, 'edit'])->name('PracticeStudent.edit');
+        Route::get('/practice-students/edit/{id}', [StudentPracticeController::class, 'edit'])->name('PracticeStudent.edit')->middleware('role:head_OPOP|head_enterprice');
         //Route::post('/practice-students/store', [StudentPracticeController::class, 'store'])->name('PracticeStudent.store');
-        Route::put('/practice-students/update/{id}', [StudentPracticeController::class, 'update'])->name('PracticeStudent.update');
-        Route::delete('/practice-students/delete/{id}', [StudentPracticeController::class, 'destroy'])->name('PracticeStudent.delete');
+        Route::put('/practice-students/update/{id}', [StudentPracticeController::class, 'update'])->name('PracticeStudent.update')->middleware('role:head_OPOP|head_enterprice');
+        Route::delete('/practice-students/delete/{id}', [StudentPracticeController::class, 'destroy'])->name('PracticeStudent.delete')->middleware('role:head_OPOP|head_enterprice');
     });
 
 

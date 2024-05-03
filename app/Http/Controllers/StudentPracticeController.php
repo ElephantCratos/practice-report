@@ -33,6 +33,12 @@ class StudentPracticeController extends Controller
             return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
         }
 
+        if ($user->hasRole('student'))
+        {
+            $practiceStudent = StudentPractice::where('student_id', $user->id)->orderBy('id','desc')->get();
+            return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
+        }
+
     }
 
     public function create()
