@@ -11,7 +11,8 @@
             @endif
         </h3>
     </x-slot>
-    @if(auth()->user()->role == 'head_OPOP')
+
+    @if(auth()->user()->hasRole('head_OPOP'))
     <div class="mt-4">
         <a href="{{ route('Practice.create') }}"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded">Добавить новый блок</button></a>
     </div>
