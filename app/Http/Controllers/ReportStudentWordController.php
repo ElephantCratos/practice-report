@@ -113,7 +113,7 @@ class ReportStudentWordController extends Controller
         $rep = 'Замечания отсутствуют.';
         }
         else{
-            $rep = $student_practice->reprimand;
+            $rep = "Замечания: " . $student_practice->reprimand;
         }
 
        $trait = $student_practice->trait->description;
