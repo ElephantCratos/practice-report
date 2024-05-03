@@ -14,7 +14,8 @@ class Task extends Model
     protected $fillable = [
         'description',
         'date',
-        'student_practice_id'
+        'student_practice_id',
+        'status'
     ];
     public function practice()
     {

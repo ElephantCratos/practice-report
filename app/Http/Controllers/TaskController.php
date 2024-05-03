@@ -6,6 +6,7 @@ use App\Models\PracticePlace;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models;
+
 class TaskController extends Controller
 {
     public function index()
@@ -43,6 +44,7 @@ class TaskController extends Controller
         $task->description = $validatedData['description'];
         $task->date = $validatedData['date'];
         $task->student_practice_id = $validatedData['student_practice_id']; // Используем идентификатор студента из запроса
+        $task->status = 'задача';
 
         // Сохраняем задачу в базе данных
         $task->save();
@@ -114,19 +116,23 @@ class TaskController extends Controller
         $filePath = $file->getRealPath();
 
         $csvData = array_map('str_getcsv', file($filePath));
+       
         $csvHeaders = array_shift($csvData);
 
         foreach ($csvData as $csvTask) {
             $description = $csvTask[4];
             $csvDate = $csvTask[6];
-            $date = date('Y-m-d H:i:s', strtotime($csvDate));
-
+            $Date = explode(' ', $csvDate);
+            $date = $Date[0];
+            $date1 = date_create_from_format("d/m/Y",$date);
+            
             $studentId = $request->input('student_practice_id');
 
             $task = new Task();
             $task->description = $description;
-            $task->date = $date;
-            $task->student_practice_id = $studentId; 
+            $task->date = $date1;
+            $task->student_practice_id = $studentId;
+            $task->status = 'работа';
             $task->save();
         }
 
