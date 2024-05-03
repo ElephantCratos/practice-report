@@ -22,19 +22,28 @@
                 {{ __('Назначить/Удалить роли') }}
             </h2>
             <div class="card-body">
-
+                @php
+                    $adminRoles = ['admin', 'head_ugrasu', 'head_OPOP', 'head_enterprice', 'student'];
+                    $headOPOPRoles = ['head_enterprice', 'head_ugrasu', 'student'];
+                @endphp
                 <div class="mb-8 mt-3">
                     <p class="mb-3">Имя пользователя: <span class="form-control">{{ $user->name }}</span></p>
                     <p class="mb-3">Email пользователя: <span class="form-control">{{ $user->email }}</span></p>
+                    
                     <p class="block text-gray-700 text-sm font-bold mb-2">Роли пользователя:</p>
                     @if($user->roles)
                     <ul>
                         @foreach ($user->roles as $role)
-                        <li class="ml-4 mb-2 list-disc"><span class="form-control">{{ $role->name }}</span></li>
+                            @if (auth()->user()->hasRole('admin') && in_array($role->name, $adminRoles))
+                                <li class="ml-4 mb-2 list-disc"><span class="form-control">{{ $role->name }}</span></li>
+                            @elseif (auth()->user()->hasRole('head_OPOP') && in_array($role->name, $headOPOPRoles))
+                                <li class="ml-4 mb-2 list-disc"><span class="form-control">{{ $role->name }}</span></li>
+                            @endif
                         @endforeach
                     </ul>
                     @endif
                 </div>
+
 
                 <div class="flex place-content-center">
                     <form action="{{ route('users.assignRole', $user->id) }}" method="post" class="mt-3 flex flex-colm mr-3 mb-3 form-group">
@@ -43,7 +52,11 @@
                             <label for="role_id" class="block text-gray-700 text-sm font-bold mb-2">Выберите роль для назначения:</label>
                             <select name="role_id" id="role_id" class="form-control px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-100 mb-3">
                                 @foreach ($roles as $role)
-                                <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                    @if (auth()->user()->hasRole('admin') && in_array($role->name, $adminRoles))
+                                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                    @elseif (auth()->user()->hasRole('head_OPOP') && in_array($role->name, $headOPOPRoles))
+                                        <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                    @endif
                                 @endforeach
                             </select>
                             <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-2 border border-green-700 rounded mb-3">Назначить роль</button>
@@ -51,20 +64,26 @@
                         </div>
                     </form>
 
+
                     <form action="{{ route('users.removeRole', $user->id) }}" method="post" class="mt-3 flex flex-colm mr-3 mb-3 form-group">
                         @csrf
                         <div class="w-56 flex flex-col mt-3 mr-3 mb-3 form-group">
                             <label for="role_id" class="block text-gray-700 text-sm font-bold mb-2">Выберите роль для удаления:</label>
                             <select name="role_id" id="role_id" class="form-control px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300 w-100 mb-3">
                                 @if($user->roles)
-                                @foreach ($user->roles as $role)
-                                <option value="{{ $role->id }}">{{ $role->name }}</option>
-                                @endforeach
+                                    @foreach ($user->roles as $role)
+                                        @if (auth()->user()->hasRole('admin') && in_array($role->name, $adminRoles))
+                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                        @elseif (auth()->user()->hasRole('head_OPOP') && in_array($role->name, $headOPOPRoles))
+                                            <option value="{{ $role->id }}">{{ $role->name }}</option>
+                                        @endif
+                                    @endforeach
                                 @endif
                             </select>
                             <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 border border-red-700 rounded">Удалить роль</button>
                         </div>
                     </form>
+
                 </div>
 
                 <div class="flex place-content-center">
