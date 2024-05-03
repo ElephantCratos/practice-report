@@ -22,20 +22,23 @@ class PracticeController extends Controller
 
         $user = Auth::user();
         
+        if ($user->hasRole('head_OPOP'))
+        {
+            $practice = Practice::all();
+            return view('practice/practice', compact(['practice']));
+        }
+
         if ($user->hasRole('head_enterprice'))
         {
             $practice = Practice::where('practice_head_enterprice_id', $user->id)->orderBy('id','desc')->get();
             return view('practice/practice', compact(['practice']));
         }
         
-        if ($user->hasRole('head_OPOP'))
-        {
-        $practice = Practice::all();
-        }
+       
 
         
 
-        return view('practice/practice', compact(['practice']));
+        
 
     }
 
