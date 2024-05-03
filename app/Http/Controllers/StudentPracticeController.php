@@ -29,6 +29,7 @@ class StudentPracticeController extends Controller
 
         if ($user->hasRole('head_OPOP'))
         {
+            
             $practiceStudent = StudentPractice::all();
             return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
         }

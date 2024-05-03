@@ -12,13 +12,31 @@
         </h3>
     </x-slot>
 
+    @role('head_OPOP')
+    @php 
+    
+    $arr = [];
+
+    foreach ($practices as $practice)
+    {
+        if ($practice->group->trainingDirections->head_OPOP->id == auth()->user()->id)
+        {
+            array_push($arr, $practice);
+        }    
+    }
+    
+    $practices = $arr;
+
+    @endphp
+    @endrole
+    
     @if(auth()->user()->hasRole('head_OPOP'))
     <div class="mt-4">
         <a href="{{ route('Practice.create') }}"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded">Добавить новый блок</button></a>
     </div>
     @endif
 
-    @foreach($practice as $practice)
+    @foreach($practices as $practice)
 
     <div class="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8 m-auto">
 

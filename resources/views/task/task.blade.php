@@ -11,6 +11,28 @@
             @endif
         </h3>
     </x-slot>
+
+
+    @role('head_enterprice')
+    @php 
+    
+    $arr = [];
+
+    foreach ($tasks as $task)
+    {
+        if ($task->practice->student->group->trainingDirections->head_OPOP->id == auth()->user()->id)
+        {
+            array_push($arr, $practice);
+        }    
+    }
+    
+    $practices = $arr;
+
+    @endphp
+    @endrole
+
+
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 justify-center items-center" style="display:flex;">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg items-center p-5 w-full">

@@ -11,6 +11,25 @@
             @endif
     <section>
         <div class="mt-4">
+            @role('head_OPOP')
+            @php 
+            
+            $arr = [];
+
+            foreach ($practiceStudent as $practice)
+            {
+                if ($practice->student->group->trainingDirections->head_OPOP->id == auth()->user()->id)
+                {
+                    array_push($arr, $practice);
+                }    
+            }
+            
+            $practiceStudent = $arr;
+
+           
+            @endphp
+            @endrole
+
             @foreach ($practiceStudent as $student)
             <div class="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8 m-auto">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">

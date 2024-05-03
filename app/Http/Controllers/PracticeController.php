@@ -24,14 +24,14 @@ class PracticeController extends Controller
         
         if ($user->hasRole('head_OPOP'))
         {
-            $practice = Practice::all();
-            return view('practice/practice', compact(['practice']));
+            $practices = Practice::all();
+            return view('practice/practice', compact(['practices']));
         }
 
         if ($user->hasRole('head_enterprice'))
         {
-            $practice = Practice::where('practice_head_enterprice_id', $user->id)->orderBy('id','desc')->get();
-            return view('practice/practice', compact(['practice']));
+            $practices = Practice::where('practice_head_enterprice_id', $user->id)->orderBy('id','desc')->get();
+            return view('practice/practice', compact(['practices']));
         }
         
        
