@@ -17,6 +17,10 @@
             <form method="POST" action="{{ route('PracticeStudent.update', $practiceStudent->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
+                <div class="mb-4">
+                    <label for="FIO">ФИО студента</label>
+                    <p name="FIO" class="text-2xl">{{$practiceStudent->student->full_name}}</p>
+                </div>
 
                 <div class="mb-4">
                     <label for="volume_id"> Объем выполненной работы </label>
@@ -45,7 +49,7 @@
                     </select>
                 </div>
 
-                
+
 
                 <div class="mb-4">
                     <label for="score_id"> Оценка</label>
@@ -145,8 +149,7 @@
         const selectedScore = document.querySelector('select[name="score_id"] option:checked').text;
         const rep = document.getElementById("reprimand");
         console.log(selectedScore);
-        if (selectedScore == 'Неудовлетворительно')
-        {
+        if (selectedScore == 'Неудовлетворительно') {
             rep.setAttribute('required', true);
         }
     });

@@ -14,6 +14,12 @@
                             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
 
                                 <div class="mb-4">
+                                    <div class="font-bold">ФИО студента:</div>
+                                    <p class="text-2xl">{{ $student->student->full_name }}</p>
+                                    
+                                </div>
+
+                                <div class="mb-4">
                                     <div class="font-bold">Объем выполненной работы:</div>
                                     @if($student->volume)
                                     <div>{{ $student->volume->description }}</div>
