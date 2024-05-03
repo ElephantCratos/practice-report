@@ -75,6 +75,7 @@ return new class extends Migration
             $table->string('description');
             $table->date('date')->format('d-m-y');
             $table->foreignId('student_practice_id')->references('id')->on('student_practice');
+            $table->string('status')->nullable();
             $table->timestamps();
 
         });
