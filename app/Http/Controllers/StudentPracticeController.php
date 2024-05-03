@@ -63,7 +63,6 @@ class StudentPracticeController extends Controller
             'volume_id' => 'required',
             'traits_id' => 'required',
             'trouble_id' => 'required',
-            'contract_type_id' => 'required',
             'score_id' => 'required',
             'practice_place' => 'required',
             'reprimand' => 'nullable|string|max:255',
