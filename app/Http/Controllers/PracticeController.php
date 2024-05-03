@@ -9,6 +9,7 @@ use App\Models\Practice;
 use App\Models\PracticePlace;
 use App\Models\PracticeType;
 use App\Models\PracticeSort;
+use App\Models\ContractType;
 use Illuminate\Http\Request;
 
 class PracticeController extends Controller
@@ -30,8 +31,9 @@ class PracticeController extends Controller
         $practiceSorts = PracticeSort::all();
         $practicePlaces = PracticePlace::all();
         $groups = Group::all();
+        $contractTypes = ContractType::all();
 
-        return view('practice/PracticeCreate', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_enterprice', 'heads_ugrasu']));
+        return view('practice/PracticeCreate', compact(['practiceTypes', 'practiceSorts', 'practicePlaces' , 'groups' , 'heads_enterprice', 'heads_ugrasu', 'contractTypes']));
     }
 
     public function store(Request $request)
@@ -48,7 +50,8 @@ class PracticeController extends Controller
             'practice_head_enterprice_id' => 'required',
             'practice_sort_id' => 'required',
             'practice_type_id' => 'required',
-            '$practicePlaces' => 'required|array'
+            '$practicePlaces' => 'required|array',
+            'contract_type_id' => 'required',
         ]);
 
         $practiceNew = Practice::create([
