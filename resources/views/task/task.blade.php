@@ -20,9 +20,9 @@
 
     foreach ($tasks as $task)
     {
-        if ($task->practice->student->group->trainingDirections->head_OPOP->id == auth()->user()->id)
+        if ($task->practice->practice_head->id == auth()->user()->id)
         {
-            array_push($arr, $practice);
+            array_push($arr, $task);
         }    
     }
     
