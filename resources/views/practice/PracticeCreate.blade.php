@@ -45,14 +45,15 @@
                         @endforeach
                     </select>
                 </div>
-                <label for="toppings" class="block text-gray-700 text-sm font-bold mb-2">Выберите организации, в которых будут проходить практики</label>
-                <div id="toppings" class="text-gray-700 mb-10">
-                    @foreach ($practicePlaces as $place)
-                    <div class="topping">
-                        <label><input type="checkbox" name="$practicePlaces[]" value="{{ $place->id }}">{{ $place->name }} - {{$place->address}}</label>
-                    </div>
-                    @endforeach
+                <div class="mb-4">
+                    <label for="practicePlaces">Место практики</label>
+                    <select name="practicePlaces" class="form-control">
+                        @foreach($practicePlaces as $place)
+                        <option value="{{ $place->id }}">{{ $place->name }} - {{$place->address}}</option>
+                        @endforeach
+                    </select>
                 </div>
+                
 
                 <div>
                     <label for="start_date" class="block text-gray-700 text-sm font-bold mb-2">Дата начала практики</label>

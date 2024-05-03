@@ -60,7 +60,7 @@ class PracticeController extends Controller
     {
 
         $validatedData =$request->validate([
-            'practice_name' => 'required|string|min:10',
+            'practice_name' => 'required|string|min:5',
             'start_date' => 'date',
             'end_date' => 'date',
             'order_number' => 'required|string',
@@ -70,9 +70,11 @@ class PracticeController extends Controller
             'practice_head_enterprice_id' => 'required',
             'practice_sort_id' => 'required',
             'practice_type_id' => 'required',
-            '$practicePlaces' => 'required|array',
+            'practicePlaces' => 'required',
             'contract_type_id' => 'required',
         ]);
+
+        $practice_place = (array($validatedData['practicePlaces']));
 
         $practiceNew = Practice::create([
             'practice_name' => $validatedData['practice_name'],
@@ -99,22 +101,22 @@ class PracticeController extends Controller
                 'practice_id' => $practiceNew->id,
                 'student_id'  => $student->id,
                 'paid' => false,
-                'contract_type_id' => 2,
+                'contract_type_id' => $validatedData['contract_type_id'],
                 'practice_head_organization_id' => $practiceNew->practice_head_enterprice_id,
                 'volume_id' => null,
                 'traits_id' => null,
                 'trouble_id' => null,
                 'score_id' => null,
                 'reprimand' => null,
-                'practice_place' => null,
                 'isReady' => false,
+                'practice_place' => $validatedData['practicePlaces'],
 
 
                 ]);
 
         }
 
-        $practiceNew->places()->attach($practice_places);
+        $practiceNew->places()->attach($practice_place);
 
         return redirect()->route('Practice.index')->with('success', 'Практика успешно создана!');
     }
@@ -147,6 +149,7 @@ class PracticeController extends Controller
             'practice_head_enterprice_id' => 'required',
             'practice_sort_id' => 'required',
             'practice_type_id' => 'required',
+            'contract_type_id' => 'required',
         ]);
 
         $practice = Practice::findOrFail($id);

@@ -46,13 +46,16 @@
                         @endforeach
                     </select>
                 </div>
-                <label for="toppings" class="block text-gray-700 text-sm font-bold mb-2">Выберите организации, в которых будут проходить практики</label>
-                <div id="toppings" class="text-gray-700 mb-10">
-                    @foreach ($practicePlaces as $place)
-                    <div class="topping">
-                        <label><input type="checkbox" name="$practicePlaces[]" value="{{ $place->id }}" @if($practice->places->contains($place)) checked @endif>{{ $place->name }} - {{$place->address}}</label>
-                    </div>
-                    @endforeach
+
+                <div class="mb-4 ">
+                    
+                        @foreach($practicePlaces as $place)
+                        @if($practice->places->contains($place))
+                        <label>Место прохождения практики</label>
+                        <input type="text"  class="w-full" value="{{ $place->name }} - {{$place->address}}" readonly>  </input> 
+                        @endif
+                        @endforeach
+                    
                 </div>
 
                 <div>
