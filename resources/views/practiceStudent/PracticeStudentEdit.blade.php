@@ -147,4 +147,14 @@
             rep.removeAttribute('required');
         }
     }
+
+    addEventListener("DOMContentLoaded", (event) => {
+        const selectedScore = document.querySelector('select[name="score_id"] option:checked').text;
+        const rep = document.getElementById("reprimand");
+        console.log(selectedScore);
+        if (selectedScore == 'Неудовлетворительно')
+        {
+            rep.setAttribute('required', true);
+        }
+    });
 </script>
