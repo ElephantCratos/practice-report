@@ -50,7 +50,7 @@ PHP 8.2 REQUIRED
 **Must Have Commands to start**
 
     git clone https://github.com/ElephantCratos/practice-report.git
-    cd food-deliv
+    cd practice-report
     composer install
     php artisan migrate -seed
  
