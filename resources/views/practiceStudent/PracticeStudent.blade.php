@@ -12,8 +12,8 @@
     <section>
         <div class="mt-4">
             @role('head_OPOP')
-            @php 
-            
+            @php
+
             $arr = [];
 
             foreach ($practiceStudent as $practice)
@@ -21,12 +21,12 @@
                 if ($practice->student->group->trainingDirections->head_OPOP->id == auth()->user()->id)
                 {
                     array_push($arr, $practice);
-                }    
+                }
             }
-            
+
             $practiceStudent = $arr;
 
-           
+
             @endphp
             @endrole
 
@@ -38,9 +38,14 @@
                             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
 
                                 <div class="mb-4">
+                                    <div class="font-bold">Наименование практики</div>
+                                    <p class="text-2xl">{{ $student->practice->practice_name }}</p>
+
+                                </div>
+                                <div class="mb-4">
                                     <div class="font-bold">ФИО студента:</div>
                                     <p class="text-2xl">{{ $student->student->full_name }}</p>
-                                    
+
                                 </div>
 
                                 <div class="mb-4">

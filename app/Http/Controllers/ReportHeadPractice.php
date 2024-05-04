@@ -68,11 +68,34 @@ class ReportHeadPractice extends Controller
 
         $practice_st = $practice->practice_st;
 
-        $count_norm = count(StudentPractice::where('score_id', '!=', 1)->get());
+        $practiceStudent = StudentPractice::all();
+
+        $count_norm = count($practiceStudent);
+
+        $count_good_score = 0;
+        for ($i=0; $i<$count_norm;$i++ )
+        {
+
+            if ($practiceStudent[$i]->practice->id == $practice->id && $practiceStudent[$i]->score_id!=1)
+            {
+                $count_good_score++;
+            }
+        }
+
+        $count_bad_score = 0;
+
+        for ($i=0; $i<$count_norm;$i++ )
+        {
+
+            if ($practiceStudent[$i]->practice->id == $practice->id && $practiceStudent[$i]->score_id==1)
+            {
+                $count_bad_score++;
+            }
+        }
         $ne_count_norm = count(StudentPractice::where('score_id', '=', 1)->get());
 
-        $document1->cloneRow('st_full_nameN', $count_norm);
-        $document1->cloneRow('ne_st_full_nameN', $ne_count_norm);
+        $document1->cloneRow('st_full_nameN', $count_good_score);
+        $document1->cloneRow('ne_st_full_nameN', $count_bad_score);
 
         $i = 1;
         $j = 1;
@@ -132,8 +155,8 @@ class ReportHeadPractice extends Controller
             'h_pr_op' => $h_pr_op,
             'ct_t' => $ct_t,
             'p' => $p,
-            'count_norm' => $count_norm,
-            'ne_count_norm' => $ne_count_norm,
+            'count_norm' => $count_good_score,
+            'ne_count_norm' => $count_bad_score,
         ));
 
         $document1->saveAs('meat - ' . 'faggot' . '.docx');
