@@ -159,8 +159,8 @@ class ReportHeadPractice extends Controller
             'ne_count_norm' => $count_bad_score,
         ));
 
-        $document1->saveAs('meat - ' . 'faggot' . '.docx');
+        $document1->saveAs($h_pr_ent . $stud_g . '.docx');
 
-        return response()->download(public_path('meat - ' . 'faggot' . '.docx'));
+        return response()->download(public_path($h_pr_ent . $stud_g . '.docx'));
     }
 }

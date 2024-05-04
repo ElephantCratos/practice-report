@@ -12,22 +12,22 @@ class ReportStudentWordController extends Controller
 
     public function downloadDocx(Request $request, $pr_stud_id)
     {
-    
+
 
         $student_practice = StudentPractice::findOrFail($pr_stud_id);
-        
+
         //if($student_practice->student->full_name_p == null ) {
           //  dd(1);
         //}
 
         //dd(2);
-             
+
         if ($student_practice->student->full_name == null || $student_practice->student->full_name_r == null || $student_practice->student->full_name_d == null)
         {
             return redirect()->route('PracticeStudent.index')-> with('success', 'Вы не заполнили все необходимые данные во вкладке профиль, заполните все склонения вашего ФИО');
         }
 
-      
+
 
 
 
@@ -113,36 +113,36 @@ class ReportStudentWordController extends Controller
 
        $trait = $student_practice->trait->description;
 
-       $trouble = $student_practice->troubles->description;  
+       $trouble = $student_practice->troubles->description;
 
         $volum = $student_practice->volume->description;
 
         $document->setValues(array(
-            'h_pr_ent' => $h_pr_ent, 
-            'h_pr_usu' => $h_pr_usu, 
-            'inst' => $inst, 
-            'pr_s_d' => $pr_s_d, 
-            'pr_s_w' => $pr_s_w, 
-            'tr_d' => $tr_d, 
-            'st_ent' => $st_ent, 
-            'practice_name' => $practice_name, 
-            'sc' => $sc, 'pr_p_ad' => $pr_p_ad, 
-            'start_date' => $startDateFormat, 
+            'h_pr_ent' => $h_pr_ent,
+            'h_pr_usu' => $h_pr_usu,
+            'inst' => $inst,
+            'pr_s_d' => $pr_s_d,
+            'pr_s_w' => $pr_s_w,
+            'tr_d' => $tr_d,
+            'st_ent' => $st_ent,
+            'practice_name' => $practice_name,
+            'sc' => $sc, 'pr_p_ad' => $pr_p_ad,
+            'start_date' => $startDateFormat,
             'end_date' => $endDateFormat,
-            'pos_ent' => $pos_ent, 
-            'pos_usu' => $pos_usu, 
-            's_c' => $s_c, 
-            'stud_g' => $stud_g, 
-            'student_full_name' => $student_full_name, 
+            'pos_ent' => $pos_ent,
+            'pos_usu' => $pos_usu,
+            's_c' => $s_c,
+            'stud_g' => $stud_g,
+            'student_full_name' => $student_full_name,
             'full_name_r' => $full_name_r,
-            'full_name_d' => $full_name_d, 
+            'full_name_d' => $full_name_d,
             'pr_pl' => $pr_pl,
-            'st_d' => $st_d, 
-            'st_m' => $st_m, 
-            'en_d' => $en_d, 
-            'en_m' => $en_m, 
-            'rep' => $rep, 
-            'trait' => $trait, 
+            'st_d' => $st_d,
+            'st_m' => $st_m,
+            'en_d' => $en_d,
+            'en_m' => $en_m,
+            'rep' => $rep,
+            'trait' => $trait,
             'trouble' => $trouble,
             'volum' => $volum
             )
@@ -165,7 +165,7 @@ class ReportStudentWordController extends Controller
 
        $size = count($tasks);
 
-       
+
        for ($i = 0; $i<$size;$i++)
        {
             if($xyi){
@@ -183,9 +183,9 @@ class ReportStudentWordController extends Controller
        }
 
 
-       $document -> saveAs('fish - '.'faggot'.'.docx');
+       $document -> saveAs($student_full_name .'.'.$practice_name.'.docx');
 
-        return response()->download(public_path('fish - '.'faggot'.'.docx'));
+        return response()->download(public_path($student_full_name .'.'.$practice_name.'.docx'));
     }
 
 
