@@ -13,6 +13,13 @@ class ReportHeadPractice extends Controller
     public function downloadDocxHead(Request $request, $pr_id)
     {
         $practice = Practice::findOrFail($pr_id);
+        foreach ($practice->practice_st as $pr)
+        {
+            if (!$pr->isReady)
+            {
+                return redirect()->route('Practice.index')->with('success', 'Не все документы студентов заполнены');
+            }
+        }
         $document1 = new \PhpOffice\PhpWord\TemplateProcessor('1121.docx');
 
         $h_pr_usu = explode(" ", $practice->head_ugrasu->full_name);
@@ -49,7 +56,7 @@ class ReportHeadPractice extends Controller
 
         $or_n = $practice->order_number;
 
-        $or_d = $practice->order_date;
+        $or_d = date('d.m.Y', strtotime($practice->order_date));
 
         $h_pr_op = explode(" ", $practice->group->trainingDirections->head_OPOP->full_name);
 
@@ -61,11 +68,34 @@ class ReportHeadPractice extends Controller
 
         $practice_st = $practice->practice_st;
 
-        $count_norm = count(StudentPractice::where('score_id', '!=', 1)->get());
+        $practiceStudent = StudentPractice::all();
+
+        $count_norm = count($practiceStudent);
+
+        $count_good_score = 0;
+        for ($i=0; $i<$count_norm;$i++ )
+        {
+
+            if ($practiceStudent[$i]->practice->id == $practice->id && $practiceStudent[$i]->score_id!=1)
+            {
+                $count_good_score++;
+            }
+        }
+
+        $count_bad_score = 0;
+
+        for ($i=0; $i<$count_norm;$i++ )
+        {
+
+            if ($practiceStudent[$i]->practice->id == $practice->id && $practiceStudent[$i]->score_id==1)
+            {
+                $count_bad_score++;
+            }
+        }
         $ne_count_norm = count(StudentPractice::where('score_id', '=', 1)->get());
 
-        $document1->cloneRow('st_full_nameN', $count_norm);
-        $document1->cloneRow('ne_st_full_nameN', $ne_count_norm);
+        $document1->cloneRow('st_full_nameN', $count_good_score);
+        $document1->cloneRow('ne_st_full_nameN', $count_bad_score);
 
         $i = 1;
         $j = 1;
@@ -125,12 +155,12 @@ class ReportHeadPractice extends Controller
             'h_pr_op' => $h_pr_op,
             'ct_t' => $ct_t,
             'p' => $p,
-            'count_norm' => $count_norm,
-            'ne_count_norm' => $ne_count_norm,
+            'count_norm' => $count_good_score,
+            'ne_count_norm' => $count_bad_score,
         ));
 
-        $document1->saveAs('meat - ' . 'faggot' . '.docx');
+        $document1->saveAs($h_pr_ent . $stud_g . '.docx');
 
-        return response()->download(public_path('meat - ' . 'faggot' . '.docx'));
+        return response()->download(public_path($h_pr_ent . $stud_g . '.docx'));
     }
 }

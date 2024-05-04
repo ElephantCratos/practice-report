@@ -13,8 +13,8 @@
     </x-slot>
 
     @role('head_OPOP')
-    @php 
-    
+    @php
+
     $arr = [];
 
     foreach ($practices as $practice)
@@ -22,14 +22,14 @@
         if ($practice->group->trainingDirections->head_OPOP->id == auth()->user()->id)
         {
             array_push($arr, $practice);
-        }    
+        }
     }
-    
+
     $practices = $arr;
 
     @endphp
     @endrole
-    
+
     @if(auth()->user()->hasRole('head_OPOP'))
     <div class="mt-4">
         <a href="{{ route('Practice.create') }}"><button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 border border-green-700 rounded">Добавить новый блок</button></a>
@@ -81,16 +81,13 @@
                         </div>
                     </div>
                 </div>
-                 
-                @if(auth()->user()->hasRole('head_OPOP'))
-                <div class="mt-4">
-                    
-                    <form action="{{ route('Practice.delete', $practice->id) }}" method="POST" style="display:inline-block">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 border border-red-700 rounded">Удалить</button>
-                    </form>
-                </div>
+
+                @if(auth()->user()->hasanyRole('head_OPOP', 'head_ugrasu'))
+                    <div class="mt-4">
+                        <a href="{{ route('downloadDocxHead', $practice->id) }}">
+                            скачать
+                        </a>
+                    </div>
                 @endif
 
             </div>
