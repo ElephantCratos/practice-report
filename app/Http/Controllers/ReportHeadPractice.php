@@ -13,6 +13,13 @@ class ReportHeadPractice extends Controller
     public function downloadDocxHead(Request $request, $pr_id)
     {
         $practice = Practice::findOrFail($pr_id);
+        foreach ($practice->practice_st as $pr)
+        {
+            if (!$pr->isReady)
+            {
+                return redirect()->route('Practice.index')->with('success', 'Не все документы студентов заполнены');
+            }
+        }
         $document1 = new \PhpOffice\PhpWord\TemplateProcessor('1121.docx');
 
         $h_pr_usu = explode(" ", $practice->head_ugrasu->full_name);
@@ -49,7 +56,7 @@ class ReportHeadPractice extends Controller
 
         $or_n = $practice->order_number;
 
-        $or_d = $practice->order_date;
+        $or_d = date('d.m.Y', strtotime($practice->order_date));
 
         $h_pr_op = explode(" ", $practice->group->trainingDirections->head_OPOP->full_name);
 
