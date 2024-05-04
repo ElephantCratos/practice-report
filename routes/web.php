@@ -70,7 +70,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     Route::middleware(['role:head_OPOP|head_enterprice'])->group(function () {
-        Route::get('/practice-places/index', [PracticePlaceController::class, 'index'])->name('PracticePlace.index');
+        Route::get('/practice-places/index/', [PracticePlaceController::class, 'index'])->name('PracticePlace.index');
         Route::get('/practice-places/create', [PracticePlaceController::class, 'create'])->name('PracticePlace.create');
         Route::get('/practice-places/edit/{id}', [PracticePlaceController::class, 'edit'])->name('PracticePlace.edit');
         Route::post('/practice-places/store', [PracticePlaceController::class, 'store'])->name('PracticePlace.store');
@@ -80,7 +80,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     Route::middleware(['role:head_OPOP|head_enterprice|student'])->group(function () {
-        Route::get('/practice-students/index', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
+        Route::get('/practice-students/index/{id?}', [StudentPracticeController::class, 'index'])->name('PracticeStudent.index');
         //Route::get('/practice-students/create', [StudentPracticeController::class, 'create'])->name('PracticeStudent.create');
         Route::get('/practice-students/edit/{id}', [StudentPracticeController::class, 'edit'])->name('PracticeStudent.edit')->middleware('role:head_OPOP|head_enterprice');
         //Route::post('/practice-students/store', [StudentPracticeController::class, 'store'])->name('PracticeStudent.store');

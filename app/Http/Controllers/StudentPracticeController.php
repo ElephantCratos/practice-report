@@ -16,27 +16,106 @@ use Illuminate\Support\Facades\Auth;
 
 class StudentPracticeController extends Controller
 {
-    public function index()
+    public function index($id = null)
     {
 
+
+
+
+
+;
+
         $user = Auth::user();
-        
+
         if ($user->hasRole('head_enterprice'))
         {
             $practiceStudent = StudentPractice::where('practice_head_organization_id', $user->id)->orderBy('id','desc')->get();
+            if ($id!=null)
+            {
+                $arr = [];
+                if ($id == 1)
+                {
+                    foreach($practiceStudent as $student)
+                    {
+                        if ($student->isReady == 1)
+                            array_push($arr,$student);
+                    }
+                    $practiceStudent = $arr;
+                }
+
+                if ($id == 0)
+                {
+                    foreach($practiceStudent as $student)
+                    {
+                        if ($student->isReady == 0)
+                            array_push($arr,$student);
+                    }
+                    $practiceStudent = $arr;
+                }
+
+            }
             return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
         }
 
         if ($user->hasRole('head_OPOP'))
         {
-            
+
             $practiceStudent = StudentPractice::all();
+            if ($id!=null)
+            {
+                $arr = [];
+                if ($id == 1)
+                {
+                    foreach($practiceStudent as $student)
+                    {
+                        if ($student->isReady == 1)
+                            array_push($arr,$student);
+                    }
+                    $practiceStudent = $arr;
+                }
+
+                if ($id == 0)
+                {
+                    foreach($practiceStudent as $student)
+                    {
+                        if ($student->isReady == 1)
+                            array_push($arr,$student);
+                    }
+                    $practiceStudent = $arr;
+                }
+            }
+
             return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
         }
 
         if ($user->hasRole('student'))
         {
             $practiceStudent = StudentPractice::where('student_id', $user->id)->orderBy('id','desc')->get();
+
+            if ($id!=null)
+            {
+                $arr = [];
+                if ($id == 1)
+                {
+                    foreach($practiceStudent as $student)
+                    {
+                        if ($student->isReady == 1)
+                            array_push($arr,$student);
+                    }
+                    $practiceStudent = $arr;
+                }
+
+                if ($id == 0)
+                {
+                    foreach($practiceStudent as $student)
+                    {
+                        if ($student->isReady == 1)
+                            array_push($arr,$student);
+                    }
+                    $practiceStudent = $arr;
+                }
+            }
+
             return view('practiceStudent/PracticeStudent', compact([ 'practiceStudent']));
         }
 

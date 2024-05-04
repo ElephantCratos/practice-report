@@ -29,7 +29,15 @@
 
             @endphp
             @endrole
-
+            <div class="flex justify-center items-center  mt-4">
+                <div class="menu flex justify-center my-8">
+                    <div class="menu__frm1 flex justify-around w-full">
+                    <a href="{{ route('PracticeStudent.index', 0) }}" style="text-decoration: none;" class="text-decoration-none bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mx-4"><p class="textOff">Не заполнены</p></a>
+                    <a href="{{ route('PracticeStudent.index', 1) }}" style="text-decoration: none;" class="text-decoration-none bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mx-4"><p class="textOff">Заполнены</p></a>
+                    <a href="{{ route('PracticeStudent.index') }}" style="text-decoration: none;" class="text-decoration-none bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mx-4"><p class="textOff">Все</p></a>
+                </div>
+            </div>
+            </div>
             @foreach ($practiceStudent as $student)
             <div class="max-w-4xl mx-auto py-6 sm:px-6 lg:px-8 m-auto">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6">
